@@ -1,9 +1,9 @@
 EESchema Schematic File Version 4
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 3
+Sheet 2 4
 Title ""
 Date ""
 Rev ""
@@ -518,8 +518,6 @@ NoConn ~ 3400 4750
 NoConn ~ 4800 4950
 NoConn ~ 4800 4850
 NoConn ~ 4800 4750
-NoConn ~ 4800 4250
-NoConn ~ 4800 4150
 NoConn ~ 4800 3850
 NoConn ~ 4800 3350
 NoConn ~ 4800 3250
@@ -527,4 +525,12 @@ Text GLabel 3100 3050 0    51   BiDi ~ 10
 JTAG_RESET
 Wire Wire Line
 	3400 3050 3100 3050
+Text GLabel 5150 4150 2    50   Input ~ 0
+BAT_STAT1
+Text GLabel 5150 4250 2    50   Input ~ 0
+BAT_STAT2
+Wire Wire Line
+	4800 4150 5150 4150
+Wire Wire Line
+	4800 4250 5150 4250
 $EndSCHEMATC
