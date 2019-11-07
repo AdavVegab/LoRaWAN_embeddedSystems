@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Schaltplan_embedded-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -245,13 +246,13 @@ Wire Wire Line
 	4800 3750 5100 3750
 Text GLabel 5100 3150 2    50   Input ~ 0
 UART_4_RX
-Text GLabel 5100 3050 2    50   Input ~ 0
+Text GLabel 5100 3050 2    50   Output ~ 0
 UART_4_TX
 Wire Wire Line
 	5100 3050 4800 3050
 Wire Wire Line
 	4800 3150 5100 3150
-Text GLabel 3000 5950 0    50   Input ~ 0
+Text GLabel 3000 5950 0    50   Output ~ 0
 UART_5_TX
 Wire Wire Line
 	3000 5950 3400 5950
@@ -293,7 +294,7 @@ Text GLabel 6550 4500 0    50   BiDi ~ 0
 3V3
 Text GLabel 6550 4600 0    50   BiDi ~ 0
 JTAG_TDI
-Text GLabel 7400 4400 2    50   BiDi ~ 0
+Text GLabel 7400 4400 2    50   Input ~ 0
 JTAG_RESET
 $Comp
 L power:GND #PWR0104
@@ -338,9 +339,9 @@ Wire Wire Line
 	6600 4300 6550 4300
 Wire Wire Line
 	6600 4200 6550 4200
-Text GLabel 8650 2800 2    50   BiDi ~ 0
+Text GLabel 8650 2800 2    50   Output ~ 0
 JTAG_RESET
-Text GLabel 8550 2150 2    50   BiDi ~ 0
+Text GLabel 8550 2150 2    50   Input ~ 0
 3V3
 $Comp
 L power:GND #PWR0105
@@ -440,11 +441,11 @@ Wire Wire Line
 	2900 3250 2700 3250
 Wire Wire Line
 	2700 3250 2700 3350
-Text GLabel 5150 3950 2    50   BiDi ~ 0
+Text GLabel 5100 3950 2    50   Output ~ 0
 LED_OUT
 Wire Wire Line
-	5150 3950 4800 3950
-Text GLabel 8600 4350 0    50   BiDi ~ 0
+	5100 3950 4800 3950
+Text GLabel 8600 4350 0    50   Input ~ 0
 LED_OUT
 $Comp
 L Device:R R3
@@ -485,10 +486,10 @@ Wire Wire Line
 	9200 4350 9250 4350
 Wire Wire Line
 	9550 4350 9850 4350
-Text GLabel 5150 4050 2    51   BiDi ~ 0
+Text GLabel 5100 4050 2    51   Output ~ 0
 5V_ENABLE
 Wire Wire Line
-	5150 4050 4800 4050
+	5100 4050 4800 4050
 NoConn ~ 4800 6250
 NoConn ~ 4800 6150
 NoConn ~ 4800 6050
@@ -518,19 +519,25 @@ NoConn ~ 3400 4750
 NoConn ~ 4800 4950
 NoConn ~ 4800 4850
 NoConn ~ 4800 4750
-NoConn ~ 4800 3850
-NoConn ~ 4800 3350
 NoConn ~ 4800 3250
-Text GLabel 3100 3050 0    51   BiDi ~ 10
+Text GLabel 3100 3050 0    50   Input ~ 0
 JTAG_RESET
 Wire Wire Line
 	3400 3050 3100 3050
-Text GLabel 5150 4150 2    50   Input ~ 0
+Text GLabel 5100 4150 2    50   Input ~ 0
 BAT_STAT1
-Text GLabel 5150 4250 2    50   Input ~ 0
+Text GLabel 5100 4250 2    50   Input ~ 0
 BAT_STAT2
 Wire Wire Line
-	4800 4150 5150 4150
+	4800 4150 5100 4150
 Wire Wire Line
-	4800 4250 5150 4250
+	4800 4250 5100 4250
+Text GLabel 5100 3850 2    50   Output ~ 0
+GPS_WAKEUP
+Wire Wire Line
+	4800 3850 5100 3850
+Text GLabel 5100 3350 2    50   Output ~ 0
+GPS_RSTN
+Wire Wire Line
+	4800 3350 5100 3350
 $EndSCHEMATC
