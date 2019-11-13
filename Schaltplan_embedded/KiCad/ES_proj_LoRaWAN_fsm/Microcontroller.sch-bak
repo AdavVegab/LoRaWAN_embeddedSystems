@@ -194,17 +194,17 @@ Wire Wire Line
 	5950 1300 6400 1300
 Wire Wire Line
 	6400 1300 6400 1400
-Text GLabel 5100 3450 2    50   Input ~ 0
+Text GLabel 5100 3450 2    50   Output ~ 0
 SPI1_NSS
 Wire Wire Line
 	4800 3450 5100 3450
-Text GLabel 5100 3550 2    50   Input ~ 0
+Text GLabel 5100 3550 2    50   Output ~ 0
 SPI1_SCK
 Wire Wire Line
 	4800 3550 5100 3550
 Text GLabel 5100 3650 2    50   Input ~ 0
 SPI1_MISO
-Text GLabel 5100 3750 2    50   Input ~ 0
+Text GLabel 5100 3750 2    50   Output ~ 0
 SPI1_MOSI
 Wire Wire Line
 	4300 6450 4200 6450
@@ -490,13 +490,6 @@ Text GLabel 5100 4050 2    51   Output ~ 0
 5V_ENABLE
 Wire Wire Line
 	5100 4050 4800 4050
-NoConn ~ 4800 6250
-NoConn ~ 4800 6150
-NoConn ~ 4800 6050
-NoConn ~ 4800 5950
-NoConn ~ 4800 5850
-NoConn ~ 4800 5750
-NoConn ~ 4800 5650
 NoConn ~ 4800 5550
 NoConn ~ 4800 5450
 NoConn ~ 4800 5350
@@ -540,4 +533,32 @@ Text GLabel 5100 3350 2    50   Output ~ 0
 GPS_RSTN
 Wire Wire Line
 	4800 3350 5100 3350
+Text GLabel 5100 5850 2    50   BiDi ~ 0
+LoRa_DI01
+Text GLabel 5100 5750 2    50   BiDi ~ 0
+LoRa_DI00
+Text GLabel 5100 5950 2    50   BiDi ~ 0
+LoRa_DI02
+Text GLabel 5100 6050 2    50   BiDi ~ 0
+LoRa_DI03
+Text GLabel 5100 6150 2    50   BiDi ~ 0
+LoRa_DI04
+Text GLabel 5100 6250 2    50   BiDi ~ 0
+LoRa_DI05
+Wire Wire Line
+	4800 5750 5100 5750
+Wire Wire Line
+	4800 5850 5100 5850
+Wire Wire Line
+	4800 5950 5100 5950
+Wire Wire Line
+	4800 6050 5100 6050
+Wire Wire Line
+	4800 6150 5100 6150
+Wire Wire Line
+	4800 6250 5100 6250
+Text GLabel 5100 5650 2    50   Output ~ 0
+LoRa_RESET
+Wire Wire Line
+	4800 5650 5100 5650
 $EndSCHEMATC

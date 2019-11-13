@@ -86,19 +86,14 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0102
 U 1 1 5DC1AD63
-P 4000 6750
-F 0 "#PWR0102" H 4000 6500 50  0001 C CNN
-F 1 "GND" H 4005 6577 50  0000 C CNN
-F 2 "" H 4000 6750 50  0001 C CNN
-F 3 "" H 4000 6750 50  0001 C CNN
-	1    4000 6750
+P 4100 6650
+F 0 "#PWR0102" H 4100 6400 50  0001 C CNN
+F 1 "GND" H 4105 6477 50  0000 C CNN
+F 2 "" H 4100 6650 50  0001 C CNN
+F 3 "" H 4100 6650 50  0001 C CNN
+	1    4100 6650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4000 6450 3900 6450
-Connection ~ 4000 6450
-Wire Wire Line
-	4000 6450 4000 6750
 Text GLabel 4850 1300 0    50   Input ~ 0
 3V3
 $Comp
@@ -194,52 +189,18 @@ Wire Wire Line
 	5950 1300 6400 1300
 Wire Wire Line
 	6400 1300 6400 1400
-Text GLabel 5100 3450 2    50   Input ~ 0
+Text GLabel 5100 3450 2    50   Output ~ 0
 SPI1_NSS
 Wire Wire Line
 	4800 3450 5100 3450
-Text GLabel 5100 3550 2    50   Input ~ 0
+Text GLabel 5100 3550 2    50   Output ~ 0
 SPI1_SCK
 Wire Wire Line
 	4800 3550 5100 3550
 Text GLabel 5100 3650 2    50   Input ~ 0
 SPI1_MISO
-Text GLabel 5100 3750 2    50   Input ~ 0
+Text GLabel 5100 3750 2    50   Output ~ 0
 SPI1_MOSI
-Wire Wire Line
-	4300 6450 4200 6450
-Connection ~ 4200 6450
-Wire Wire Line
-	4100 6450 4000 6450
-Wire Wire Line
-	4100 6450 4200 6450
-Connection ~ 4100 6450
-Wire Wire Line
-	4300 2850 4400 2850
-Connection ~ 4300 2850
-Wire Wire Line
-	4200 2850 4300 2850
-Connection ~ 4200 2850
-Wire Wire Line
-	4100 2850 4200 2850
-Connection ~ 4100 2850
-Wire Wire Line
-	4100 2850 4000 2850
-Wire Wire Line
-	3900 2850 4000 2850
-Connection ~ 4000 2850
-Connection ~ 3900 2850
-$Comp
-L MCU_ST_STM32L4:STM32L476RGTx U1
-U 1 1 5DC1A60F
-P 4100 4650
-F 0 "U1" H 4100 2764 50  0000 C CNN
-F 1 "STM32L476RGTx" H 4100 2673 50  0000 C CNN
-F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 3500 2950 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00108832.pdf" H 4100 4650 50  0001 C CNN
-	1    4100 4650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4800 3650 5100 3650
 Wire Wire Line
@@ -441,10 +402,10 @@ Wire Wire Line
 	2900 3250 2700 3250
 Wire Wire Line
 	2700 3250 2700 3350
-Text GLabel 5150 3950 2    50   Output ~ 0
+Text GLabel 5100 3950 2    50   Output ~ 0
 LED_OUT
 Wire Wire Line
-	5150 3950 4800 3950
+	5100 3950 4800 3950
 Text GLabel 8600 4350 0    50   Input ~ 0
 LED_OUT
 $Comp
@@ -486,17 +447,10 @@ Wire Wire Line
 	9200 4350 9250 4350
 Wire Wire Line
 	9550 4350 9850 4350
-Text GLabel 5150 4050 2    51   BiDi ~ 0
+Text GLabel 5100 4050 2    51   Output ~ 0
 5V_ENABLE
 Wire Wire Line
-	5150 4050 4800 4050
-NoConn ~ 4800 6250
-NoConn ~ 4800 6150
-NoConn ~ 4800 6050
-NoConn ~ 4800 5950
-NoConn ~ 4800 5850
-NoConn ~ 4800 5750
-NoConn ~ 4800 5650
+	5100 4050 4800 4050
 NoConn ~ 4800 5550
 NoConn ~ 4800 5450
 NoConn ~ 4800 5350
@@ -519,19 +473,102 @@ NoConn ~ 3400 4750
 NoConn ~ 4800 4950
 NoConn ~ 4800 4850
 NoConn ~ 4800 4750
-NoConn ~ 4800 3850
-NoConn ~ 4800 3350
 NoConn ~ 4800 3250
 Text GLabel 3100 3050 0    50   Input ~ 0
 JTAG_RESET
 Wire Wire Line
 	3400 3050 3100 3050
-Text GLabel 5150 4150 2    50   Input ~ 0
+Text GLabel 5100 4150 2    50   Input ~ 0
 BAT_STAT1
-Text GLabel 5150 4250 2    50   Input ~ 0
+Text GLabel 5100 4250 2    50   Input ~ 0
 BAT_STAT2
 Wire Wire Line
-	4800 4150 5150 4150
+	4800 4150 5100 4150
 Wire Wire Line
-	4800 4250 5150 4250
+	4800 4250 5100 4250
+Text GLabel 5100 3850 2    50   Output ~ 0
+GPS_WAKEUP
+Wire Wire Line
+	4800 3850 5100 3850
+Text GLabel 5100 3350 2    50   Output ~ 0
+GPS_RSTN
+Wire Wire Line
+	4800 3350 5100 3350
+Text GLabel 5100 5850 2    50   BiDi ~ 0
+LoRa_DI01
+Text GLabel 5100 5750 2    50   BiDi ~ 0
+LoRa_DI00
+Text GLabel 5100 5950 2    50   BiDi ~ 0
+LoRa_DI02
+Text GLabel 5100 6050 2    50   BiDi ~ 0
+LoRa_DI03
+Text GLabel 5100 6150 2    50   BiDi ~ 0
+LoRa_DI04
+Text GLabel 5100 6250 2    50   BiDi ~ 0
+LoRa_DI05
+Wire Wire Line
+	4800 5750 5100 5750
+Wire Wire Line
+	4800 5850 5100 5850
+Wire Wire Line
+	4800 5950 5100 5950
+Wire Wire Line
+	4800 6050 5100 6050
+Wire Wire Line
+	4800 6150 5100 6150
+Wire Wire Line
+	4800 6250 5100 6250
+Text GLabel 5100 5650 2    50   Output ~ 0
+LoRa_RESET
+Wire Wire Line
+	4800 5650 5100 5650
+Wire Wire Line
+	4300 2850 4400 2850
+Connection ~ 4300 2850
+Wire Wire Line
+	4200 2850 4300 2850
+Connection ~ 4200 2850
+Wire Wire Line
+	4100 2850 4200 2850
+Connection ~ 4100 2850
+Wire Wire Line
+	3900 2850 4000 2850
+Wire Wire Line
+	4100 2850 4000 2850
+Connection ~ 4000 2850
+Connection ~ 3900 2850
+$Comp
+L MCU_ST_STM32L4:STM32L476RGTx U1
+U 1 1 5DC1A60F
+P 4100 4650
+F 0 "U1" H 4400 2900 50  0000 C CNN
+F 1 "STM32L476RGTx" H 4650 2800 50  0000 C CNN
+F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 3500 2950 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00108832.pdf" H 4100 4650 50  0001 C CNN
+	1    4100 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 6450 3900 6550
+Wire Wire Line
+	3900 6550 4000 6550
+Wire Wire Line
+	4300 6550 4300 6450
+Wire Wire Line
+	4000 6450 4000 6550
+Connection ~ 4000 6550
+Wire Wire Line
+	4000 6550 4100 6550
+Wire Wire Line
+	4100 6450 4100 6550
+Connection ~ 4100 6550
+Wire Wire Line
+	4100 6550 4200 6550
+Wire Wire Line
+	4200 6450 4200 6550
+Connection ~ 4200 6550
+Wire Wire Line
+	4200 6550 4300 6550
+Wire Wire Line
+	4100 6550 4100 6650
 $EndSCHEMATC

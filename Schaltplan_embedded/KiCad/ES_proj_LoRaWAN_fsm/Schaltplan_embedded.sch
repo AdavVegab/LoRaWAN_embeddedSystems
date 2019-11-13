@@ -27,9 +27,9 @@ F0 "Spannungsversorgung" 50
 F1 "Spannungsversorgung.sch" 50
 $EndSheet
 $Sheet
-S 4450 1050 3550 1250
+S 4450 1100 3550 1250
 U 5E150549
-F0 "Peripherie" 50
-F1 "Peripherie.sch" 50
+F0 "Sensorik" 50
+F1 "Sensorik.sch" 50
 $EndSheet
 $EndSCHEMATC

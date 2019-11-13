@@ -1,0 +1,570 @@
+EESchema Schematic File Version 4
+LIBS:Schaltplan_embedded-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+NoConn ~ 1350 1050
+Text GLabel 1550 1150 2    50   Input ~ 0
+5V
+Wire Wire Line
+	1350 1150 1550 1150
+NoConn ~ 1350 1250
+NoConn ~ 1350 1350
+NoConn ~ 1350 1450
+Text GLabel 1550 1550 2    50   Input ~ 0
+UART_4_RX
+Wire Wire Line
+	1350 1550 1550 1550
+Text GLabel 1550 1650 2    50   Output ~ 0
+UART_4_TX
+Wire Wire Line
+	1350 1650 1550 1650
+$Comp
+L Connector:Conn_01x08_Male J?
+U 1 1 5E17DE2D
+P 1150 1350
+F 0 "J?" H 1258 1831 50  0000 C CNN
+F 1 "Conn_01x08_Male" H 1258 1740 50  0000 C CNN
+F 2 "" H 1150 1350 50  0001 C CNN
+F 3 "~" H 1150 1350 50  0001 C CNN
+	1    1150 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E17F498
+P 1500 1850
+F 0 "#PWR?" H 1500 1600 50  0001 C CNN
+F 1 "GND" H 1505 1677 50  0000 C CNN
+F 2 "" H 1500 1850 50  0001 C CNN
+F 3 "" H 1500 1850 50  0001 C CNN
+	1    1500 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 1750 1500 1750
+Wire Wire Line
+	1500 1750 1500 1850
+Wire Notes Line
+	850  750  850  2100
+Wire Notes Line
+	850  2100 2150 2100
+Wire Notes Line
+	2150 750  850  750 
+Wire Notes Line
+	2150 750  2150 2100
+Text Notes 850  750  0    50   ~ 0
+Feinstaubsensor HPMA115S0
+$Comp
+L SamacSys_Parts:TESEO-LIV3F IC?
+U 1 1 5DC58704
+P 6350 1300
+F 0 "IC?" H 7150 1565 50  0000 C CNN
+F 1 "TESEO-LIV3F" H 7150 1474 50  0000 C CNN
+F 2 "SON110P970X1010X230-18N" H 7800 1400 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/TESEO-LIV3F.pdf" H 7800 1300 50  0001 L CNN
+F 4 "GPS Modules Tiny GNSS module" H 7800 1200 50  0001 L CNN "Description"
+F 5 "2.3" H 7800 1100 50  0001 L CNN "Height"
+F 6 "511-TESEO-LIV3F" H 7800 1000 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=511-TESEO-LIV3F" H 7800 900 50  0001 L CNN "Mouser Price/Stock"
+F 8 "STMicroelectronics" H 7800 800 50  0001 L CNN "Manufacturer_Name"
+F 9 "TESEO-LIV3F" H 7800 700 50  0001 L CNN "Manufacturer_Part_Number"
+	1    6350 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L?
+U 1 1 5DC65B2A
+P 4700 2000
+F 0 "L?" V 4890 2000 50  0000 C CNN
+F 1 "27nH" V 4799 2000 50  0000 C CNN
+F 2 "" H 4700 2000 50  0001 C CNN
+F 3 "~" H 4700 2000 50  0001 C CNN
+	1    4700 2000
+	0    -1   -1   0   
+$EndComp
+Text GLabel 4200 2000 0    50   Input ~ 0
+3V3
+NoConn ~ 7950 1700
+Wire Wire Line
+	4850 2000 4950 2000
+Wire Wire Line
+	4200 2000 4450 2000
+Wire Wire Line
+	6350 1800 5200 1800
+Wire Wire Line
+	5200 1800 5200 1900
+Wire Wire Line
+	6350 1900 5200 1900
+Connection ~ 5200 1900
+$Comp
+L Device:C C?
+U 1 1 5DC71579
+P 4450 2200
+F 0 "C?" H 4565 2246 50  0000 L CNN
+F 1 "10nF" H 4565 2155 50  0000 L CNN
+F 2 "" H 4488 2050 50  0001 C CNN
+F 3 "~" H 4450 2200 50  0001 C CNN
+	1    4450 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5DC72065
+P 4950 2200
+F 0 "C?" H 5065 2246 50  0000 L CNN
+F 1 "56pF" H 5065 2155 50  0000 L CNN
+F 2 "" H 4988 2050 50  0001 C CNN
+F 3 "~" H 4950 2200 50  0001 C CNN
+	1    4950 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 2050 4450 2000
+Connection ~ 4450 2000
+Wire Wire Line
+	4450 2000 4550 2000
+Wire Wire Line
+	4950 2050 4950 2000
+Wire Wire Line
+	4950 2350 4950 2400
+Wire Wire Line
+	4950 2400 4450 2400
+Wire Wire Line
+	4450 2400 4450 2350
+$Comp
+L power:GND #PWR?
+U 1 1 5DC73486
+P 4450 2500
+F 0 "#PWR?" H 4450 2250 50  0001 C CNN
+F 1 "GND" H 4455 2327 50  0000 C CNN
+F 2 "" H 4450 2500 50  0001 C CNN
+F 3 "" H 4450 2500 50  0001 C CNN
+	1    4450 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 2400 4450 2500
+Connection ~ 4450 2400
+Connection ~ 4950 2000
+Wire Wire Line
+	4950 2000 5200 2000
+Wire Wire Line
+	5200 1900 5200 2000
+Connection ~ 5200 2000
+NoConn ~ 7950 1300
+NoConn ~ 7950 1600
+NoConn ~ 7950 1400
+NoConn ~ 7950 1500
+Text GLabel 4600 900  0    50   Input ~ 0
+UART_5_TX
+Text GLabel 4600 800  0    50   Output ~ 0
+UART_5_RX
+$Comp
+L Device:C C?
+U 1 1 5DC88989
+P 4950 1100
+F 0 "C?" H 5065 1146 50  0000 L CNN
+F 1 "56pF" H 5065 1055 50  0000 L CNN
+F 2 "" H 4988 950 50  0001 C CNN
+F 3 "~" H 4950 1100 50  0001 C CNN
+	1    4950 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5DC892A7
+P 5400 1100
+F 0 "C?" H 5515 1146 50  0000 L CNN
+F 1 "56pF" H 5515 1055 50  0000 L CNN
+F 2 "" H 5438 950 50  0001 C CNN
+F 3 "~" H 5400 1100 50  0001 C CNN
+	1    5400 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DC89815
+P 4950 1400
+F 0 "#PWR?" H 4950 1150 50  0001 C CNN
+F 1 "GND" H 4955 1227 50  0000 C CNN
+F 2 "" H 4950 1400 50  0001 C CNN
+F 3 "" H 4950 1400 50  0001 C CNN
+	1    4950 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 1250 4950 1300
+Wire Wire Line
+	4950 1300 5400 1300
+Wire Wire Line
+	5400 1300 5400 1250
+Connection ~ 4950 1300
+Wire Wire Line
+	4950 1300 4950 1400
+Wire Wire Line
+	4600 900  5400 900 
+Wire Wire Line
+	4600 800  4950 800 
+Wire Wire Line
+	4950 800  4950 950 
+Connection ~ 4950 800 
+Wire Wire Line
+	5400 900  5400 950 
+Connection ~ 5400 900 
+Wire Wire Line
+	5400 900  5850 900 
+Wire Wire Line
+	4950 800  5950 800 
+Wire Wire Line
+	5850 900  5850 1500
+Wire Wire Line
+	5850 1500 6350 1500
+Wire Wire Line
+	5950 800  5950 1400
+Wire Wire Line
+	5950 1400 6350 1400
+Wire Wire Line
+	5400 1300 6350 1300
+Connection ~ 5400 1300
+Wire Wire Line
+	5200 2000 6350 2000
+NoConn ~ 6350 1600
+Text GLabel 6050 1700 0    50   Input ~ 0
+GPS_WAKEUP
+Wire Wire Line
+	6050 1700 6350 1700
+Text GLabel 6050 2100 0    50   Input ~ 0
+GPS_RSTN
+Wire Wire Line
+	6050 2100 6350 2100
+$Comp
+L power:GND #PWR?
+U 1 1 5DCC0ABC
+P 8050 2200
+F 0 "#PWR?" H 8050 1950 50  0001 C CNN
+F 1 "GND" H 8055 2027 50  0000 C CNN
+F 2 "" H 8050 2200 50  0001 C CNN
+F 3 "" H 8050 2200 50  0001 C CNN
+	1    8050 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 2100 8050 2100
+Wire Wire Line
+	8050 2100 8050 2200
+Wire Wire Line
+	7950 1900 8050 1900
+Wire Wire Line
+	8050 1900 8050 2100
+Connection ~ 8050 2100
+Text GLabel 8200 2000 2    50   Input ~ 0
+RF_IN
+Wire Wire Line
+	7950 2000 8200 2000
+NoConn ~ 7950 1800
+$Comp
+L Connector:Conn_Coaxial J?
+U 1 1 5DCF1081
+P 1800 4050
+F 0 "J?" H 1728 4288 50  0000 C CNN
+F 1 "Conn_Coaxial" H 1728 4197 50  0000 C CNN
+F 2 "" H 1800 4050 50  0001 C CNN
+F 3 " ~" H 1800 4050 50  0001 C CNN
+	1    1800 4050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DCFF4CB
+P 1800 4350
+F 0 "#PWR?" H 1800 4100 50  0001 C CNN
+F 1 "GND" H 1805 4177 50  0000 C CNN
+F 2 "" H 1800 4350 50  0001 C CNN
+F 3 "" H 1800 4350 50  0001 C CNN
+	1    1800 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 4250 1800 4350
+$Comp
+L SamacSys_Parts:ESDARF02-1BU2CK D?
+U 1 1 5DD00D5D
+P 2300 4200
+F 0 "D?" V 2654 4328 50  0000 L CNN
+F 1 "ESDARF02-1BU2CK" V 2745 4328 50  0000 L CNN
+F 2 "ESDARF021BU2CK" H 2950 4300 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/ESDARF02-1BU2CK.pdf" H 2950 4200 50  0001 L CNN
+F 4 "STMicroelectronics ESDARF02-1BU2CK Bi-Directional ESD Protection Diode, 20W peak, 2-Pin ST-0201" H 2950 4100 50  0001 L CNN "Description"
+F 5 "0.33" H 2950 4000 50  0001 L CNN "Height"
+F 6 "511-ESDARF02-1BU2CK" H 2950 3900 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=511-ESDARF02-1BU2CK" H 2950 3800 50  0001 L CNN "Mouser Price/Stock"
+F 8 "STMicroelectronics" H 2950 3700 50  0001 L CNN "Manufacturer_Name"
+F 9 "ESDARF02-1BU2CK" H 2950 3600 50  0001 L CNN "Manufacturer_Part_Number"
+	1    2300 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:L L?
+U 1 1 5DD0BBF5
+P 3200 4450
+F 0 "L?" H 3253 4496 50  0000 L CNN
+F 1 "56nH" H 3253 4405 50  0000 L CNN
+F 2 "" H 3200 4450 50  0001 C CNN
+F 3 "~" H 3200 4450 50  0001 C CNN
+	1    3200 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5DD0EE03
+P 2700 5050
+F 0 "C?" V 2448 5050 50  0000 C CNN
+F 1 "56pF" V 2539 5050 50  0000 C CNN
+F 2 "" H 2738 4900 50  0001 C CNN
+F 3 "~" H 2700 5050 50  0001 C CNN
+	1    2700 5050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5DD11E98
+P 3600 4050
+F 0 "C?" V 3348 4050 50  0000 C CNN
+F 1 "120pF" V 3439 4050 50  0000 C CNN
+F 2 "" H 3638 3900 50  0001 C CNN
+F 3 "~" H 3600 4050 50  0001 C CNN
+	1    3600 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5DD13B71
+P 3950 4300
+F 0 "C?" H 3835 4254 50  0000 R CNN
+F 1 "3.9pF" H 3835 4345 50  0000 R CNN
+F 2 "" H 3988 4150 50  0001 C CNN
+F 3 "~" H 3950 4300 50  0001 C CNN
+	1    3950 4300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5DD1843D
+P 6450 3650
+F 0 "C?" H 6335 3604 50  0000 R CNN
+F 1 "1nF" H 6335 3695 50  0000 R CNN
+F 2 "" H 6488 3500 50  0001 C CNN
+F 3 "~" H 6450 3650 50  0001 C CNN
+	1    6450 3650
+	-1   0    0    1   
+$EndComp
+$Comp
+L SamacSys_Parts:BGA824N6E6327XTSA1 IC?
+U 1 1 5DD18DC4
+P 6000 3950
+F 0 "IC?" H 6600 4215 50  0000 C CNN
+F 1 "BGA824N6E6327XTSA1" H 6600 4124 50  0000 C CNN
+F 2 "BGS12SN6E6327XTSA1" H 7050 4050 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/BGA824N6E6327XTSA1.pdf" H 7050 3950 50  0001 L CNN
+F 4 "INFINEON - BGA824N6E6327XTSA1 - LNA, 17DB, 1.55GHZ-1.615GHZ, TSNP-6" H 7050 3850 50  0001 L CNN "Description"
+F 5 "" H 7050 3750 50  0001 L CNN "Height"
+F 6 "726-A824N6E6327XTSA1" H 7050 3650 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=726-A824N6E6327XTSA1" H 7050 3550 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Infineon" H 7050 3450 50  0001 L CNN "Manufacturer_Name"
+F 9 "BGA824N6E6327XTSA1" H 7050 3350 50  0001 L CNN "Manufacturer_Part_Number"
+	1    6000 3950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:L L?
+U 1 1 5DD198A7
+P 4350 4050
+F 0 "L?" V 4540 4050 50  0000 C CNN
+F 1 "6.8nH" V 4449 4050 50  0000 C CNN
+F 2 "" H 4350 4050 50  0001 C CNN
+F 3 "~" H 4350 4050 50  0001 C CNN
+	1    4350 4050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L RF_Filter_neu:B4327 FL?
+U 1 1 5DD1B065
+P 7350 4150
+F 0 "FL?" H 7350 4617 50  0000 C CNN
+F 1 "B4327" H 7350 4526 50  0000 C CNN
+F 2 "" H 7350 4650 50  0001 C CNN
+F 3 "" H 7350 4250 50  0001 C CNN
+	1    7350 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5DD1C20C
+P 8150 4150
+F 0 "C?" V 8402 4150 50  0000 C CNN
+F 1 "120pF" V 8311 4150 50  0000 C CNN
+F 2 "" H 8188 4000 50  0001 C CNN
+F 3 "~" H 8150 4150 50  0001 C CNN
+	1    8150 4150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DD23AF9
+P 2300 5200
+F 0 "#PWR?" H 2300 4950 50  0001 C CNN
+F 1 "GND" H 2305 5027 50  0000 C CNN
+F 2 "" H 2300 5200 50  0001 C CNN
+F 3 "" H 2300 5200 50  0001 C CNN
+	1    2300 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 4050 2300 4050
+Wire Wire Line
+	2300 4050 2300 4200
+Wire Wire Line
+	2300 5000 2300 5050
+Wire Wire Line
+	2300 5050 2550 5050
+Connection ~ 2300 5050
+Wire Wire Line
+	2300 5050 2300 5200
+Wire Wire Line
+	2850 5050 3200 5050
+Wire Wire Line
+	3200 5050 3200 4600
+Wire Wire Line
+	2300 4050 3200 4050
+Wire Wire Line
+	3200 4050 3200 4300
+Connection ~ 2300 4050
+Connection ~ 3200 4050
+Wire Wire Line
+	3750 4050 3950 4050
+Wire Wire Line
+	3950 4050 3950 4150
+Wire Wire Line
+	4200 4050 3950 4050
+Connection ~ 3950 4050
+Wire Wire Line
+	4500 4050 4800 4050
+Wire Wire Line
+	6200 4050 6000 4050
+Wire Wire Line
+	6200 3450 6450 3450
+Wire Wire Line
+	6450 3450 6450 3500
+Wire Wire Line
+	4800 4150 4650 4150
+Wire Wire Line
+	6950 4150 6000 4150
+Wire Wire Line
+	7750 4150 8000 4150
+Text GLabel 8650 4150 2    50   Output ~ 0
+RF_IN
+Text GLabel 4550 3250 0    50   Input ~ 0
+3V3
+Wire Wire Line
+	4550 3250 4650 3250
+Wire Wire Line
+	4650 3250 4650 3450
+Wire Wire Line
+	4650 3450 6200 3450
+Connection ~ 4650 3450
+Wire Wire Line
+	4650 3450 4650 4150
+Connection ~ 6200 3450
+Wire Wire Line
+	6200 3450 6200 4050
+$Comp
+L power:GND #PWR?
+U 1 1 5DD87FDA
+P 4750 4650
+F 0 "#PWR?" H 4750 4400 50  0001 C CNN
+F 1 "GND" H 4755 4477 50  0000 C CNN
+F 2 "" H 4750 4650 50  0001 C CNN
+F 3 "" H 4750 4650 50  0001 C CNN
+	1    4750 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 3950 4750 3950
+Wire Wire Line
+	4750 3950 4750 4550
+Wire Wire Line
+	6100 3950 6000 3950
+Connection ~ 4750 4550
+Wire Wire Line
+	4750 4550 4750 4650
+Wire Wire Line
+	3950 4450 3950 4550
+Wire Wire Line
+	3950 4550 4750 4550
+$Comp
+L power:GND #PWR?
+U 1 1 5DDA1B74
+P 6450 3850
+F 0 "#PWR?" H 6450 3600 50  0001 C CNN
+F 1 "GND" H 6455 3677 50  0000 C CNN
+F 2 "" H 6450 3850 50  0001 C CNN
+F 3 "" H 6450 3850 50  0001 C CNN
+	1    6450 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 3800 6450 3850
+Wire Wire Line
+	7250 4650 7250 4700
+Wire Wire Line
+	7250 4700 7350 4700
+Wire Wire Line
+	7450 4700 7450 4650
+Wire Wire Line
+	7350 4650 7350 4700
+Connection ~ 7350 4700
+Wire Wire Line
+	7350 4700 7450 4700
+$Comp
+L power:GND #PWR?
+U 1 1 5DDA920B
+P 7350 4800
+F 0 "#PWR?" H 7350 4550 50  0001 C CNN
+F 1 "GND" H 7355 4627 50  0000 C CNN
+F 2 "" H 7350 4800 50  0001 C CNN
+F 3 "" H 7350 4800 50  0001 C CNN
+	1    7350 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 4700 7350 4800
+$Comp
+L power:GND #PWR?
+U 1 1 5DDABFE4
+P 6100 4650
+F 0 "#PWR?" H 6100 4400 50  0001 C CNN
+F 1 "GND" H 6105 4477 50  0000 C CNN
+F 2 "" H 6100 4650 50  0001 C CNN
+F 3 "" H 6100 4650 50  0001 C CNN
+	1    6100 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 3950 6100 4650
+Wire Wire Line
+	3200 4050 3450 4050
+Wire Wire Line
+	8300 4150 8650 4150
+$EndSCHEMATC
