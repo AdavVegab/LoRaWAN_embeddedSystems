@@ -1,0 +1,62 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP NE555D
+D NE555DG4, Timer, 4.5 To 16V, 8-Pin SOIC-8
+F http://www.ti.com/lit/ds/symlink/ne555.pdf
+$ENDCMP
+#
+$CMP SPV1040T
+D Voltage Regulators - Switching Regulators Hi efficiency solar battery charger
+K
+F https://componentsearchengine.com/Datasheets/1/SPV1040T.pdf
+$ENDCMP
+#
+$CMP TLS850B0TBV33ATMA1
+D INFINEON - TLS850B0TBV33ATMA1 - LDO, AEC-Q100, FIXED, 3.3V, 0.5A, TO-263
+K
+F https://www.infineon.com/dgdl/Infineon-TLS850B0TB%20V33-DS-v01_00-EN.pdf?fileId=5546d4625fe3678401600cf0f9cb6d40
+$ENDCMP
+#
+$CMP SMM4F5.0A-TR
+D ESD Suppressors / TVS Diodes 400W HI JCT TMP
+K
+F https://componentsearchengine.com/Datasheets/1/SMM4F5.0A-TR.pdf
+$ENDCMP
+#
+$CMP BGA_725L6_E6327
+D INFINEON - BGA 725L6 E6327 - RF AMP, 20DB, 1.615GHZ, 3.6V, TSLP-6
+K
+F https://componentsearchengine.com/Datasheets/1/BGA 725L6 E6327.pdf
+$ENDCMP
+#
+$CMP BGA824N6E6327XTSA1
+D INFINEON - BGA824N6E6327XTSA1 - LNA, 17DB, 1.55GHZ-1.615GHZ, TSNP-6
+K
+F https://componentsearchengine.com/Datasheets/1/BGA824N6E6327XTSA1.pdf
+$ENDCMP
+#
+$CMP ESDARF02-1BU2CK
+D STMicroelectronics ESDARF02-1BU2CK Bi-Directional ESD Protection Diode, 20W peak, 2-Pin ST-0201
+K
+F https://componentsearchengine.com/Datasheets/1/ESDARF02-1BU2CK.pdf
+$ENDCMP
+#
+$CMP L6924D
+D L6924D, Battery Charge Controller, Lithium-Ion, Lithium-Polymer, 16-Pin VFQFPN
+K
+F https://componentsearchengine.com/Datasheets/1/L6924D.pdf
+$ENDCMP
+#
+$CMP TESEO-LIV3F
+D GPS Modules Tiny GNSS module
+K
+F https://componentsearchengine.com/Datasheets/1/TESEO-LIV3F.pdf
+$ENDCMP
+#
+$CMP TPS22943DCKR
+D LOW-INPUT-VOLTAGE CURRENT-LIMITED LOAD SWITCHES  WITH SHUT OFF AND AUTO-RESTART FEATURE
+K
+F http://www.ti.com/lit/gpn/tps22943
+$ENDCMP
+#
+#End Doc Library
