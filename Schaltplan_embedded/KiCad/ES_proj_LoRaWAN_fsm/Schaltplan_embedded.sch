@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 950  850  3100 1550
+S 950  800  3100 1550
 U 5DC1A511
 F0 "Microcontroller" 50
 F1 "Microcontroller.sch" 50
