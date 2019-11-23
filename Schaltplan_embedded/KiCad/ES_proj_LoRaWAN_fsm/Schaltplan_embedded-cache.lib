@@ -82,31 +82,6 @@ X Pin_8 8 200 -400 150 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Conn_Coaxial
-#
-DEF Connector_Conn_Coaxial J 0 40 Y N 1 F N
-F0 "J" 10 120 50 H V C CNN
-F1 "Connector_Conn_Coaxial" 115 0 50 V V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- *BNC*
- *SMA*
- *SMB*
- *SMC*
- *Cinch*
-$ENDFPLIST
-DRAW
-A -2 0 71 1636 0 0 1 10 N -70 20 70 0
-A -1 0 71 0 -1638 0 1 10 N 70 0 -70 -20
-C 0 0 20 0 1 8 N
-P 2 0 1 0 -100 0 -20 0 N
-P 2 0 1 0 0 -100 0 -70 N
-X In 1 -200 0 100 R 50 50 1 1 P
-X Ext 2 0 -200 100 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
 # Connector_Generic_Conn_02x05_Odd_Even
 #
 DEF Connector_Generic_Conn_02x05_Odd_Even J 0 40 Y N 1 F N
@@ -404,6 +379,29 @@ X ANT 9 500 300 100 L 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
+# SamacSys_Parts_73100-0258
+#
+DEF SamacSys_Parts_73100-0258 J 0 30 Y Y 1 F N
+F0 "J" 650 300 50 H V L CNN
+F1 "SamacSys_Parts_73100-0258" 650 200 50 H V L CNN
+F2 "731000258" 650 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/1/73100-0258.pdf" 650 0 50 H I L CNN
+F4 "MOLEX - 73100-0258 - RF COAX CONN, SMB, JACK, 75 OHM, PCB" 650 -100 50 H I L CNN "Description"
+F5 "7.49" 650 -200 50 H I L CNN "Height"
+F6 "538-73100-0258" 650 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.com/Search/Refine.aspx?Keyword=538-73100-0258" 650 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Molex" 650 -500 50 H I L CNN "Manufacturer_Name"
+F9 "73100-0258" 650 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 5 0 1 6 200 100 600 100 600 -300 200 -300 200 100 N
+X 1 1 0 0 200 R 50 50 0 0 U
+X 2 2 800 0 200 L 50 50 0 0 U
+X 3 3 0 -100 200 R 50 50 0 0 U
+X 4 4 800 -100 200 L 50 50 0 0 U
+X 5 5 0 -200 200 R 50 50 0 0 U
+ENDDRAW
+ENDDEF
+#
 # SamacSys_Parts_BGA824N6E6327XTSA1
 #
 DEF SamacSys_Parts_BGA824N6E6327XTSA1 IC 0 30 Y Y 1 F N
@@ -482,18 +480,40 @@ X VOPRG 9 1400 -300 200 L 50 50 0 0 I
 ENDDRAW
 ENDDEF
 #
+# SamacSys_Parts_LL3301NF065QG
+#
+DEF SamacSys_Parts_LL3301NF065QG S 0 30 Y Y 1 F N
+F0 "S" 650 300 50 H V L CNN
+F1 "SamacSys_Parts_LL3301NF065QG" 650 200 50 H V L CNN
+F2 "LL3301NF065QG" 650 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/1/LL3301NF065QG.pdf" 650 0 50 H I L CNN
+F4 "E-SWITCH - LL3301NF065QG - TACTILE SW, SPST, 0.05A, 12VDC, SOLDER" 650 -100 50 H I L CNN "Description"
+F5 "4" 650 -200 50 H I L CNN "Height"
+F6 "612-LL3301NF065QG" 650 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.com/Search/Refine.aspx?Keyword=612-LL3301NF065QG" 650 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "E-Switch" 650 -500 50 H I L CNN "Manufacturer_Name"
+F9 "LL3301NF065QG" 650 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 5 0 1 6 200 100 600 100 600 -200 200 -200 200 100 N
+X 1 1 0 0 200 R 50 50 0 0 U
+X 2 2 0 -100 200 R 50 50 0 0 U
+X 3 3 800 0 200 L 50 50 0 0 U
+X 4 4 800 -100 200 L 50 50 0 0 U
+ENDDRAW
+ENDDEF
+#
 # SamacSys_Parts_SMM4F5.0A-TR
 #
 DEF SamacSys_Parts_SMM4F5.0A-TR D 0 30 Y Y 1 F N
 F0 "D" 450 200 50 H V L CNN
 F1 "SamacSys_Parts_SMM4F5.0A-TR" 450 100 50 H V L CNN
 F2 "STMITE" 450 0 50 H I L CNN
-F3 "https://componentsearchengine.com/Datasheets/1/SMM4F5.0A-TR.pdf" 450 -100 50 H I L CNN
+F3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/5d/b3/40/b8/ac/6c/49/a2/CD00178940.pdf/files/CD00178940.pdf/jcr:content/translations/en.CD00178940.pdf" 450 -100 50 H I L CNN
 F4 "ESD Suppressors / TVS Diodes 400W HI JCT TMP" 450 -200 50 H I L CNN "Description"
-F5 "511-SMM4F5.0A-TR" 450 -400 50 H I L CNN "Mouser Part Number"
-F6 "https://www.mouser.com/Search/Refine.aspx?Keyword=511-SMM4F5.0A-TR" 450 -500 50 H I L CNN "Mouser Price/Stock"
-F7 "STMicroelectronics" 450 -600 50 H I L CNN "Manufacturer_Name"
-F8 "SMM4F5.0A-TR" 450 -700 50 H I L CNN "Manufacturer_Part_Number"
+F5 "STMicroelectronics" 450 -400 50 H I L CNN "Manufacturer_Name"
+F6 "SMM4F5.0A-TR" 450 -500 50 H I L CNN "Manufacturer_Part_Number"
+F7 "511-SMM4F5.0A-TR" 450 -600 50 H I L CNN "Mouser Part Number"
+F8 "https://www.mouser.com/Search/Refine.aspx?Keyword=511-SMM4F5.0A-TR" 450 -700 50 H I L CNN "Mouser Price/Stock"
 DRAW
 P 2 0 1 6 200 100 200 -100 N
 P 4 0 1 6 200 0 400 100 400 -100 200 0 N
@@ -607,23 +627,6 @@ X GND 2 0 -100 200 R 50 50 0 0 U
 X OC 3 0 -200 200 R 50 50 0 0 U
 X ON 4 1100 0 200 L 50 50 0 0 U
 X VIN 5 1100 -100 200 L 50 50 0 0 U
-ENDDRAW
-ENDDEF
-#
-# Switch_SW_Push
-#
-DEF Switch_SW_Push SW 0 40 N N 1 F N
-F0 "SW" 50 100 50 H V L CNN
-F1 "Switch_SW_Push" 0 -60 50 H V C CNN
-F2 "" 0 200 50 H I C CNN
-F3 "" 0 200 50 H I C CNN
-DRAW
-C -80 0 20 0 1 0 N
-C 80 0 20 0 1 0 N
-P 2 0 1 0 0 50 0 120 N
-P 2 0 1 0 100 50 -100 50 N
-X 1 1 -200 0 100 R 50 50 0 1 P
-X 2 2 200 0 100 L 50 50 0 1 P
 ENDDRAW
 ENDDEF
 #
