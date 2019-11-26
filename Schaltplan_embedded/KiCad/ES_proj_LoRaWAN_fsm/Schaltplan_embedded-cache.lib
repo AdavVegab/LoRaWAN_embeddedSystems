@@ -82,28 +82,22 @@ X Pin_8 8 200 -400 150 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Conn_Coaxial
+# Connector_Generic_Conn_01x02
 #
-DEF Connector_Conn_Coaxial J 0 40 Y N 1 F N
-F0 "J" 10 120 50 H V C CNN
-F1 "Connector_Conn_Coaxial" 115 0 50 V V C CNN
+DEF Connector_Generic_Conn_01x02 J 0 40 Y N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "Connector_Generic_Conn_01x02" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
- *BNC*
- *SMA*
- *SMB*
- *SMC*
- *Cinch*
+ Connector*:*_1x??_*
 $ENDFPLIST
 DRAW
-A -2 0 71 1636 0 0 1 10 N -70 20 70 0
-A -1 0 71 0 -1638 0 1 10 N 70 0 -70 -20
-C 0 0 20 0 1 8 N
-P 2 0 1 0 -100 0 -20 0 N
-P 2 0 1 0 0 -100 0 -70 N
-X In 1 -200 0 100 R 50 50 1 1 P
-X Ext 2 0 -200 100 U 50 50 1 1 P
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 50 50 -150 1 1 10 f
+X Pin_1 1 -200 0 150 R 50 50 1 1 P
+X Pin_2 2 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -344,6 +338,34 @@ X PC1 9 -700 -200 100 R 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
+# RF_Filter_neu_B4327
+#
+DEF RF_Filter_neu_B4327 FL 0 20 Y Y 1 F N
+F0 "FL" 0 425 50 H V C CNN
+F1 "RF_Filter_neu_B4327" 0 350 50 H V C CNN
+F2 "" 0 500 50 H I C CNN
+F3 "" 0 100 50 H I C CNN
+$FPLIST
+ Filter*Mini?Circuits*FV1206?7*
+$ENDFPLIST
+DRAW
+A -75 -100 90 1463 337 0 1 10 N -150 -50 0 -50
+A -75 0 90 1463 337 0 1 10 N -150 50 0 50
+A -75 100 90 1463 337 0 1 10 N -150 150 0 150
+A 75 0 90 -1463 -337 0 1 10 N 0 -50 150 -50
+A 75 100 90 -1463 -337 0 1 10 N 0 50 150 50
+A 75 200 90 -1463 -337 0 1 10 N 0 150 150 150
+S -300 300 300 -300 0 1 10 f
+P 2 0 1 10 -50 -100 50 0 N
+P 2 0 1 10 -50 100 50 200 N
+X IN 1 -400 0 100 R 50 50 1 1 P
+X GND 2 -100 -500 200 U 50 50 1 1 P
+X GND 3 0 -500 200 U 50 50 1 1 P
+X OUT 4 400 0 100 L 50 50 1 1 P
+X GND 5 100 -500 200 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # RF_Module_RFM95W-868S2
 #
 DEF RF_Module_RFM95W-868S2 U 0 40 Y Y 1 F N
@@ -376,18 +398,41 @@ X ANT 9 500 300 100 L 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
+# SamacSys_Parts_73100-0258
+#
+DEF SamacSys_Parts_73100-0258 J 0 30 Y Y 1 F N
+F0 "J" 650 300 50 H V L CNN
+F1 "SamacSys_Parts_73100-0258" 650 200 50 H V L CNN
+F2 "731000258" 650 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/1/73100-0258.pdf" 650 0 50 H I L CNN
+F4 "MOLEX - 73100-0258 - RF COAX CONN, SMB, JACK, 75 OHM, PCB" 650 -100 50 H I L CNN "Description"
+F5 "7.49" 650 -200 50 H I L CNN "Height"
+F6 "538-73100-0258" 650 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.com/Search/Refine.aspx?Keyword=538-73100-0258" 650 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Molex" 650 -500 50 H I L CNN "Manufacturer_Name"
+F9 "73100-0258" 650 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 5 0 1 6 200 100 600 100 600 -300 200 -300 200 100 N
+X 1 1 0 0 200 R 50 50 0 0 U
+X 2 2 800 0 200 L 50 50 0 0 U
+X 3 3 0 -100 200 R 50 50 0 0 U
+X 4 4 800 -100 200 L 50 50 0 0 U
+X 5 5 0 -200 200 R 50 50 0 0 U
+ENDDRAW
+ENDDEF
+#
 # SamacSys_Parts_BGA824N6E6327XTSA1
 #
 DEF SamacSys_Parts_BGA824N6E6327XTSA1 IC 0 30 Y Y 1 F N
 F0 "IC" 1050 300 50 H V L CNN
 F1 "SamacSys_Parts_BGA824N6E6327XTSA1" 1050 200 50 H V L CNN
 F2 "BGS12SN6E6327XTSA1" 1050 100 50 H I L CNN
-F3 "https://componentsearchengine.com/Datasheets/1/BGA824N6E6327XTSA1.pdf" 1050 0 50 H I L CNN
+F3 "https://www.infineon.com/dgdl/Infineon-BGA824N6-DS-v03_00-en.pdf?fileId=db3a30433f764301013f7b53cdd02721" 1050 0 50 H I L CNN
 F4 "INFINEON - BGA824N6E6327XTSA1 - LNA, 17DB, 1.55GHZ-1.615GHZ, TSNP-6" 1050 -100 50 H I L CNN "Description"
-F5 "726-A824N6E6327XTSA1" 1050 -300 50 H I L CNN "Mouser Part Number"
-F6 "https://www.mouser.com/Search/Refine.aspx?Keyword=726-A824N6E6327XTSA1" 1050 -400 50 H I L CNN "Mouser Price/Stock"
-F7 "Infineon" 1050 -500 50 H I L CNN "Manufacturer_Name"
-F8 "BGA824N6E6327XTSA1" 1050 -600 50 H I L CNN "Manufacturer_Part_Number"
+F5 "Infineon" 1050 -300 50 H I L CNN "Manufacturer_Name"
+F6 "BGA824N6E6327XTSA1" 1050 -400 50 H I L CNN "Manufacturer_Part_Number"
+F7 "726-A824N6E6327XTSA1" 1050 -500 50 H I L CNN "Mouser Part Number"
+F8 "https://www.mouser.com/Search/Refine.aspx?Keyword=726-A824N6E6327XTSA1" 1050 -600 50 H I L CNN "Mouser Price/Stock"
 DRAW
 P 5 0 1 6 200 100 1000 100 1000 -300 200 -300 200 100 N
 X GND_1 1 0 0 200 R 50 50 0 0 U
@@ -454,18 +499,40 @@ X VOPRG 9 1400 -300 200 L 50 50 0 0 I
 ENDDRAW
 ENDDEF
 #
+# SamacSys_Parts_LL3301NF065QG
+#
+DEF SamacSys_Parts_LL3301NF065QG S 0 30 Y Y 1 F N
+F0 "S" 650 300 50 H V L CNN
+F1 "SamacSys_Parts_LL3301NF065QG" 650 200 50 H V L CNN
+F2 "LL3301NF065QG" 650 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/1/LL3301NF065QG.pdf" 650 0 50 H I L CNN
+F4 "E-SWITCH - LL3301NF065QG - TACTILE SW, SPST, 0.05A, 12VDC, SOLDER" 650 -100 50 H I L CNN "Description"
+F5 "4" 650 -200 50 H I L CNN "Height"
+F6 "612-LL3301NF065QG" 650 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.com/Search/Refine.aspx?Keyword=612-LL3301NF065QG" 650 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "E-Switch" 650 -500 50 H I L CNN "Manufacturer_Name"
+F9 "LL3301NF065QG" 650 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 5 0 1 6 200 100 600 100 600 -200 200 -200 200 100 N
+X 1 1 0 0 200 R 50 50 0 0 U
+X 2 2 0 -100 200 R 50 50 0 0 U
+X 3 3 800 0 200 L 50 50 0 0 U
+X 4 4 800 -100 200 L 50 50 0 0 U
+ENDDRAW
+ENDDEF
+#
 # SamacSys_Parts_SMM4F5.0A-TR
 #
 DEF SamacSys_Parts_SMM4F5.0A-TR D 0 30 Y Y 1 F N
 F0 "D" 450 200 50 H V L CNN
 F1 "SamacSys_Parts_SMM4F5.0A-TR" 450 100 50 H V L CNN
 F2 "STMITE" 450 0 50 H I L CNN
-F3 "https://componentsearchengine.com/Datasheets/1/SMM4F5.0A-TR.pdf" 450 -100 50 H I L CNN
+F3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/5d/b3/40/b8/ac/6c/49/a2/CD00178940.pdf/files/CD00178940.pdf/jcr:content/translations/en.CD00178940.pdf" 450 -100 50 H I L CNN
 F4 "ESD Suppressors / TVS Diodes 400W HI JCT TMP" 450 -200 50 H I L CNN "Description"
-F5 "511-SMM4F5.0A-TR" 450 -400 50 H I L CNN "Mouser Part Number"
-F6 "https://www.mouser.com/Search/Refine.aspx?Keyword=511-SMM4F5.0A-TR" 450 -500 50 H I L CNN "Mouser Price/Stock"
-F7 "STMicroelectronics" 450 -600 50 H I L CNN "Manufacturer_Name"
-F8 "SMM4F5.0A-TR" 450 -700 50 H I L CNN "Manufacturer_Part_Number"
+F5 "STMicroelectronics" 450 -400 50 H I L CNN "Manufacturer_Name"
+F6 "SMM4F5.0A-TR" 450 -500 50 H I L CNN "Manufacturer_Part_Number"
+F7 "511-SMM4F5.0A-TR" 450 -600 50 H I L CNN "Mouser Part Number"
+F8 "https://www.mouser.com/Search/Refine.aspx?Keyword=511-SMM4F5.0A-TR" 450 -700 50 H I L CNN "Mouser Price/Stock"
 DRAW
 P 2 0 1 6 200 100 200 -100 N
 P 4 0 1 6 200 0 400 100 400 -100 200 0 N
@@ -582,20 +649,34 @@ X VIN 5 1100 -100 200 L 50 50 0 0 U
 ENDDRAW
 ENDDEF
 #
-# Switch_SW_Push
+# power_+3.3V
 #
-DEF Switch_SW_Push SW 0 40 N N 1 F N
-F0 "SW" 50 100 50 H V L CNN
-F1 "Switch_SW_Push" 0 -60 50 H V C CNN
-F2 "" 0 200 50 H I C CNN
-F3 "" 0 200 50 H I C CNN
+DEF power_+3.3V #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "power_+3.3V" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+ALIAS +3.3V
 DRAW
-C -80 0 20 0 1 0 N
-C 80 0 20 0 1 0 N
-P 2 0 1 0 0 50 0 120 N
-P 2 0 1 0 100 50 -100 50 N
-X 1 1 -200 0 100 R 50 50 0 1 P
-X 2 2 200 0 100 L 50 50 0 1 P
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +3V3 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# power_+5V
+#
+DEF power_+5V #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "power_+5V" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +5V 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
