@@ -1,0 +1,10 @@
+14:54:47 **** Incremental Build of configuration Debug for project FW_Feinstaubmessung ****
+make -j8 all 
+arm-none-eabi-size   FW_Feinstaubmessung.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51128	     92	   2524	  53744	   d1f0	FW_Feinstaubmessung.elf
+Finished building: default.size.stdout
+ 
+
+14:54:50 Build Finished. 0 errors, 0 warnings. (took 2s.745ms)
+
