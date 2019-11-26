@@ -189,10 +189,8 @@ Wire Wire Line
 	5950 1300 6400 1300
 Wire Wire Line
 	6400 1300 6400 1400
-Text GLabel 5100 3450 2    50   Output ~ 0
+Text GLabel 5100 5350 2    50   Output ~ 0
 SPI1_NSS
-Wire Wire Line
-	4800 3450 5100 3450
 Text GLabel 5100 3550 2    50   Output ~ 0
 SPI1_SCK
 Wire Wire Line
@@ -402,10 +400,8 @@ Wire Wire Line
 	2900 3250 2700 3250
 Wire Wire Line
 	2700 3250 2700 3350
-Text GLabel 5100 3950 2    50   Output ~ 0
+Text GLabel 3000 5650 0    50   Output ~ 0
 LED_OUT
-Wire Wire Line
-	5100 3950 4800 3950
 Text GLabel 8600 4350 0    50   Input ~ 0
 LED_OUT
 $Comp
@@ -447,25 +443,18 @@ Wire Wire Line
 	9200 4350 9250 4350
 Wire Wire Line
 	9550 4350 9850 4350
-Text GLabel 5100 4050 2    51   Output ~ 0
+Text GLabel 5100 5600 2    51   Output ~ 0
 5V_ENABLE
-Wire Wire Line
-	5100 4050 4800 4050
 NoConn ~ 4800 5550
 NoConn ~ 4800 5450
-NoConn ~ 4800 5350
 NoConn ~ 4800 5250
 NoConn ~ 3400 6250
 NoConn ~ 3400 6150
 NoConn ~ 3400 6050
 NoConn ~ 3400 5850
 NoConn ~ 3400 5750
-NoConn ~ 3400 5650
 NoConn ~ 3400 5550
-NoConn ~ 3400 5450
 NoConn ~ 3400 5350
-NoConn ~ 3400 5250
-NoConn ~ 3400 5150
 NoConn ~ 3400 5050
 NoConn ~ 3400 4950
 NoConn ~ 3400 4850
@@ -473,7 +462,6 @@ NoConn ~ 3400 4750
 NoConn ~ 4800 4950
 NoConn ~ 4800 4850
 NoConn ~ 4800 4750
-NoConn ~ 4800 3250
 Text GLabel 3100 3050 0    50   Input ~ 0
 JTAG_RESET
 Wire Wire Line
@@ -486,19 +474,17 @@ Wire Wire Line
 	4800 4150 5100 4150
 Wire Wire Line
 	4800 4250 5100 4250
-Text GLabel 5100 3850 2    50   Output ~ 0
+Text GLabel 5100 5700 2    50   Output ~ 0
 GPS_WAKEUP
-Wire Wire Line
-	4800 3850 5100 3850
 Text GLabel 5100 3350 2    50   Output ~ 0
 GPS_RSTN
 Wire Wire Line
 	4800 3350 5100 3350
-Text GLabel 5100 5850 2    50   BiDi ~ 0
+Text GLabel 5100 3950 2    50   BiDi ~ 0
 LoRa_DI01
-Text GLabel 5100 5750 2    50   BiDi ~ 0
+Text GLabel 5100 4050 2    50   BiDi ~ 0
 LoRa_DI00
-Text GLabel 5100 5950 2    50   BiDi ~ 0
+Text GLabel 5100 3850 2    50   BiDi ~ 0
 LoRa_DI02
 Text GLabel 5100 6050 2    50   BiDi ~ 0
 LoRa_DI03
@@ -507,21 +493,13 @@ LoRa_DI04
 Text GLabel 5100 6250 2    50   BiDi ~ 0
 LoRa_DI05
 Wire Wire Line
-	4800 5750 5100 5750
-Wire Wire Line
-	4800 5850 5100 5850
-Wire Wire Line
-	4800 5950 5100 5950
-Wire Wire Line
 	4800 6050 5100 6050
 Wire Wire Line
 	4800 6150 5100 6150
 Wire Wire Line
 	4800 6250 5100 6250
-Text GLabel 5100 5650 2    50   Output ~ 0
+Text GLabel 3000 5450 0    50   Output ~ 0
 LoRa_RESET
-Wire Wire Line
-	4800 5650 5100 5650
 Wire Wire Line
 	4300 2850 4400 2850
 Connection ~ 4300 2850
@@ -571,4 +549,28 @@ Wire Wire Line
 	4200 6550 4300 6550
 Wire Wire Line
 	4100 6550 4100 6650
+Wire Wire Line
+	3400 5650 3000 5650
+Wire Wire Line
+	3000 5450 3400 5450
+Wire Wire Line
+	5100 3850 4800 3850
+Wire Wire Line
+	5100 3950 4800 3950
+Wire Wire Line
+	5100 4050 4800 4050
+Text Notes 5800 5700 0    50   ~ 0
+Cuadrar estos\n
+Text GLabel 3000 5150 0    50   Output ~ 0
+USART_2_TX
+Text Notes -300 5200 0    50   ~ 0
+Conexion para comunicacion seral con PC, conectar a Conn de 2 pines\n
+Wire Wire Line
+	3000 5150 3400 5150
+Text GLabel 3000 5250 0    50   Input ~ 0
+USART_3_RX
+Wire Wire Line
+	3000 5250 3400 5250
+Wire Wire Line
+	5100 5350 4800 5350
 $EndSCHEMATC
