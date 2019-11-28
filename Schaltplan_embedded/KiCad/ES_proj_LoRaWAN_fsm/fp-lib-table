@@ -1,3 +1,3 @@
 (fp_lib_table
-  (lib (name SamacSys_Parts)(type Legacy)(uri C:/Users/thorben/Documents/embedded-systems/Schaltplan_embedded/Bibliothek/SamacSys_Parts.mod)(options "")(descr ""))
+  (lib (name SamacSys_Parts_2)(type Legacy)(uri ${KIPRJMOD}/Bibliotheken/SamacSys_Parts.mod)(options "")(descr ""))
 )
