@@ -14,46 +14,23 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-NoConn ~ 1350 1050
-NoConn ~ 1350 1250
-NoConn ~ 1350 1350
-NoConn ~ 1350 1450
-Text GLabel 1550 1550 2    50   Input ~ 0
+Text GLabel 1650 1600 2    50   Input ~ 0
 UART_4_RX
-Wire Wire Line
-	1350 1550 1550 1550
-Text GLabel 1550 1650 2    50   Output ~ 0
+Text GLabel 1650 1700 2    50   Output ~ 0
 UART_4_TX
-Wire Wire Line
-	1350 1650 1550 1650
-$Comp
-L Connector:Conn_01x08_Male J3
-U 1 1 5E17DE2D
-P 1150 1350
-F 0 "J3" H 1258 1831 50  0000 C CNN
-F 1 "Conn_01x08_Male" H 1258 1740 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x08_Pitch1.00mm" H 1150 1350 50  0001 C CNN
-F 3 "~" H 1150 1350 50  0001 C CNN
-	1    1150 1350
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR015
 U 1 1 5E17F498
-P 1500 1850
-F 0 "#PWR015" H 1500 1600 50  0001 C CNN
-F 1 "GND" H 1505 1677 50  0000 C CNN
-F 2 "" H 1500 1850 50  0001 C CNN
-F 3 "" H 1500 1850 50  0001 C CNN
-	1    1500 1850
+P 1600 1850
+F 0 "#PWR015" H 1600 1600 50  0001 C CNN
+F 1 "GND" H 1605 1677 50  0000 C CNN
+F 2 "" H 1600 1850 50  0001 C CNN
+F 3 "" H 1600 1850 50  0001 C CNN
+	1    1600 1850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1350 1750 1500 1750
-Wire Wire Line
-	1500 1750 1500 1850
-Wire Notes Line
-	850  750  850  2100
+	1600 1800 1600 1850
 Wire Notes Line
 	850  2100 2150 2100
 Wire Notes Line
@@ -377,7 +354,7 @@ F 3 "~" H 4350 4050 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Schaltplan_embedded-rescue:B4327-RF_Filter_neu FL?
+L Schaltplan_embedded-rescue:B4327-RF_Filter_neu-Schaltplan_embedded-rescue FL?
 U 1 1 5DD1B065
 P 7350 4150
 AR Path="/5DD1B065" Ref="FL?"  Part="1" 
@@ -530,7 +507,7 @@ Wire Wire Line
 Wire Wire Line
 	8300 4150 8650 4150
 $Comp
-L Schaltplan_embedded-rescue:RFM95W-868S2-RF_Module U2
+L Schaltplan_embedded-rescue:RFM95W-868S2-RF_Module-Schaltplan_embedded-rescue U2
 U 1 1 5DE49B3D
 P 2850 6750
 F 0 "U2" H 2850 7431 50  0000 C CNN
@@ -895,10 +872,6 @@ F 3 "" H 1850 1000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1850 1150 1850 1000
-Wire Wire Line
-	1350 1150 1850 1150
-Wire Wire Line
 	8950 3050 8950 5500
 Wire Wire Line
 	1500 6450 2350 6450
@@ -951,7 +924,7 @@ Connection ~ 1800 4250
 Wire Wire Line
 	1800 4250 1800 4600
 $Comp
-L Schaltplan_embedded-rescue:CONSMA002-L-G-SamacSys_Parts J5
+L Schaltplan_embedded-rescue:CONSMA002-L-G-SamacSys_Parts-Schaltplan_embedded-rescue J5
 U 1 1 5DDFF1AD
 P 1750 4250
 F 0 "J5" H 2150 4515 50  0000 C CNN
@@ -968,7 +941,7 @@ F 9 "CONSMA002-L-G" H 2400 3650 50  0001 L CNN "Manufacturer_Part_Number"
 	-1   0    0    1   
 $EndComp
 $Comp
-L Schaltplan_embedded-rescue:CONSMA002-L-G-SamacSys_Parts J4
+L Schaltplan_embedded-rescue:CONSMA002-L-G-SamacSys_Parts-Schaltplan_embedded-rescue J4
 U 1 1 5DE088FB
 P 1500 6650
 F 0 "J4" H 1900 6915 50  0000 C CNN
@@ -984,4 +957,37 @@ F 9 "CONSMA002-L-G" H 2150 6050 50  0001 L CNN "Manufacturer_Part_Number"
 	1    1500 6650
 	-1   0    0    1   
 $EndComp
+Wire Notes Line
+	850  750  850  2100
+$Comp
+L SamacSys_Parts:53048-0810 J3
+U 1 1 5DEAB6B5
+P 1550 1100
+F 0 "J3" H 1842 1365 50  0000 C CNN
+F 1 "53048-0810" H 1842 1274 50  0000 C CNN
+F 2 "SamacSys_Parts:SHDR8W35P0X125_1X8_1175X550X370P" H 2200 1200 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/53048-0810.pdf" H 2200 1100 50  0001 L CNN
+F 4 "8 way through board PCB 90deg header Molex PICOBLADE Series, Series Number 53048, 1.25mm Pitch 8 Way 1 Row Right Angle PCB Header, Solder Termination, 1A" H 2200 1000 50  0001 L CNN "Description"
+F 5 "3.7" H 2200 900 50  0001 L CNN "Height"
+F 6 "538-53048-0810" H 2200 800 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=538-53048-0810" H 2200 700 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Molex" H 2200 600 50  0001 L CNN "Manufacturer_Name"
+F 9 "53048-0810" H 2200 500 50  0001 L CNN "Manufacturer_Part_Number"
+	1    1550 1100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 1200 1850 1200
+Wire Wire Line
+	1550 1600 1650 1600
+Wire Wire Line
+	1550 1700 1650 1700
+Wire Wire Line
+	1550 1800 1600 1800
+Wire Wire Line
+	1850 1000 1850 1200
+NoConn ~ 1550 1100
+NoConn ~ 1550 1300
+NoConn ~ 1550 1400
+NoConn ~ 1550 1500
 $EndSCHEMATC

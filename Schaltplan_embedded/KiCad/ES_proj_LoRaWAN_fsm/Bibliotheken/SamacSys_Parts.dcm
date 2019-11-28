@@ -96,4 +96,10 @@ K
 F http://www.produktinfo.conrad.com/datenblaetter/1500000-1599999/001582350-da-01-en-DC_EINBAUBUCHSE__SCHALTER_GESCHLOSSEN.pdf
 $ENDCMP
 #
+$CMP 53048-0810
+D 8 way through board PCB 90deg header Molex PICOBLADE Series, Series Number 53048, 1.25mm Pitch 8 Way 1 Row Right Angle PCB Header, Solder Termination, 1A
+K
+F https://componentsearchengine.com/Datasheets/1/53048-0810.pdf
+$ENDCMP
+#
 #End Doc Library

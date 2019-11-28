@@ -614,7 +614,7 @@ U 1 1 5DE2967D
 P 6950 5200
 F 0 "J2" H 7030 5192 50  0000 L CNN
 F 1 "Conn_01x02" H 7030 5101 50  0000 L CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch1.00mm" H 6950 5200 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 6950 5200 50  0001 C CNN
 F 3 "~" H 6950 5200 50  0001 C CNN
 	1    6950 5200
 	1    0    0    -1  
