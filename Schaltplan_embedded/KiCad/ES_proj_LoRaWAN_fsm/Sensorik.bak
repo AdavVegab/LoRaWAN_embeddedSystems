@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:Schaltplan_embedded-cache
-EELAYER 30 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -377,9 +377,11 @@ F 3 "~" H 4350 4050 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L RF_Filter_neu:B4327 FL1
+L Schaltplan_embedded-rescue:B4327-RF_Filter_neu FL1
 U 1 1 5DD1B065
 P 7350 4150
+AR Path="/5DD1B065" Ref="FL1"  Part="1" 
+AR Path="/5E150549/5DD1B065" Ref="FL1"  Part="1" 
 F 0 "FL1" H 7350 4617 50  0000 C CNN
 F 1 "B4327" H 7350 4526 50  0000 C CNN
 F 2 "SamacSys_Parts:B39162B4353P810" H 7350 4650 50  0001 C CNN
@@ -528,7 +530,7 @@ Wire Wire Line
 Wire Wire Line
 	8300 4150 8650 4150
 $Comp
-L RF_Module:RFM95W-868S2 U2
+L Schaltplan_embedded-rescue:RFM95W-868S2-RF_Module U2
 U 1 1 5DE49B3D
 P 2850 6750
 F 0 "U2" H 2850 7431 50  0000 C CNN
@@ -949,7 +951,7 @@ Connection ~ 1800 4250
 Wire Wire Line
 	1800 4250 1800 4600
 $Comp
-L SamacSys_Parts:CONSMA002-L-G J6
+L Schaltplan_embedded-rescue:CONSMA002-L-G-SamacSys_Parts J6
 U 1 1 5DDFF1AD
 P 1750 4250
 F 0 "J6" H 2150 4515 50  0000 C CNN
@@ -966,7 +968,7 @@ F 9 "CONSMA002-L-G" H 2400 3650 50  0001 L CNN "Manufacturer_Part_Number"
 	-1   0    0    1   
 $EndComp
 $Comp
-L SamacSys_Parts:CONSMA002-L-G J4
+L Schaltplan_embedded-rescue:CONSMA002-L-G-SamacSys_Parts J4
 U 1 1 5DE088FB
 P 1500 6650
 F 0 "J4" H 1900 6915 50  0000 C CNN
