@@ -1,4 +1,4 @@
-136992204932290
+136992807553961
 Air_Coils_SML_NEOSID
 Neosid_Air-Coil_SML_1turn_HDM0131A
 
@@ -43063,6 +43063,13 @@ Connector
 0
 8
 8
+SamacSys_Parts
+SODFL1608X65N
+SOD523_2
+TVS Diode (Uni-directional)
+0
+2
+2
 SamacSys_Parts
 SOIC127P600X175-8N
 D (R-PDSO-G8)

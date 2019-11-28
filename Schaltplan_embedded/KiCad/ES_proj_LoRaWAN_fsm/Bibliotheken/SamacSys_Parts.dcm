@@ -102,4 +102,10 @@ K
 F https://componentsearchengine.com/Datasheets/1/53048-0810.pdf
 $ENDCMP
 #
+$CMP T3V3S5-7
+D ESD Suppressor TVS 3.3V 2-Pin SOD-523 T/R
+K
+F https://componentsearchengine.com/Datasheets/1/T3V3S5-7.pdf
+$ENDCMP
+#
 #End Doc Library

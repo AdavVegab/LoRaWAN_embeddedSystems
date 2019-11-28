@@ -964,7 +964,7 @@ Wire Wire Line
 Wire Wire Line
 	2950 800  2950 1500
 $Comp
-L Schaltplan_embedded-rescue:CON-SOCJ-2155-SamacSys_Parts J6
+L Schaltplan_embedded-rescue:CON-SOCJ-2155-SamacSys_Parts-Schaltplan_embedded-rescue J6
 U 1 1 5DE16150
 P 1200 1250
 F 0 "J6" H 1492 869 50  0000 C CNN

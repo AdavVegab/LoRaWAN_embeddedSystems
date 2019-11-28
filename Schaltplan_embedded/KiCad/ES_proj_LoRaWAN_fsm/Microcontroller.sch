@@ -535,11 +535,11 @@ F 3 "" H 7200 3050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5200 1750 6100 1750
+	5200 1750 5650 1750
 Wire Wire Line
 	8100 2800 8200 2800
 $Comp
-L Schaltplan_embedded-rescue:LL3301NF065QG-SamacSys_Parts S1
+L Schaltplan_embedded-rescue:LL3301NF065QG-SamacSys_Parts-Schaltplan_embedded-rescue S1
 U 1 1 5DE990BE
 P 7300 2800
 F 0 "S1" H 7700 3065 50  0000 C CNN
@@ -670,4 +670,9 @@ Connection ~ 2450 4500
 Wire Wire Line
 	2100 4500 2450 4500
 NoConn ~ 4550 4950
+Wire Wire Line
+	5650 1700 5650 1750
+Connection ~ 5650 1750
+Wire Wire Line
+	5650 1750 6100 1750
 $EndSCHEMATC

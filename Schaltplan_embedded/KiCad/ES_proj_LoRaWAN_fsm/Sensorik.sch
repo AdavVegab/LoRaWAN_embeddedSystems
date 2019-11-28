@@ -254,23 +254,6 @@ F 3 "" H 900 4750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SamacSys_Parts:ESDARF02-1BU2CK D2
-U 1 1 5DD00D5D
-P 2300 4200
-F 0 "D2" V 2654 4328 50  0000 L CNN
-F 1 "ESDARF02-1BU2CK" V 2745 4328 50  0000 L CNN
-F 2 "SamacSys_Parts:ESDARF021BU2CK" H 2950 4300 50  0001 L CNN
-F 3 "https://componentsearchengine.com/Datasheets/1/ESDARF02-1BU2CK.pdf" H 2950 4200 50  0001 L CNN
-F 4 "STMicroelectronics ESDARF02-1BU2CK Bi-Directional ESD Protection Diode, 20W peak, 2-Pin ST-0201" H 2950 4100 50  0001 L CNN "Description"
-F 5 "0.33" H 2950 4000 50  0001 L CNN "Height"
-F 6 "511-ESDARF02-1BU2CK" H 2950 3900 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=511-ESDARF02-1BU2CK" H 2950 3800 50  0001 L CNN "Mouser Price/Stock"
-F 8 "STMicroelectronics" H 2950 3700 50  0001 L CNN "Manufacturer_Name"
-F 9 "ESDARF02-1BU2CK" H 2950 3600 50  0001 L CNN "Manufacturer_Part_Number"
-	1    2300 4200
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:L L1
 U 1 1 5DD0BBF5
 P 3200 4450
@@ -389,9 +372,9 @@ F 3 "" H 2300 5200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2300 4050 2300 4200
+	2300 4050 2300 4150
 Wire Wire Line
-	2300 5000 2300 5050
+	2300 4950 2300 5050
 Wire Wire Line
 	2300 5050 2550 5050
 Connection ~ 2300 5050
@@ -990,4 +973,21 @@ NoConn ~ 1550 1100
 NoConn ~ 1550 1300
 NoConn ~ 1550 1400
 NoConn ~ 1550 1500
+$Comp
+L SamacSys_Parts:T3V3S5-7 D2
+U 1 1 5DF6519C
+P 2300 4150
+F 0 "D2" V 2654 4278 50  0000 L CNN
+F 1 "T3V3S5-7" V 2745 4278 50  0000 L CNN
+F 2 "SamacSys_Parts:SODFL1608X65N" H 2950 4250 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/T3V3S5-7.pdf" H 2950 4150 50  0001 L CNN
+F 4 "ESD Suppressor TVS 3.3V 2-Pin SOD-523 T/R" H 2950 4050 50  0001 L CNN "Description"
+F 5 "0.65" H 2950 3950 50  0001 L CNN "Height"
+F 6 "621-T3V3S5-7" H 2950 3850 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=621-T3V3S5-7" H 2950 3750 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Diodes Inc." H 2950 3650 50  0001 L CNN "Manufacturer_Name"
+F 9 "T3V3S5-7" H 2950 3550 50  0001 L CNN "Manufacturer_Part_Number"
+	1    2300 4150
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
