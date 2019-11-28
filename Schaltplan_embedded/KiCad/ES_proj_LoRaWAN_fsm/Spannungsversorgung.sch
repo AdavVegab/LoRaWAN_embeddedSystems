@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:Schaltplan_embedded-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -189,7 +189,7 @@ U 1 1 5DCAA82F
 P 10300 5200
 F 0 "C15" H 10418 5246 50  0000 L CNN
 F 1 "10uF" H 10418 5155 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" H 10338 5050 50  0001 C CNN
+F 2 "Capacitors_SMD:CP_Elec_5x5.3" H 10338 5050 50  0001 C CNN
 F 3 "~" H 10300 5200 50  0001 C CNN
 	1    10300 5200
 	1    0    0    -1  
@@ -435,47 +435,6 @@ F 3 "~" H 2450 5800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R4
-U 1 1 5DD0CD69
-P 1150 3750
-F 0 "R4" V 943 3750 50  0000 C CNN
-F 1 "1k" V 1034 3750 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 1080 3750 50  0001 C CNN
-F 3 "~" H 1150 3750 50  0001 C CNN
-	1    1150 3750
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R5
-U 1 1 5DD0D292
-P 1150 4150
-F 0 "R5" V 943 4150 50  0000 C CNN
-F 1 "68k" V 1034 4150 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 1080 4150 50  0001 C CNN
-F 3 "~" H 1150 4150 50  0001 C CNN
-	1    1150 4150
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR01
-U 1 1 5DD102DE
-P 1150 4350
-F 0 "#PWR01" H 1150 4100 50  0001 C CNN
-F 1 "GND" H 1155 4177 50  0000 C CNN
-F 2 "" H 1150 4350 50  0001 C CNN
-F 3 "" H 1150 4350 50  0001 C CNN
-	1    1150 4350
-	1    0    0    -1  
-$EndComp
-Text GLabel 1050 3550 0    50   Input ~ 0
-VREF
-Wire Wire Line
-	1050 3550 1150 3550
-Wire Wire Line
-	1150 3550 1150 3600
-Wire Wire Line
-	1150 4300 1150 4350
-$Comp
 L Device:R R8
 U 1 1 5DD1CB63
 P 3150 3650
@@ -711,13 +670,6 @@ NoConn ~ 2750 4100
 Wire Wire Line
 	1350 4700 1800 4700
 Wire Wire Line
-	1150 3900 1150 3950
-Wire Wire Line
-	2550 3950 2550 4100
-Connection ~ 1150 3950
-Wire Wire Line
-	1150 3950 1150 4000
-Wire Wire Line
 	4950 1300 4950 950 
 Wire Wire Line
 	4950 950  3150 950 
@@ -797,10 +749,6 @@ $EndComp
 Wire Wire Line
 	2350 2700 2350 2600
 Connection ~ 2350 2600
-Text Notes 1400 3900 0    50   ~ 0
-Optional! Widerstände können\nevtl. noch weggelassen werden.
-Wire Wire Line
-	1150 3950 2550 3950
 Wire Wire Line
 	3550 4700 3550 4550
 Wire Wire Line
@@ -1045,4 +993,5 @@ Wire Wire Line
 Connection ~ 1350 1450
 Wire Wire Line
 	1350 1450 1350 1700
+NoConn ~ 2550 4100
 $EndSCHEMATC

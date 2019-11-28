@@ -189,20 +189,9 @@ U 1 1 5DCAA82F
 P 10300 5200
 F 0 "C15" H 10418 5246 50  0000 L CNN
 F 1 "10uF" H 10418 5155 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" H 10338 5050 50  0001 C CNN
+F 2 "Capacitors_SMD:CP_Elec_5x5.3" H 10338 5050 50  0001 C CNN
 F 3 "~" H 10300 5200 50  0001 C CNN
 	1    10300 5200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Barrel_Jack J2
-U 1 1 5DD26B6F
-P 1050 1400
-F 0 "J2" H 1105 1725 50  0000 C CNN
-F 1 "Barrel_Jack" H 1105 1634 50  0000 C CNN
-F 2 "Connect:BARREL_JACK" H 1100 1360 50  0001 C CNN
-F 3 "~" H 1100 1360 50  0001 C CNN
-	1    1050 1400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -655,8 +644,6 @@ $EndComp
 Wire Wire Line
 	2700 1700 2700 1650
 Wire Wire Line
-	1350 1500 1350 1700
-Wire Wire Line
 	1550 1700 1750 1700
 Wire Wire Line
 	1750 1700 1750 1650
@@ -1028,4 +1015,34 @@ Wire Wire Line
 	2650 800  2950 800 
 Wire Wire Line
 	2950 800  2950 1500
+$Comp
+L Schaltplan_embedded-rescue:CON-SOCJ-2155-SamacSys_Parts J2
+U 1 1 5DE16150
+P 1200 1250
+F 0 "J2" H 1492 869 50  0000 C CNN
+F 1 "CON-SOCJ-2155" H 1492 960 50  0000 C CNN
+F 2 "SamacSys_Parts:CONSOCJ2155" H 1850 1100 50  0001 L CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/1500000-1599999/001582350-da-01-en-DC_EINBAUBUCHSE__SCHALTER_GESCHLOSSEN.pdf" H 1850 1000 50  0001 L CNN
+F 4 "DC Power Connectors Power Jack/Connector 2.1mm x 5.5mm" H 1850 900 50  0001 L CNN "Description"
+F 5 "11" H 1850 800 50  0001 L CNN "Height"
+F 6 "992-CON-SOCJ-2155" H 1850 700 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=992-CON-SOCJ-2155" H 1850 600 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Gravitech" H 1850 500 50  0001 L CNN "Manufacturer_Name"
+F 9 "CON-SOCJ-2155" H 1850 400 50  0001 L CNN "Manufacturer_Part_Number"
+	1    1200 1250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 1250 1350 1250
+Wire Wire Line
+	1350 1250 1350 1300
+Wire Wire Line
+	1350 1350 1350 1450
+Wire Wire Line
+	1200 1350 1350 1350
+Wire Wire Line
+	1200 1450 1350 1450
+Connection ~ 1350 1450
+Wire Wire Line
+	1350 1450 1350 1700
 $EndSCHEMATC

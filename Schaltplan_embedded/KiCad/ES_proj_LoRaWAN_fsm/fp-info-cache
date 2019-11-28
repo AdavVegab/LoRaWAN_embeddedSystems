@@ -1,4 +1,4 @@
-136957060959557
+136991943410425
 Air_Coils_SML_NEOSID
 Neosid_Air-Coil_SML_1turn_HDM0131A
 
@@ -42966,6 +42966,13 @@ powermite3
 0
 0
 SamacSys_Parts
+731000258
+73100-0258-1
+Connector
+0
+5
+5
+SamacSys_Parts
 ABS2532768KHZT
 ABS25-32.768KHZ-T
 Crystal or Oscillator
@@ -42994,6 +43001,20 @@ Integrated Circuit
 6
 6
 SamacSys_Parts
+CONSMA002LG
+CONSMA002-L-G-2
+Connector
+0
+5
+5
+SamacSys_Parts
+CONSOCJ2155
+CON-SOCJ-2155_1
+Connector
+0
+3
+3
+SamacSys_Parts
 EEEFK1H470V
 EEE-FK1H470V-3
 Capacitor Polarised
@@ -43010,6 +43031,13 @@ TVS Diode (Bi-directional)
 SamacSys_Parts
 LL3301FF065QJ
 LL3301FF065QJ-2
+Switch
+0
+4
+4
+SamacSys_Parts
+LL3301NF065QG
+LL3301NF065QG
 Switch
 0
 4
