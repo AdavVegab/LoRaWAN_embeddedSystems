@@ -1,0 +1,102 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# B4327-RF_Filter_neu
+#
+DEF B4327-RF_Filter_neu FL 0 20 Y Y 1 F N
+F0 "FL" 0 425 50 H V C CNN
+F1 "B4327-RF_Filter_neu" 0 350 50 H V C CNN
+F2 "" 0 500 50 H I C CNN
+F3 "" 0 100 50 H I C CNN
+$FPLIST
+ Filter*Mini?Circuits*FV1206?7*
+$ENDFPLIST
+DRAW
+A -75 -100 90 1463 337 0 1 10 N -150 -50 0 -50
+A -75 0 90 1463 337 0 1 10 N -150 50 0 50
+A -75 100 90 1463 337 0 1 10 N -150 150 0 150
+A 75 0 90 -1463 -337 0 1 10 N 0 -50 150 -50
+A 75 100 90 -1463 -337 0 1 10 N 0 50 150 50
+A 75 200 90 -1463 -337 0 1 10 N 0 150 150 150
+S -300 300 300 -300 0 1 10 f
+P 2 0 1 10 -50 -100 50 0 N
+P 2 0 1 10 -50 100 50 200 N
+X IN 1 -400 0 100 R 50 50 1 1 P
+X GND 2 -100 -500 200 U 50 50 1 1 P
+X GND 3 0 -500 200 U 50 50 1 1 P
+X OUT 4 400 0 100 L 50 50 1 1 P
+X GND 5 100 -500 200 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# CON-SOCJ-2155-SamacSys_Parts
+#
+DEF CON-SOCJ-2155-SamacSys_Parts J 0 30 Y Y 1 F N
+F0 "J" 650 50 50 H V L CNN
+F1 "CON-SOCJ-2155-SamacSys_Parts" 650 -50 50 H V L CNN
+F2 "CONSOCJ2155" 650 -150 50 H I L CNN
+F3 "http://www.produktinfo.conrad.com/datenblaetter/1500000-1599999/001582350-da-01-en-DC_EINBAUBUCHSE__SCHALTER_GESCHLOSSEN.pdf" 650 -250 50 H I L CNN
+F4 "DC Power Connectors Power Jack/Connector 2.1mm x 5.5mm" 650 -350 50 H I L CNN "Description"
+F5 "11" 650 -450 50 H I L CNN "Height"
+F6 "992-CON-SOCJ-2155" 650 -550 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.com/Search/Refine.aspx?Keyword=992-CON-SOCJ-2155" 650 -650 50 H I L CNN "Mouser Price/Stock"
+F8 "Gravitech" 650 -750 50 H I L CNN "Manufacturer_Name"
+F9 "CON-SOCJ-2155" 650 -850 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 2 0 1 6 100 0 200 0 N
+P 3 0 1 6 100 -100 300 -100 300 -200 N
+P 4 0 1 6 100 -200 400 -200 500 -100 600 -200 N
+P 4 0 1 6 300 -200 280 -140 320 -140 300 -200 N
+P 5 0 1 6 200 40 200 -40 600 -40 600 40 200 40 N
+X ~ 1 0 0 100 R 50 50 0 0 U
+X ~ 2 0 -200 100 R 50 50 0 0 U
+X ~ 3 0 -100 100 R 50 50 0 0 U
+ENDDRAW
+ENDDEF
+#
+# CONSMA002-L-G-SamacSys_Parts
+#
+DEF CONSMA002-L-G-SamacSys_Parts J 0 30 Y Y 1 F N
+F0 "J" 650 300 50 H V L CNN
+F1 "CONSMA002-L-G-SamacSys_Parts" 650 200 50 H V L CNN
+F2 "CONSMA002LG" 650 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/1/CONSMA002-L-G.pdf" 650 0 50 H I L CNN
+F4 "RF Connectors / Coaxial Connectors SMA Fml Right Angle PCB Mount, Extended" 650 -100 50 H I L CNN "Description"
+F5 "10" 650 -200 50 H I L CNN "Height"
+F6 "712-CONSMA002-L-G" 650 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.com/Search/Refine.aspx?Keyword=712-CONSMA002-L-G" 650 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Linx Technologies" 650 -500 50 H I L CNN "Manufacturer_Name"
+F9 "CONSMA002-L-G" 650 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 5 0 1 6 200 100 600 100 600 -300 200 -300 200 100 N
+X 1 1 0 0 200 R 50 50 0 0 U
+X 2 2 800 0 200 L 50 50 0 0 U
+X 3 3 0 -100 200 R 50 50 0 0 U
+X 4 4 800 -100 200 L 50 50 0 0 U
+X 5 5 0 -200 200 R 50 50 0 0 U
+ENDDRAW
+ENDDEF
+#
+# LL3301NF065QG-SamacSys_Parts
+#
+DEF LL3301NF065QG-SamacSys_Parts S 0 30 Y Y 1 F N
+F0 "S" 650 300 50 H V L CNN
+F1 "LL3301NF065QG-SamacSys_Parts" 650 200 50 H V L CNN
+F2 "LL3301NF065QG" 650 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/1/LL3301NF065QG.pdf" 650 0 50 H I L CNN
+F4 "E-SWITCH - LL3301NF065QG - TACTILE SW, SPST, 0.05A, 12VDC, SOLDER" 650 -100 50 H I L CNN "Description"
+F5 "4" 650 -200 50 H I L CNN "Height"
+F6 "612-LL3301NF065QG" 650 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.com/Search/Refine.aspx?Keyword=612-LL3301NF065QG" 650 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "E-Switch" 650 -500 50 H I L CNN "Manufacturer_Name"
+F9 "LL3301NF065QG" 650 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 5 0 1 6 200 100 600 100 600 -200 200 -200 200 100 N
+X 1 1 0 0 200 R 50 50 0 0 U
+X 2 2 0 -100 200 R 50 50 0 0 U
+X 3 3 800 0 200 L 50 50 0 0 U
+X 4 4 800 -100 200 L 50 50 0 0 U
+ENDDRAW
+ENDDEF
+#
+#End Library

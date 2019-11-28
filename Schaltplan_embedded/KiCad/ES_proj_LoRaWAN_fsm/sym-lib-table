@@ -1,2 +1,3 @@
 (sym_lib_table
+  (lib (name Schaltplan_embedded-rescue)(type Legacy)(uri ${KIPRJMOD}/Schaltplan_embedded-rescue.lib)(options "")(descr ""))
 )
