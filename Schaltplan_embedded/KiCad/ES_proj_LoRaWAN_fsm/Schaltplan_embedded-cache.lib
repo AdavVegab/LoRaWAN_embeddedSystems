@@ -1,29 +1,6 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Connector_Barrel_Jack
-#
-DEF Connector_Barrel_Jack J 0 40 Y Y 1 F N
-F0 "J" 0 210 50 H V C CNN
-F1 "Connector_Barrel_Jack" 0 -200 50 H V C CNN
-F2 "" 50 -40 50 H I C CNN
-F3 "" 50 -40 50 H I C CNN
-ALIAS Jack-DC
-$FPLIST
- BarrelJack*
-$ENDFPLIST
-DRAW
-A -130 100 25 901 -901 0 1 10 F -130 125 -130 75
-A -130 100 25 901 -901 0 1 10 N -130 125 -130 75
-S -200 150 200 -150 0 1 10 f
-S 145 125 -130 75 0 1 10 F
-P 2 0 1 10 200 100 150 100 N
-P 6 0 1 10 -150 -100 -100 -100 -50 -50 0 -100 100 -100 200 -100 N
-X ~ 1 300 100 100 L 50 50 1 1 P
-X ~ 2 300 -100 100 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
 # Connector_Conn_01x02_Female
 #
 DEF Connector_Conn_01x02_Female J 0 40 Y N 1 F N
@@ -398,29 +375,6 @@ X ANT 9 500 300 100 L 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# SamacSys_Parts_73100-0258
-#
-DEF SamacSys_Parts_73100-0258 J 0 30 Y Y 1 F N
-F0 "J" 650 300 50 H V L CNN
-F1 "SamacSys_Parts_73100-0258" 650 200 50 H V L CNN
-F2 "731000258" 650 100 50 H I L CNN
-F3 "https://componentsearchengine.com/Datasheets/1/73100-0258.pdf" 650 0 50 H I L CNN
-F4 "MOLEX - 73100-0258 - RF COAX CONN, SMB, JACK, 75 OHM, PCB" 650 -100 50 H I L CNN "Description"
-F5 "7.49" 650 -200 50 H I L CNN "Height"
-F6 "538-73100-0258" 650 -300 50 H I L CNN "Mouser Part Number"
-F7 "https://www.mouser.com/Search/Refine.aspx?Keyword=538-73100-0258" 650 -400 50 H I L CNN "Mouser Price/Stock"
-F8 "Molex" 650 -500 50 H I L CNN "Manufacturer_Name"
-F9 "73100-0258" 650 -600 50 H I L CNN "Manufacturer_Part_Number"
-DRAW
-P 5 0 1 6 200 100 600 100 600 -300 200 -300 200 100 N
-X 1 1 0 0 200 R 50 50 0 0 U
-X 2 2 800 0 200 L 50 50 0 0 U
-X 3 3 0 -100 200 R 50 50 0 0 U
-X 4 4 800 -100 200 L 50 50 0 0 U
-X 5 5 0 -200 200 R 50 50 0 0 U
-ENDDRAW
-ENDDEF
-#
 # SamacSys_Parts_BGA824N6E6327XTSA1
 #
 DEF SamacSys_Parts_BGA824N6E6327XTSA1 IC 0 30 Y Y 1 F N
@@ -441,6 +395,54 @@ X AO 3 0 -200 200 R 50 50 0 0 U
 X GND_2 4 1200 0 200 L 50 50 0 0 U
 X AI 5 1200 -100 200 L 50 50 0 0 U
 X PON 6 1200 -200 200 L 50 50 0 0 U
+ENDDRAW
+ENDDEF
+#
+# SamacSys_Parts_CON-SOCJ-2155
+#
+DEF SamacSys_Parts_CON-SOCJ-2155 J 0 30 Y Y 1 F N
+F0 "J" 650 50 50 H V L CNN
+F1 "SamacSys_Parts_CON-SOCJ-2155" 650 -50 50 H V L CNN
+F2 "CONSOCJ2155" 650 -150 50 H I L CNN
+F3 "http://www.produktinfo.conrad.com/datenblaetter/1500000-1599999/001582350-da-01-en-DC_EINBAUBUCHSE__SCHALTER_GESCHLOSSEN.pdf" 650 -250 50 H I L CNN
+F4 "DC Power Connectors Power Jack/Connector 2.1mm x 5.5mm" 650 -350 50 H I L CNN "Description"
+F5 "11" 650 -450 50 H I L CNN "Height"
+F6 "992-CON-SOCJ-2155" 650 -550 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.com/Search/Refine.aspx?Keyword=992-CON-SOCJ-2155" 650 -650 50 H I L CNN "Mouser Price/Stock"
+F8 "Gravitech" 650 -750 50 H I L CNN "Manufacturer_Name"
+F9 "CON-SOCJ-2155" 650 -850 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 2 0 1 6 100 0 200 0 N
+P 3 0 1 6 100 -100 300 -100 300 -200 N
+P 4 0 1 6 100 -200 400 -200 500 -100 600 -200 N
+P 4 0 1 6 300 -200 280 -140 320 -140 300 -200 N
+P 5 0 1 6 200 40 200 -40 600 -40 600 40 200 40 N
+X ~ 1 0 0 100 R 50 50 0 0 U
+X ~ 2 0 -200 100 R 50 50 0 0 U
+X ~ 3 0 -100 100 R 50 50 0 0 U
+ENDDRAW
+ENDDEF
+#
+# SamacSys_Parts_CONSMA002-L-G
+#
+DEF SamacSys_Parts_CONSMA002-L-G J 0 30 Y Y 1 F N
+F0 "J" 650 300 50 H V L CNN
+F1 "SamacSys_Parts_CONSMA002-L-G" 650 200 50 H V L CNN
+F2 "CONSMA002LG" 650 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/1/CONSMA002-L-G.pdf" 650 0 50 H I L CNN
+F4 "RF Connectors / Coaxial Connectors SMA Fml Right Angle PCB Mount, Extended" 650 -100 50 H I L CNN "Description"
+F5 "10" 650 -200 50 H I L CNN "Height"
+F6 "712-CONSMA002-L-G" 650 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.com/Search/Refine.aspx?Keyword=712-CONSMA002-L-G" 650 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Linx Technologies" 650 -500 50 H I L CNN "Manufacturer_Name"
+F9 "CONSMA002-L-G" 650 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 5 0 1 6 200 100 600 100 600 -300 200 -300 200 100 N
+X 1 1 0 0 200 R 50 50 0 0 U
+X 2 2 800 0 200 L 50 50 0 0 U
+X 3 3 0 -100 200 R 50 50 0 0 U
+X 4 4 800 -100 200 L 50 50 0 0 U
+X 5 5 0 -200 200 R 50 50 0 0 U
 ENDDRAW
 ENDDEF
 #

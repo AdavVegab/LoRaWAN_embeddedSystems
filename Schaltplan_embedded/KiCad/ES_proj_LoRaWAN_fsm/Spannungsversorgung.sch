@@ -195,17 +195,6 @@ F 3 "~" H 10300 5200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Barrel_Jack J2
-U 1 1 5DD26B6F
-P 1050 1400
-F 0 "J2" H 1105 1725 50  0000 C CNN
-F 1 "Barrel_Jack" H 1105 1634 50  0000 C CNN
-F 2 "Connect:BARREL_JACK" H 1100 1360 50  0001 C CNN
-F 3 "~" H 1100 1360 50  0001 C CNN
-	1    1050 1400
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R6
 U 1 1 5DD26C0B
 P 2050 1300
@@ -1028,4 +1017,21 @@ Wire Wire Line
 	2650 800  2950 800 
 Wire Wire Line
 	2950 800  2950 1500
+$Comp
+L SamacSys_Parts:CON-SOCJ-2155 J?
+U 1 1 5DE16150
+P 1200 1250
+F 0 "J?" H 1492 869 50  0000 C CNN
+F 1 "CON-SOCJ-2155" H 1492 960 50  0000 C CNN
+F 2 "CONSOCJ2155" H 1850 1100 50  0001 L CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/1500000-1599999/001582350-da-01-en-DC_EINBAUBUCHSE__SCHALTER_GESCHLOSSEN.pdf" H 1850 1000 50  0001 L CNN
+F 4 "DC Power Connectors Power Jack/Connector 2.1mm x 5.5mm" H 1850 900 50  0001 L CNN "Description"
+F 5 "11" H 1850 800 50  0001 L CNN "Height"
+F 6 "992-CON-SOCJ-2155" H 1850 700 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=992-CON-SOCJ-2155" H 1850 600 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Gravitech" H 1850 500 50  0001 L CNN "Manufacturer_Name"
+F 9 "CON-SOCJ-2155" H 1850 400 50  0001 L CNN "Manufacturer_Part_Number"
+	1    1200 1250
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC

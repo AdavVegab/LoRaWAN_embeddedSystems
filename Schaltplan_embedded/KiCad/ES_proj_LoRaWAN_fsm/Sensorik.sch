@@ -898,23 +898,6 @@ Wire Wire Line
 	1350 1150 1850 1150
 Wire Wire Line
 	8950 3050 8950 5500
-$Comp
-L SamacSys_Parts:73100-0258 J4
-U 1 1 5DE081B6
-P 1500 6650
-F 0 "J4" H 1900 6915 50  0000 C CNN
-F 1 "73100-0258" H 1900 6824 50  0000 C CNN
-F 2 "SamacSys_Parts:731000258" H 2150 6750 50  0001 L CNN
-F 3 "https://componentsearchengine.com/Datasheets/1/73100-0258.pdf" H 2150 6650 50  0001 L CNN
-F 4 "MOLEX - 73100-0258 - RF COAX CONN, SMB, JACK, 75 OHM, PCB" H 2150 6550 50  0001 L CNN "Description"
-F 5 "7.49" H 2150 6450 50  0001 L CNN "Height"
-F 6 "538-73100-0258" H 2150 6350 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=538-73100-0258" H 2150 6250 50  0001 L CNN "Mouser Price/Stock"
-F 8 "Molex" H 2150 6150 50  0001 L CNN "Manufacturer_Name"
-F 9 "73100-0258" H 2150 6050 50  0001 L CNN "Manufacturer_Part_Number"
-	1    1500 6650
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	1500 6450 2350 6450
 Wire Wire Line
@@ -940,23 +923,6 @@ Wire Wire Line
 Connection ~ 1550 6650
 Wire Wire Line
 	1550 6650 1550 7000
-$Comp
-L SamacSys_Parts:73100-0258 J6
-U 1 1 5DE559F1
-P 1750 4250
-F 0 "J6" H 2150 4515 50  0000 C CNN
-F 1 "73100-0258" H 2150 4424 50  0000 C CNN
-F 2 "SamacSys_Parts:731000258" H 2400 4350 50  0001 L CNN
-F 3 "https://componentsearchengine.com/Datasheets/1/73100-0258.pdf" H 2400 4250 50  0001 L CNN
-F 4 "MOLEX - 73100-0258 - RF COAX CONN, SMB, JACK, 75 OHM, PCB" H 2400 4150 50  0001 L CNN "Description"
-F 5 "7.49" H 2400 4050 50  0001 L CNN "Height"
-F 6 "538-73100-0258" H 2400 3950 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=538-73100-0258" H 2400 3850 50  0001 L CNN "Mouser Price/Stock"
-F 8 "Molex" H 2400 3750 50  0001 L CNN "Manufacturer_Name"
-F 9 "73100-0258" H 2400 3650 50  0001 L CNN "Manufacturer_Part_Number"
-	1    1750 4250
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	1750 4050 2300 4050
 Wire Wire Line
@@ -982,4 +948,38 @@ Wire Wire Line
 Connection ~ 1800 4250
 Wire Wire Line
 	1800 4250 1800 4600
+$Comp
+L SamacSys_Parts:CONSMA002-L-G J6
+U 1 1 5DDFF1AD
+P 1750 4250
+F 0 "J6" H 2150 4515 50  0000 C CNN
+F 1 "CONSMA002-L-G" H 2150 4424 50  0000 C CNN
+F 2 "SamacSys_Parts:CONSMA002LG" H 2400 4350 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/CONSMA002-L-G.pdf" H 2400 4250 50  0001 L CNN
+F 4 "RF Connectors / Coaxial Connectors SMA Fml Right Angle PCB Mount, Extended" H 2400 4150 50  0001 L CNN "Description"
+F 5 "10" H 2400 4050 50  0001 L CNN "Height"
+F 6 "712-CONSMA002-L-G" H 2400 3950 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=712-CONSMA002-L-G" H 2400 3850 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Linx Technologies" H 2400 3750 50  0001 L CNN "Manufacturer_Name"
+F 9 "CONSMA002-L-G" H 2400 3650 50  0001 L CNN "Manufacturer_Part_Number"
+	1    1750 4250
+	-1   0    0    1   
+$EndComp
+$Comp
+L SamacSys_Parts:CONSMA002-L-G J4
+U 1 1 5DE088FB
+P 1500 6650
+F 0 "J4" H 1900 6915 50  0000 C CNN
+F 1 "CONSMA002-L-G" H 1900 6824 50  0000 C CNN
+F 2 "SamacSys_Parts:CONSMA002LG" H 2150 6750 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/CONSMA002-L-G.pdf" H 2150 6650 50  0001 L CNN
+F 4 "RF Connectors / Coaxial Connectors SMA Fml Right Angle PCB Mount, Extended" H 2150 6550 50  0001 L CNN "Description"
+F 5 "10" H 2150 6450 50  0001 L CNN "Height"
+F 6 "712-CONSMA002-L-G" H 2150 6350 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=712-CONSMA002-L-G" H 2150 6250 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Linx Technologies" H 2150 6150 50  0001 L CNN "Manufacturer_Name"
+F 9 "CONSMA002-L-G" H 2150 6050 50  0001 L CNN "Manufacturer_Part_Number"
+	1    1500 6650
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
