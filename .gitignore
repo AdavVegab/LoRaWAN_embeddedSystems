@@ -67,7 +67,7 @@ dkms.conf
 # Compiled Dynamic libraries
 
 # Fortran module files
-*.mod
+#*.mod
 *.smod
 
 # Compiled Static libraries
