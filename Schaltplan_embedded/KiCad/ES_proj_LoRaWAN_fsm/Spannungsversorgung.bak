@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:Schaltplan_embedded-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -644,6 +644,8 @@ $EndComp
 Wire Wire Line
 	2700 1700 2700 1650
 Wire Wire Line
+	1350 1500 1350 1700
+Wire Wire Line
 	1550 1700 1750 1700
 Wire Wire Line
 	1750 1700 1750 1650
@@ -1016,12 +1018,12 @@ Wire Wire Line
 Wire Wire Line
 	2950 800  2950 1500
 $Comp
-L Schaltplan_embedded-rescue:CON-SOCJ-2155-SamacSys_Parts J2
+L SamacSys_Parts:CON-SOCJ-2155 J?
 U 1 1 5DE16150
 P 1200 1250
-F 0 "J2" H 1492 869 50  0000 C CNN
+F 0 "J?" H 1492 869 50  0000 C CNN
 F 1 "CON-SOCJ-2155" H 1492 960 50  0000 C CNN
-F 2 "SamacSys_Parts:CONSOCJ2155" H 1850 1100 50  0001 L CNN
+F 2 "CONSOCJ2155" H 1850 1100 50  0001 L CNN
 F 3 "http://www.produktinfo.conrad.com/datenblaetter/1500000-1599999/001582350-da-01-en-DC_EINBAUBUCHSE__SCHALTER_GESCHLOSSEN.pdf" H 1850 1000 50  0001 L CNN
 F 4 "DC Power Connectors Power Jack/Connector 2.1mm x 5.5mm" H 1850 900 50  0001 L CNN "Description"
 F 5 "11" H 1850 800 50  0001 L CNN "Height"
@@ -1030,19 +1032,6 @@ F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=992-CON-SOCJ-2155" H 1850
 F 8 "Gravitech" H 1850 500 50  0001 L CNN "Manufacturer_Name"
 F 9 "CON-SOCJ-2155" H 1850 400 50  0001 L CNN "Manufacturer_Part_Number"
 	1    1200 1250
-	-1   0    0    -1  
+	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	1200 1250 1350 1250
-Wire Wire Line
-	1350 1250 1350 1300
-Wire Wire Line
-	1350 1350 1350 1450
-Wire Wire Line
-	1200 1350 1350 1350
-Wire Wire Line
-	1200 1450 1350 1450
-Connection ~ 1350 1450
-Wire Wire Line
-	1350 1450 1350 1700
 $EndSCHEMATC

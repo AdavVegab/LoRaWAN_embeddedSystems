@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:Schaltplan_embedded-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -539,7 +539,7 @@ Wire Wire Line
 Wire Wire Line
 	8100 2800 8200 2800
 $Comp
-L Schaltplan_embedded-rescue:LL3301NF065QG-SamacSys_Parts S1
+L SamacSys_Parts:LL3301NF065QG S1
 U 1 1 5DE990BE
 P 7300 2800
 F 0 "S1" H 7700 3065 50  0000 C CNN
