@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "C:\\Users\\roman\\Documents\\Studium\\Master\\Embedded  Systems\\Git\\Schaltplan_embedded\\KiCad\\ES_proj_LoRaWAN_fsm\\Schaltplan_embedded.sch")
-    (date "28.11.2019 14:48:46")
+    (date "03.12.2019 10:43:44")
     (tool "Eeschema (5.1.4)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
