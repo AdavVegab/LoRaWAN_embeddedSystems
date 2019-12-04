@@ -358,7 +358,6 @@ NoConn ~ 3400 4950
 NoConn ~ 3400 4850
 NoConn ~ 3400 4750
 NoConn ~ 4800 4950
-NoConn ~ 4800 3250
 Text GLabel 3100 3050 0    50   Input ~ 0
 JTAG_RESET
 Wire Wire Line
@@ -447,10 +446,8 @@ Wire Wire Line
 Wire Wire Line
 	4400 2750 4400 2850
 Connection ~ 4300 2750
-Text GLabel 5100 5550 2    50   Output ~ 0
+Text GLabel 5100 3250 2    50   Output ~ 0
 AntOFF
-Wire Wire Line
-	4800 5550 5100 5550
 $Comp
 L power:+3.3V #PWR03
 U 1 1 5DEBFF94
@@ -669,10 +666,17 @@ Connection ~ 2450 4050
 Connection ~ 2450 4500
 Wire Wire Line
 	2100 4500 2450 4500
-NoConn ~ 4550 4950
 Wire Wire Line
 	5650 1700 5650 1750
 Connection ~ 5650 1750
 Wire Wire Line
 	5650 1750 6100 1750
+NoConn ~ 4800 3450
+NoConn ~ 4800 5650
+NoConn ~ 4800 5750
+NoConn ~ 4800 5850
+NoConn ~ 4800 5950
+Wire Wire Line
+	4800 3250 5100 3250
+NoConn ~ 4800 5550
 $EndSCHEMATC
