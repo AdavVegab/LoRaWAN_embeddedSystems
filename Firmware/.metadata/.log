@@ -386,3 +386,42 @@ java.lang.RuntimeException
 
 !ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2019-11-26 14:54:03.218
 !MESSAGE Won't launch debug session since we failed to locate the binary.
+!SESSION 2019-12-05 14:03:20.640 -----------------------------------------------
+eclipse.buildId=Version 1.1.0
+java.version=1.8.0_202
+java.vendor=AdoptOpenJdk
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2019-12-05 14:03:50.194
+!MESSAGE Log4j initialized with config file C:\Users\andre\Google Drive\Academic\Fachhochshule Muenster\Master\3\Embedded Systems\Feinstaubmessung Project\Firmware\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-05 14:03:52.971
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-05 14:03:52.974
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-05 14:03:53.262
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-05 14:03:53.274
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-05 14:03:53.291
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-05 14:03:53.294
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-12-05 14:03:53.305
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-12-05 14:03:53.318
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2019-12-05 14:04:00.725
+!MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2019-12-05 14:04:01.016
+!MESSAGE Started RMI Server, listening on port 41337
