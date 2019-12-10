@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 6)
+    (drawings 7)
     (tracks 663)
     (zones 0)
     (modules 78)
@@ -3360,6 +3360,7 @@
     )
   )
 
+  (gr_line (start 185 48) (end 185 48) (layer F.SilkS) (width 0.12) (tstamp 5DEF8187))
   (dimension 72 (width 0.12) (layer F.SilkS)
     (gr_text "72,000 mm" (at 191.27 84 270) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
