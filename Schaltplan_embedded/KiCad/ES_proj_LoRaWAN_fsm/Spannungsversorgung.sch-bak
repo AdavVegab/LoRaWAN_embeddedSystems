@@ -762,21 +762,8 @@ Text Notes 8150 7650 0    50   ~ 0
 06.11.19\n
 Text Notes 10600 7650 0    50   ~ 0
 0.1\n
-$Comp
-L Connector:Conn_01x02_Female J7
-U 1 1 5E182E1C
-P 5850 4000
-F 0 "J7" H 5878 3976 50  0000 L CNN
-F 1 "Conn_01x02_Female" H 5878 3885 50  0000 L CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch1.00mm" H 5850 4000 50  0001 C CNN
-F 3 "~" H 5850 4000 50  0001 C CNN
-	1    5850 4000
-	1    0    0    -1  
-$EndComp
 Text GLabel 5350 4000 0    51   Input ~ 10
 V_BAT
-Wire Wire Line
-	5350 4000 5650 4000
 $Comp
 L power:GND #PWR039
 U 1 1 5E191225
@@ -790,8 +777,6 @@ F 3 "" H 5500 4250 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5500 4250 5500 4100
-Wire Wire Line
-	5500 4100 5650 4100
 Wire Notes Line
 	5000 3800 5000 4500
 Wire Notes Line
@@ -994,5 +979,19 @@ Connection ~ 1350 1450
 Wire Wire Line
 	1350 1450 1350 1700
 NoConn ~ 2550 4100
-NoConn ~ 2800 2450
+$Comp
+L Connector_Generic:Conn_01x02 J7
+U 1 1 5DF31BD9
+P 5900 4000
+F 0 "J7" H 5980 3992 50  0000 L CNN
+F 1 "Conn_01x02" H 5980 3901 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 5900 4000 50  0001 C CNN
+F 3 "~" H 5900 4000 50  0001 C CNN
+	1    5900 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 4000 5700 4000
+Wire Wire Line
+	5500 4100 5700 4100
 $EndSCHEMATC
