@@ -241,7 +241,6 @@ Text GLabel 8200 2000 2    50   Input ~ 0
 RF_IN
 Wire Wire Line
 	7950 2000 8200 2000
-NoConn ~ 7950 1800
 $Comp
 L power:GND #PWR014
 U 1 1 5DCFF4CB
@@ -990,4 +989,8 @@ F 9 "T3V3S5-7" H 2950 3550 50  0001 L CNN "Manufacturer_Part_Number"
 	1    2300 4150
 	0    1    1    0   
 $EndComp
+Text GLabel 8200 1800 2    50   Output ~ 0
+AntOFF
+Wire Wire Line
+	8200 1800 7950 1800
 $EndSCHEMATC

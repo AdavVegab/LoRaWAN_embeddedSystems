@@ -1,4 +1,4 @@
-update=10.12.2019 12:19:24
+update=10/12/2019 23:29:25
 version=1
 last_client=kicad
 [general]
@@ -12,6 +12,16 @@ NetIExt=net
 version=1
 LibDir=
 [eeschema/libraries]
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceAjustPassiveValues=0
+LabSize=50
+ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
@@ -28,7 +38,7 @@ MinViaDrill=0.6
 MinMicroViaDiameter=0.2
 MinMicroViaDrill=0.09999999999999999
 MinHoleToHole=0.25
-TrackWidth1=0.1
+TrackWidth1=0.2
 ViaDiameter1=0.9
 ViaDrill1=0.6
 dPairWidth1=0.2
@@ -184,7 +194,7 @@ Type=0
 Enabled=0
 [pcbnew/Layer.B.Cu]
 Name=B.Cu
-Type=0
+Type=2
 Enabled=1
 [pcbnew/Layer.B.Adhes]
 Enabled=1
@@ -228,7 +238,7 @@ Enabled=0
 [pcbnew/Netclasses/Default]
 Name=Default
 Clearance=0.1
-TrackWidth=0.1
+TrackWidth=0.2
 ViaDiameter=0.9
 ViaDrill=0.6
 uViaDiameter=0.3
@@ -239,7 +249,7 @@ dPairViaGap=0.25
 [pcbnew/Netclasses/1]
 Name=3V3
 Clearance=0.15
-TrackWidth=0.15
+TrackWidth=0.4
 ViaDiameter=0.9
 ViaDrill=0.6
 uViaDiameter=0.3
@@ -250,7 +260,7 @@ dPairViaGap=0.25
 [pcbnew/Netclasses/2]
 Name=5V
 Clearance=0.15
-TrackWidth=0.15
+TrackWidth=0.6
 ViaDiameter=0.9
 ViaDrill=0.6
 uViaDiameter=0.3
@@ -259,9 +269,9 @@ dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
 [pcbnew/Netclasses/3]
-Name=Data
-Clearance=0.1
-TrackWidth=0.1
+Name=Antenna
+Clearance=0.15
+TrackWidth=0.4
 ViaDiameter=0.9
 ViaDrill=0.6
 uViaDiameter=0.3
@@ -269,13 +279,14 @@ uViaDrill=0.1
 dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=Pcbnew
-SpiceAjustPassiveValues=0
-LabSize=50
-ERC_TestSimilarLabels=1
+[pcbnew/Netclasses/4]
+Name=Data
+Clearance=0.1
+TrackWidth=0.2
+ViaDiameter=0.9
+ViaDrill=0.6
+uViaDiameter=0.3
+uViaDrill=0.1
+dPairWidth=0.2
+dPairGap=0.25
+dPairViaGap=0.25

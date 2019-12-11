@@ -299,7 +299,7 @@ Wire Wire Line
 	2900 3250 2700 3250
 Wire Wire Line
 	2700 3250 2700 3350
-Text GLabel 3000 5650 0    50   Output ~ 0
+Text GLabel 3000 4850 0    50   Output ~ 0
 LED_OUT
 Text GLabel 8600 4350 0    50   Input ~ 0
 LED_OUT
@@ -355,7 +355,6 @@ NoConn ~ 3400 5550
 NoConn ~ 3400 5350
 NoConn ~ 3400 5050
 NoConn ~ 3400 4950
-NoConn ~ 3400 4850
 NoConn ~ 3400 4750
 NoConn ~ 4800 4950
 Text GLabel 3100 3050 0    50   Input ~ 0
@@ -446,8 +445,6 @@ Wire Wire Line
 Wire Wire Line
 	4400 2750 4400 2850
 Connection ~ 4300 2750
-Text GLabel 5100 3250 2    50   Output ~ 0
-AntOFF
 $Comp
 L power:+3.3V #PWR03
 U 1 1 5DEBFF94
@@ -578,8 +575,6 @@ Wire Wire Line
 	4800 3950 5100 3950
 Wire Wire Line
 	4800 3850 5100 3850
-Wire Wire Line
-	3000 5650 3400 5650
 $Comp
 L MCU_ST_STM32L4:STM32L476RGTx U1
 U 1 1 5DC1A60F
@@ -676,7 +671,9 @@ NoConn ~ 4800 5650
 NoConn ~ 4800 5750
 NoConn ~ 4800 5850
 NoConn ~ 4800 5950
-Wire Wire Line
-	4800 3250 5100 3250
 NoConn ~ 4800 5550
+Wire Wire Line
+	3400 4850 3000 4850
+NoConn ~ 3400 5650
+NoConn ~ 4800 3250
 $EndSCHEMATC
