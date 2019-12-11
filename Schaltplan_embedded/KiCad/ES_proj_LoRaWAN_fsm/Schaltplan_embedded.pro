@@ -1,4 +1,4 @@
-update=10/12/2019 23:29:25
+update=11/12/2019 12:50:15
 version=1
 last_client=kicad
 [general]
@@ -32,7 +32,7 @@ AllowMicroVias=0
 AllowBlindVias=0
 RequireCourtyardDefinitions=0
 ProhibitOverlappingCourtyards=1
-MinTrackWidth=0.09999999999999999
+MinTrackWidth=0.2
 MinViaDiameter=0.8999999999999999
 MinViaDrill=0.6
 MinMicroViaDiameter=0.2
@@ -271,7 +271,7 @@ dPairViaGap=0.25
 [pcbnew/Netclasses/3]
 Name=Antenna
 Clearance=0.15
-TrackWidth=0.4
+TrackWidth=0.9
 ViaDiameter=0.9
 ViaDrill=0.6
 uViaDiameter=0.3

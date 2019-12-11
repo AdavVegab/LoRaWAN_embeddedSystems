@@ -26,17 +26,6 @@ F 3 "" H 1600 4650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Crystal Y1
-U 1 1 5DC1A7A3
-P 2450 4250
-F 0 "Y1" V 2404 4381 50  0000 L CNN
-F 1 "Crystal 8Mhz" V 2495 4381 50  0000 L CNN
-F 2 "Crystals:Crystal_SMD_HC49-SD_HandSoldering" H 2450 4250 50  0001 C CNN
-F 3 "~" H 2450 4250 50  0001 C CNN
-	1    2450 4250
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:C C2
 U 1 1 5DC1A815
 P 1950 4500
@@ -299,7 +288,7 @@ Wire Wire Line
 	2900 3250 2700 3250
 Wire Wire Line
 	2700 3250 2700 3350
-Text GLabel 3000 5650 0    50   Output ~ 0
+Text GLabel 3000 4850 0    50   Output ~ 0
 LED_OUT
 Text GLabel 8600 4350 0    50   Input ~ 0
 LED_OUT
@@ -355,7 +344,6 @@ NoConn ~ 3400 5550
 NoConn ~ 3400 5350
 NoConn ~ 3400 5050
 NoConn ~ 3400 4950
-NoConn ~ 3400 4850
 NoConn ~ 3400 4750
 NoConn ~ 4800 4950
 Text GLabel 3100 3050 0    50   Input ~ 0
@@ -446,8 +434,6 @@ Wire Wire Line
 Wire Wire Line
 	4400 2750 4400 2850
 Connection ~ 4300 2750
-Text GLabel 5100 3250 2    50   Output ~ 0
-AntOFF
 $Comp
 L power:+3.3V #PWR03
 U 1 1 5DEBFF94
@@ -578,8 +564,6 @@ Wire Wire Line
 	4800 3950 5100 3950
 Wire Wire Line
 	4800 3850 5100 3850
-Wire Wire Line
-	3000 5650 3400 5650
 $Comp
 L MCU_ST_STM32L4:STM32L476RGTx U1
 U 1 1 5DC1A60F
@@ -676,7 +660,38 @@ NoConn ~ 4800 5650
 NoConn ~ 4800 5750
 NoConn ~ 4800 5850
 NoConn ~ 4800 5950
-Wire Wire Line
-	4800 3250 5100 3250
 NoConn ~ 4800 5550
+Wire Wire Line
+	3400 4850 3000 4850
+NoConn ~ 3400 5650
+NoConn ~ 4800 3250
+Wire Wire Line
+	2300 4200 2250 4200
+Wire Wire Line
+	2250 4200 2250 4100
+Wire Wire Line
+	2250 4100 2450 4100
+Wire Wire Line
+	2450 4400 2250 4400
+Wire Wire Line
+	2250 4400 2250 4300
+Wire Wire Line
+	2250 4300 2300 4300
+$Comp
+L SamacSys_Parts:ECS-80-12-30Q-DS-TR Y1
+U 1 1 5DF286AB
+P 2300 4200
+F 0 "Y1" H 3128 4196 50  0000 L CNN
+F 1 "ECS-80-12-30Q-DS-TR" H 3128 4105 50  0000 L CNN
+F 2 "myLib:Quarz" H 3150 4300 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/ECS-80-12-30Q-DS-TR.pdf" H 3150 4200 50  0001 L CNN
+F 4 "Crystals 8MHz 12pF AEC ESR 100 -40C +125C" H 3150 4100 50  0001 L CNN "Description"
+F 5 "1.1" H 3150 4000 50  0001 L CNN "Height"
+F 6 "520-80-12-30Q-DST" H 3150 3900 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=520-80-12-30Q-DST" H 3150 3800 50  0001 L CNN "Mouser Price/Stock"
+F 8 "ECS" H 3150 3700 50  0001 L CNN "Manufacturer_Name"
+F 9 "ECS-80-12-30Q-DS-TR" H 3150 3600 50  0001 L CNN "Manufacturer_Part_Number"
+	1    2300 4200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

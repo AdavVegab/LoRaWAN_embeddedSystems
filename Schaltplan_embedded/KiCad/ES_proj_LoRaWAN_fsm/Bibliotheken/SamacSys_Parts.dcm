@@ -108,4 +108,10 @@ K
 F https://componentsearchengine.com/Datasheets/1/T3V3S5-7.pdf
 $ENDCMP
 #
+$CMP ECS-80-12-30Q-DS-TR
+D Crystals 8MHz 12pF AEC ESR 100 -40C +125C
+K
+F https://componentsearchengine.com/Datasheets/1/ECS-80-12-30Q-DS-TR.pdf
+$ENDCMP
+#
 #End Doc Library
