@@ -644,7 +644,6 @@ Text GLabel 5100 4350 2    50   BiDi ~ 0
 SWDIO
 NoConn ~ 4800 4550
 NoConn ~ 4800 5050
-NoConn ~ 4800 5350
 $Comp
 L Connector_Generic:Conn_01x05 J2
 U 1 1 5DF6DACC
@@ -680,4 +679,8 @@ $EndComp
 Wire Wire Line
 	4300 2600 4300 2750
 NoConn ~ 4800 5150
+Text GLabel 5100 5350 2    50   Output ~ 0
+SPI1_NSS
+Wire Wire Line
+	4800 5350 5100 5350
 $EndSCHEMATC
