@@ -962,7 +962,7 @@
     (descr 53048-0810)
     (tags Connector)
     (path /5E150549/5DEAB6B5)
-    (fp_text reference J3 (at 3.5 0 180) (layer F.SilkS)
+    (fp_text reference J3 (at -2.2 2.2 180) (layer F.SilkS)
       (effects (font (size 1.27 1.27) (thickness 0.254)))
     )
     (fp_text value 53048-0810 (at 0 0 180) (layer F.SilkS) hide
