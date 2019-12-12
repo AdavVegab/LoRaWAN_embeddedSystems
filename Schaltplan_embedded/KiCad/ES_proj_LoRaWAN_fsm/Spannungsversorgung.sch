@@ -82,8 +82,6 @@ F 3 "~" H 9750 3350 50  0001 C CNN
 	1    9750 3350
 	1    0    0    -1  
 $EndComp
-NoConn ~ 9500 3250
-NoConn ~ 9550 5100
 $Comp
 L Device:CP C29
 U 1 1 5DCA77C5
@@ -994,4 +992,16 @@ Wire Wire Line
 	5350 4000 5700 4000
 Wire Wire Line
 	5500 4100 5700 4100
+Wire Wire Line
+	9550 5100 9600 5100
+Wire Wire Line
+	9600 5100 9600 5400
+Wire Wire Line
+	9600 5400 9800 5400
+Wire Wire Line
+	9500 3250 9550 3250
+Wire Wire Line
+	9550 3250 9550 3550
+Wire Wire Line
+	9550 3550 9750 3550
 $EndSCHEMATC
