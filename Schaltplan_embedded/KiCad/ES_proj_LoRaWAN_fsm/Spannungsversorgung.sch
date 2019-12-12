@@ -487,8 +487,6 @@ $EndComp
 Wire Wire Line
 	4350 5100 4350 5200
 Wire Wire Line
-	3350 4700 3550 4700
-Wire Wire Line
 	4350 4700 4350 4800
 Wire Wire Line
 	2750 5600 2750 5800
@@ -700,8 +698,6 @@ F 3 "" H 3050 1600 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3050 1400 3050 1600
-Text GLabel 3700 4550 2    50   Output ~ 0
-VREF
 Wire Wire Line
 	2350 1700 2350 2150
 Connection ~ 2350 1700
@@ -747,13 +743,6 @@ $EndComp
 Wire Wire Line
 	2350 2700 2350 2600
 Connection ~ 2350 2600
-Wire Wire Line
-	3550 4700 3550 4550
-Wire Wire Line
-	3550 4550 3700 4550
-Connection ~ 3550 4700
-Wire Wire Line
-	3550 4700 4350 4700
 Text Notes 7350 7500 0    50   ~ 0
 Spannungsversorgung
 Text Notes 8150 7650 0    50   ~ 0
@@ -1004,4 +993,6 @@ Wire Wire Line
 	9550 3250 9550 3550
 Wire Wire Line
 	9550 3550 9750 3550
+Wire Wire Line
+	3350 4700 4350 4700
 $EndSCHEMATC

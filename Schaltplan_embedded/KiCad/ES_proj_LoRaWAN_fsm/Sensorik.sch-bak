@@ -235,12 +235,12 @@ Connection ~ 5150 2350
 $Comp
 L power:GND #PWR016
 U 1 1 5DCFF4CB
-P 2450 2750
-F 0 "#PWR016" H 2450 2500 50  0001 C CNN
-F 1 "GND" H 2455 2577 50  0000 C CNN
-F 2 "" H 2450 2750 50  0001 C CNN
-F 3 "" H 2450 2750 50  0001 C CNN
-	1    2450 2750
+P 3000 2700
+F 0 "#PWR016" H 3000 2450 50  0001 C CNN
+F 1 "GND" H 3005 2527 50  0000 C CNN
+F 2 "" H 3000 2700 50  0001 C CNN
+F 3 "" H 3000 2700 50  0001 C CNN
+	1    3000 2700
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -603,37 +603,6 @@ Wire Wire Line
 Connection ~ 1600 6100
 Wire Wire Line
 	1600 6100 1600 6150
-Wire Wire Line
-	3300 2250 3850 2250
-Wire Wire Line
-	2450 2750 2450 2600
-Wire Wire Line
-	2450 2150 2500 2150
-Wire Wire Line
-	2500 2250 2450 2250
-Connection ~ 2450 2250
-Wire Wire Line
-	2450 2250 2450 2150
-Connection ~ 2450 2600
-Wire Wire Line
-	2450 2600 2450 2250
-$Comp
-L Schaltplan_embedded-rescue:CONSMA002-L-G-SamacSys_Parts-Schaltplan_embedded-rescue J5
-U 1 1 5DDFF1AD
-P 3300 2250
-F 0 "J5" H 3700 2515 50  0000 C CNN
-F 1 "CONSMA002-L-G" H 3700 2424 50  0000 C CNN
-F 2 "SamacSys_Parts:CONSMA002LG" H 3950 2350 50  0001 L CNN
-F 3 "https://componentsearchengine.com/Datasheets/1/CONSMA002-L-G.pdf" H 3950 2250 50  0001 L CNN
-F 4 "RF Connectors / Coaxial Connectors SMA Fml Right Angle PCB Mount, Extended" H 3950 2150 50  0001 L CNN "Description"
-F 5 "10" H 3950 2050 50  0001 L CNN "Height"
-F 6 "712-CONSMA002-L-G" H 3950 1950 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=712-CONSMA002-L-G" H 3950 1850 50  0001 L CNN "Mouser Price/Stock"
-F 8 "Linx Technologies" H 3950 1750 50  0001 L CNN "Manufacturer_Name"
-F 9 "CONSMA002-L-G" H 3950 1650 50  0001 L CNN "Manufacturer_Part_Number"
-	1    3300 2250
-	-1   0    0    1   
-$EndComp
 $Comp
 L Schaltplan_embedded-rescue:CONSMA002-L-G-SamacSys_Parts-Schaltplan_embedded-rescue J4
 U 1 1 5DE088FB
@@ -705,17 +674,6 @@ Wire Wire Line
 	4550 3600 5100 3600
 Connection ~ 5100 3600
 Wire Wire Line
-	3300 2050 3400 2050
-Wire Wire Line
-	3400 2050 3400 2150
-Wire Wire Line
-	3400 2150 3300 2150
-Wire Wire Line
-	3400 2150 3400 2600
-Wire Wire Line
-	2450 2600 3400 2600
-Connection ~ 3400 2150
-Wire Wire Line
 	2500 6100 2500 5650
 Wire Wire Line
 	2500 5650 2450 5650
@@ -779,4 +737,19 @@ Wire Wire Line
 Wire Wire Line
 	7550 1550 7800 1550
 Connection ~ 7800 1550
+$Comp
+L Connector:Conn_Coaxial J5
+U 1 1 5DFA290B
+P 3000 2250
+F 0 "J5" H 2928 2488 50  0000 C CNN
+F 1 "Conn_Coaxial" H 2928 2397 50  0000 C CNN
+F 2 "Connector_Coaxial:U.FL_Molex_MCRF_73412-0110_Vertical" H 3000 2250 50  0001 C CNN
+F 3 " ~" H 3000 2250 50  0001 C CNN
+	1    3000 2250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 2450 3000 2700
+Wire Wire Line
+	3200 2250 3850 2250
 $EndSCHEMATC
