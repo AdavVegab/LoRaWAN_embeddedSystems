@@ -1,0 +1,8 @@
+
+// HPMA115S0 dust sensor PM2.5 and PM10
+// ---------------------
+// Documentation:
+// Honeywell HPMA115S0 datasheet
+// https://sensing.honeywell.com/HPMA115S0-particulate-matter-sensors
+
+#include 

@@ -32,6 +32,9 @@ default.size.stdout \
 OBJDUMP_LIST += \
 FW_Feinstaubmessung.list \
 
+OBJCOPY_BIN += \
+FW_Feinstaubmessung.bin \
+
 
 # All Target
 all: FW_Feinstaubmessung.elf secondary-outputs
@@ -52,12 +55,17 @@ FW_Feinstaubmessung.list: $(EXECUTABLES)
 	@echo 'Finished building: $@'
 	@echo ' '
 
+FW_Feinstaubmessung.bin: $(EXECUTABLES)
+	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "FW_Feinstaubmessung.bin"
+	@echo 'Finished building: $@'
+	@echo ' '
+
 # Other Targets
 clean:
 	-$(RM) *
 	-@echo ' '
 
-secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
+secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_BIN)
 
 .PHONY: all clean dependents
 .SECONDARY:
