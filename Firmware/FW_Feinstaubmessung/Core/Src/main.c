@@ -25,6 +25,7 @@
 /* USER CODE BEGIN Includes */
 #include "lmic.h"
 #include "debug.h"
+#include "stm32hpmlib.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -43,14 +44,18 @@
 
 /* Private variables ---------------------------------------------------------*/
 
+
 /* USER CODE BEGIN PV */
+// unique device ID (LSBF)       < ------- IMPORTANT
+static const u1_t DEVEUI[8]  = { 0x6F, 0xD2, 0x0A, 0x30, 0x14, 0xE0, 0x23, 0x00 };
+
 // application router ID (LSBF)  < ------- IMPORTANT
 static const u1_t APPEUI[8]  = { 0xB0, 0x53, 0x02, 0xD0, 0x7E, 0xD5, 0xB3, 0x70 };
-// unique device ID (LSBF)       < ------- IMPORTANT
-static const u1_t DEVEUI[8]  = { 0x89, 0x21, 0xDB, 0xE9, 0x84, 0xEC, 0x6D, 0x00 };
 
 // device-specific AES key (derived from device EUI)
-static const u1_t DEVKEY[16] = { 0xD6, 0x44, 0x3A, 0x75, 0x2F, 0x91, 0xBA, 0xF9, 0xC0, 0x22, 0x71, 0x9C, 0x73, 0x2B, 0xAD, 0xD7 };
+static const u1_t DEVKEY[16] = { 0x87, 0x65, 0x68, 0x5D, 0x38, 0x21, 0x5E, 0xEA, 0xA0, 0xEE, 0xC0, 0x4B, 0xE3, 0x2C, 0xD0, 0xC7 };
+
+//Air Quality
 
 /* USER CODE END PV */
 
@@ -60,6 +65,7 @@ static void MX_GPIO_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_TIM4_Init(void);
 static void MX_USART2_UART_Init(void);
+static void MX_UART4_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -96,24 +102,48 @@ void initfunc (osjob_t* j) {
     // init done - onEvent() callback will be invoked...
 }
 
-u2_t readsensor(){
-	u2_t value = 0xDF;    /// read from evrything ...make your own sensor
-	return value;
+u2_t * readsensor(){
+
+	int pm25;
+	int pm10;
+	u2_t frame[] = {0x00, 0x00, 0x00, 0x00};
+	hpmStartParticleMeasurement();
+	HAL_Delay(2000);
+	hpmReadResults(&pm25,&pm10);
+	hpmStopParticleMeasurement();
+    //int value = (int) pm25;    /// read from evrything ...make your own sensor
+    frame[0] = pm25 << 8;
+    frame[1] = pm25;
+    frame[2] = pm10 << 8;
+    frame[3] = pm10;
+	//return value;
+    return frame;
 }
+
+
 
 static osjob_t reportjob;
 
 // report sensor value every minute
 static void reportfunc (osjob_t* j) {
     // read sensor
-    u2_t val = readsensor();
-    debug_val("val = ", val);
+	int pm25 = 0;
+	int pm10 = 0;
+	hpmStartParticleMeasurement();
+	HAL_Delay(5000);
+	hpmReadResults(&pm25,&pm10);
+	hpmStopParticleMeasurement();
+	//u2_t * frame;
+    //frame = readsensor();
+    //debug_val("val = ", val);
     // prepare and schedule data for transmission
-    LMIC.frame[0] = val << 8;
-    LMIC.frame[1] = val;
-    LMIC_setTxData2(1, LMIC.frame, 2, 0); // (port 1, 2 bytes, unconfirmed)
+    LMIC.frame[0] = pm25 >> 8;
+    LMIC.frame[1] = pm25;
+    LMIC.frame[2] = pm10 >> 8;
+    LMIC.frame[3] = pm10;
+    LMIC_setTxData2(1, LMIC.frame, 4, 0); // (port 1, 2 bytes, unconfirmed)
     // reschedule job in 60 seconds
-    os_setTimedCallback(j, os_getTime()+sec2osticks(10), reportfunc);
+    os_setTimedCallback(j, os_getTime()+sec2osticks(60), reportfunc);
 }
 
 
@@ -131,7 +161,8 @@ void onEvent (ev_t ev) {
        	  debug_str("try joining\r\n");
        	  break;
       case EV_JOINED:
-          debug_led(1);
+          //debug_led(1);
+    	  debug_str("joined\r\n");
           // kick-off periodic sensor job
           reportfunc(&reportjob);
           break;
@@ -183,7 +214,7 @@ void onEvent (ev_t ev) {
 		  debug_str("EV_LINK_ALIVE\r\n");
 		  break;
 	  default:
-		   debug_str("Unknown event\r\n");
+		   debug_str("\r\n");
 		  break;
     }
 }
@@ -221,6 +252,7 @@ int main(void)
   MX_SPI1_Init();
   MX_TIM4_Init();
   MX_USART2_UART_Init();
+  MX_UART4_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT(&htim4);    // <-----------  change to your setup
   __HAL_SPI_ENABLE(&hspi1);         // <-----------  change to your setup
@@ -232,6 +264,11 @@ int main(void)
 
   // initialize debug library
   debug_init();
+
+  // Configure UART for Air-Sensor
+  debug_str("Configuring Sensor\r\n");
+  hpmSetUart(&huart4);
+  hpmStopAutoSend();
   // setup initial job
    os_setCallback(&initjob, initfunc);
   // execute scheduled jobs and events
@@ -292,8 +329,9 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2;
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2|RCC_PERIPHCLK_UART4;
   PeriphClkInit.Usart2ClockSelection = RCC_USART2CLKSOURCE_PCLK1;
+  PeriphClkInit.Uart4ClockSelection = RCC_UART4CLKSOURCE_PCLK1;
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
     Error_Handler();
@@ -391,6 +429,41 @@ static void MX_TIM4_Init(void)
   /* USER CODE BEGIN TIM4_Init 2 */
 
   /* USER CODE END TIM4_Init 2 */
+
+}
+
+/**
+  * @brief UART4 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_UART4_Init(void)
+{
+
+  /* USER CODE BEGIN UART4_Init 0 */
+
+  /* USER CODE END UART4_Init 0 */
+
+  /* USER CODE BEGIN UART4_Init 1 */
+
+  /* USER CODE END UART4_Init 1 */
+  huart4.Instance = UART4;
+  huart4.Init.BaudRate = 9600;
+  huart4.Init.WordLength = UART_WORDLENGTH_8B;
+  huart4.Init.StopBits = UART_STOPBITS_1;
+  huart4.Init.Parity = UART_PARITY_NONE;
+  huart4.Init.Mode = UART_MODE_TX_RX;
+  huart4.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart4.Init.OverSampling = UART_OVERSAMPLING_16;
+  huart4.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+  huart4.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+  if (HAL_UART_Init(&huart4) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN UART4_Init 2 */
+
+  /* USER CODE END UART4_Init 2 */
 
 }
 

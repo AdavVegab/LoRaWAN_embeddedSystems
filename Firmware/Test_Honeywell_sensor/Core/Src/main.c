@@ -93,8 +93,7 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   MX_UART4_Init();
-  int pm25;
-  int pm10;
+
   hpmSetUart(&huart4);
   hpmStopAutoSend();
   /* USER CODE BEGIN 2 */
@@ -105,10 +104,12 @@ int main(void)
   for(;;)
   {
 
-
+	  int pm25;
+	  int pm10;
 	  hpmStartParticleMeasurement();
+	  HAL_Delay(2000);
 	  hpmReadResults(&pm25,&pm10);
-	  hpmStartParticleMeasurement();
+	  hpmStopParticleMeasurement();
 
 
 

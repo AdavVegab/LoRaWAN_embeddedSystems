@@ -1,22 +1,12 @@
-09:57:12 **** Incremental Build of configuration Debug for project FW_Feinstaubmessung ****
-make -j8 all 
-arm-none-eabi-size   FW_Feinstaubmessung.elf 
-   text	   data	    bss	    dec	    hex	filename
-  51224	     92	   2652	  53968	   d2d0	FW_Feinstaubmessung.elf
-Finished building: default.size.stdout
- 
-09:57:19 **** Incremental Build of configuration Debug for project FW_Feinstaubmessung ****
-make -j8 all 
-arm-none-eabi-size   FW_Feinstaubmessung.elf 
-   text	   data	    bss	    dec	    hex	filename
-  51224	     92	   2652	  53968	   d2d0	FW_Feinstaubmessung.elf
-Finished building: default.size.stdout
- 
-09:58:25 **** Incremental Build of configuration Debug for project FW_Feinstaubmessung ****
+17:21:43 **** Incremental Build of configuration Debug for project FW_Feinstaubmessung ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DCFG_sx1276_radio -DUSE_HAL_DRIVER -DCFG_eu868 -DSTM32L476xx -DDEBUG -c -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'readsensor':
+../Core/Src/main.c:120:12: warning: function returns address of local variable [-Wreturn-local-addr]
+     return frame;
+            ^~~~~
 ../Core/Src/main.c: In function 'onEvent':
-../Core/Src/main.c:166:16: warning: passing argument 1 of 'debug_str' makes pointer from integer without a cast [-Wint-conversion]
+../Core/Src/main.c:190:16: warning: passing argument 1 of 'debug_str' makes pointer from integer without a cast [-Wint-conversion]
       debug_str(LMIC.dataLen);
                 ^~~~
 In file included from ../Core/Src/main.c:27:0:
@@ -30,25 +20,29 @@ arm-none-eabi-objdump -h -S  FW_Feinstaubmessung.elf  > "FW_Feinstaubmessung.lis
 arm-none-eabi-objcopy  -O binary  FW_Feinstaubmessung.elf  "FW_Feinstaubmessung.bin"
 arm-none-eabi-size   FW_Feinstaubmessung.elf 
    text	   data	    bss	    dec	    hex	filename
-  51224	     92	   2652	  53968	   d2d0	FW_Feinstaubmessung.elf
+  52772	     92	   2660	  55524	   d8e4	FW_Feinstaubmessung.elf
 Finished building: default.size.stdout
  
 Finished building: FW_Feinstaubmessung.bin
  
 Finished building: FW_Feinstaubmessung.list
  
-09:58:38 **** Incremental Build of configuration Debug for project FW_Feinstaubmessung ****
+17:21:58 **** Incremental Build of configuration Debug for project FW_Feinstaubmessung ****
 make -j8 all 
 arm-none-eabi-size   FW_Feinstaubmessung.elf 
    text	   data	    bss	    dec	    hex	filename
-  51224	     92	   2652	  53968	   d2d0	FW_Feinstaubmessung.elf
+  52772	     92	   2660	  55524	   d8e4	FW_Feinstaubmessung.elf
 Finished building: default.size.stdout
  
-09:59:40 **** Incremental Build of configuration Debug for project FW_Feinstaubmessung ****
+17:27:45 **** Incremental Build of configuration Debug for project FW_Feinstaubmessung ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DCFG_sx1276_radio -DUSE_HAL_DRIVER -DCFG_eu868 -DSTM32L476xx -DDEBUG -c -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'readsensor':
+../Core/Src/main.c:120:12: warning: function returns address of local variable [-Wreturn-local-addr]
+     return frame;
+            ^~~~~
 ../Core/Src/main.c: In function 'onEvent':
-../Core/Src/main.c:166:16: warning: passing argument 1 of 'debug_str' makes pointer from integer without a cast [-Wint-conversion]
+../Core/Src/main.c:196:16: warning: passing argument 1 of 'debug_str' makes pointer from integer without a cast [-Wint-conversion]
       debug_str(LMIC.dataLen);
                 ^~~~
 In file included from ../Core/Src/main.c:27:0:
@@ -62,7 +56,209 @@ arm-none-eabi-objdump -h -S  FW_Feinstaubmessung.elf  > "FW_Feinstaubmessung.lis
 arm-none-eabi-objcopy  -O binary  FW_Feinstaubmessung.elf  "FW_Feinstaubmessung.bin"
 arm-none-eabi-size   FW_Feinstaubmessung.elf 
    text	   data	    bss	    dec	    hex	filename
-  51224	     92	   2652	  53968	   d2d0	FW_Feinstaubmessung.elf
+  52700	     92	   2660	  55452	   d89c	FW_Feinstaubmessung.elf
+Finished building: default.size.stdout
+ 
+Finished building: FW_Feinstaubmessung.bin
+ 
+Finished building: FW_Feinstaubmessung.list
+ 
+17:31:06 **** Incremental Build of configuration Debug for project FW_Feinstaubmessung ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DCFG_sx1276_radio -DUSE_HAL_DRIVER -DCFG_eu868 -DSTM32L476xx -DDEBUG -c -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'readsensor':
+../Core/Src/main.c:120:12: warning: function returns address of local variable [-Wreturn-local-addr]
+     return frame;
+            ^~~~~
+../Core/Src/main.c: In function 'onEvent':
+../Core/Src/main.c:196:16: warning: passing argument 1 of 'debug_str' makes pointer from integer without a cast [-Wint-conversion]
+      debug_str(LMIC.dataLen);
+                ^~~~
+In file included from ../Core/Src/main.c:27:0:
+../Core/Inc/debug.h:51:6: note: expected 'const char *' but argument is of type 'u1_t {aka unsigned char}'
+ void debug_str (const char* str);
+      ^~~~~~~~~
+arm-none-eabi-gcc -o "FW_Feinstaubmessung.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\andre\Google Drive\Academic\Fachhochshule Muenster\Master\3\Embedded Systems\Feinstaubmessung Project\Firmware\FW_Feinstaubmessung\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FW_Feinstaubmessung.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: FW_Feinstaubmessung.elf
+ 
+arm-none-eabi-objdump -h -S  FW_Feinstaubmessung.elf  > "FW_Feinstaubmessung.list"
+arm-none-eabi-objcopy  -O binary  FW_Feinstaubmessung.elf  "FW_Feinstaubmessung.bin"
+arm-none-eabi-size   FW_Feinstaubmessung.elf 
+   text	   data	    bss	    dec	    hex	filename
+  52700	     92	   2660	  55452	   d89c	FW_Feinstaubmessung.elf
+Finished building: default.size.stdout
+ 
+Finished building: FW_Feinstaubmessung.bin
+ 
+Finished building: FW_Feinstaubmessung.list
+ 
+17:33:37 **** Incremental Build of configuration Debug for project FW_Feinstaubmessung ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DCFG_sx1276_radio -DUSE_HAL_DRIVER -DCFG_eu868 -DSTM32L476xx -DDEBUG -c -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'readsensor':
+../Core/Src/main.c:120:12: warning: function returns address of local variable [-Wreturn-local-addr]
+     return frame;
+            ^~~~~
+../Core/Src/main.c: In function 'onEvent':
+../Core/Src/main.c:196:16: warning: passing argument 1 of 'debug_str' makes pointer from integer without a cast [-Wint-conversion]
+      debug_str(LMIC.dataLen);
+                ^~~~
+In file included from ../Core/Src/main.c:27:0:
+../Core/Inc/debug.h:51:6: note: expected 'const char *' but argument is of type 'u1_t {aka unsigned char}'
+ void debug_str (const char* str);
+      ^~~~~~~~~
+arm-none-eabi-gcc -o "FW_Feinstaubmessung.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\andre\Google Drive\Academic\Fachhochshule Muenster\Master\3\Embedded Systems\Feinstaubmessung Project\Firmware\FW_Feinstaubmessung\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FW_Feinstaubmessung.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: FW_Feinstaubmessung.elf
+ 
+arm-none-eabi-objdump -h -S  FW_Feinstaubmessung.elf  > "FW_Feinstaubmessung.list"
+arm-none-eabi-objcopy  -O binary  FW_Feinstaubmessung.elf  "FW_Feinstaubmessung.bin"
+arm-none-eabi-size   FW_Feinstaubmessung.elf 
+   text	   data	    bss	    dec	    hex	filename
+  52700	     92	   2660	  55452	   d89c	FW_Feinstaubmessung.elf
+Finished building: default.size.stdout
+ 
+Finished building: FW_Feinstaubmessung.bin
+ 
+Finished building: FW_Feinstaubmessung.list
+ 
+17:33:50 **** Incremental Build of configuration Debug for project FW_Feinstaubmessung ****
+make -j8 all 
+arm-none-eabi-size   FW_Feinstaubmessung.elf 
+   text	   data	    bss	    dec	    hex	filename
+  52700	     92	   2660	  55452	   d89c	FW_Feinstaubmessung.elf
+Finished building: default.size.stdout
+ 
+17:43:53 **** Incremental Build of configuration Debug for project FW_Feinstaubmessung ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DCFG_sx1276_radio -DUSE_HAL_DRIVER -DCFG_eu868 -DSTM32L476xx -DDEBUG -c -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'readsensor':
+../Core/Src/main.c:120:12: warning: function returns address of local variable [-Wreturn-local-addr]
+     return frame;
+            ^~~~~
+../Core/Src/main.c: In function 'onEvent':
+../Core/Src/main.c:196:16: warning: passing argument 1 of 'debug_str' makes pointer from integer without a cast [-Wint-conversion]
+      debug_str(LMIC.dataLen);
+                ^~~~
+In file included from ../Core/Src/main.c:27:0:
+../Core/Inc/debug.h:51:6: note: expected 'const char *' but argument is of type 'u1_t {aka unsigned char}'
+ void debug_str (const char* str);
+      ^~~~~~~~~
+arm-none-eabi-gcc -o "FW_Feinstaubmessung.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\andre\Google Drive\Academic\Fachhochshule Muenster\Master\3\Embedded Systems\Feinstaubmessung Project\Firmware\FW_Feinstaubmessung\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FW_Feinstaubmessung.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: FW_Feinstaubmessung.elf
+ 
+arm-none-eabi-objdump -h -S  FW_Feinstaubmessung.elf  > "FW_Feinstaubmessung.list"
+arm-none-eabi-objcopy  -O binary  FW_Feinstaubmessung.elf  "FW_Feinstaubmessung.bin"
+arm-none-eabi-size   FW_Feinstaubmessung.elf 
+   text	   data	    bss	    dec	    hex	filename
+  52124	     92	   2660	  54876	   d65c	FW_Feinstaubmessung.elf
+Finished building: default.size.stdout
+ 
+Finished building: FW_Feinstaubmessung.bin
+ 
+Finished building: FW_Feinstaubmessung.list
+ 
+17:44:07 **** Incremental Build of configuration Debug for project FW_Feinstaubmessung ****
+make -j8 all 
+arm-none-eabi-size   FW_Feinstaubmessung.elf 
+   text	   data	    bss	    dec	    hex	filename
+  52124	     92	   2660	  54876	   d65c	FW_Feinstaubmessung.elf
+Finished building: default.size.stdout
+ 
+17:44:24 **** Incremental Build of configuration Debug for project FW_Feinstaubmessung ****
+make -j8 all 
+arm-none-eabi-size   FW_Feinstaubmessung.elf 
+   text	   data	    bss	    dec	    hex	filename
+  52124	     92	   2660	  54876	   d65c	FW_Feinstaubmessung.elf
+Finished building: default.size.stdout
+ 
+17:49:59 **** Incremental Build of configuration Debug for project FW_Feinstaubmessung ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DCFG_sx1276_radio -DUSE_HAL_DRIVER -DCFG_eu868 -DSTM32L476xx -DDEBUG -c -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'readsensor':
+../Core/Src/main.c:120:12: warning: function returns address of local variable [-Wreturn-local-addr]
+     return frame;
+            ^~~~~
+../Core/Src/main.c: In function 'onEvent':
+../Core/Src/main.c:196:16: warning: passing argument 1 of 'debug_str' makes pointer from integer without a cast [-Wint-conversion]
+      debug_str(LMIC.dataLen);
+                ^~~~
+In file included from ../Core/Src/main.c:27:0:
+../Core/Inc/debug.h:51:6: note: expected 'const char *' but argument is of type 'u1_t {aka unsigned char}'
+ void debug_str (const char* str);
+      ^~~~~~~~~
+arm-none-eabi-gcc -o "FW_Feinstaubmessung.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\andre\Google Drive\Academic\Fachhochshule Muenster\Master\3\Embedded Systems\Feinstaubmessung Project\Firmware\FW_Feinstaubmessung\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FW_Feinstaubmessung.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: FW_Feinstaubmessung.elf
+ 
+arm-none-eabi-objdump -h -S  FW_Feinstaubmessung.elf  > "FW_Feinstaubmessung.list"
+arm-none-eabi-objcopy  -O binary  FW_Feinstaubmessung.elf  "FW_Feinstaubmessung.bin"
+arm-none-eabi-size   FW_Feinstaubmessung.elf 
+   text	   data	    bss	    dec	    hex	filename
+  52124	     92	   2660	  54876	   d65c	FW_Feinstaubmessung.elf
+Finished building: default.size.stdout
+ 
+Finished building: FW_Feinstaubmessung.bin
+ 
+Finished building: FW_Feinstaubmessung.list
+ 
+17:50:12 **** Incremental Build of configuration Debug for project FW_Feinstaubmessung ****
+make -j8 all 
+arm-none-eabi-size   FW_Feinstaubmessung.elf 
+   text	   data	    bss	    dec	    hex	filename
+  52124	     92	   2660	  54876	   d65c	FW_Feinstaubmessung.elf
+Finished building: default.size.stdout
+ 
+18:05:07 **** Incremental Build of configuration Debug for project FW_Feinstaubmessung ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DCFG_sx1276_radio -DUSE_HAL_DRIVER -DCFG_eu868 -DSTM32L476xx -DDEBUG -c -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'readsensor':
+../Core/Src/main.c:120:12: warning: function returns address of local variable [-Wreturn-local-addr]
+     return frame;
+            ^~~~~
+../Core/Src/main.c: In function 'onEvent':
+../Core/Src/main.c:196:16: warning: passing argument 1 of 'debug_str' makes pointer from integer without a cast [-Wint-conversion]
+      debug_str(LMIC.dataLen);
+                ^~~~
+In file included from ../Core/Src/main.c:27:0:
+../Core/Inc/debug.h:51:6: note: expected 'const char *' but argument is of type 'u1_t {aka unsigned char}'
+ void debug_str (const char* str);
+      ^~~~~~~~~
+arm-none-eabi-gcc -o "FW_Feinstaubmessung.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\andre\Google Drive\Academic\Fachhochshule Muenster\Master\3\Embedded Systems\Feinstaubmessung Project\Firmware\FW_Feinstaubmessung\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FW_Feinstaubmessung.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: FW_Feinstaubmessung.elf
+ 
+arm-none-eabi-objdump -h -S  FW_Feinstaubmessung.elf  > "FW_Feinstaubmessung.list"
+arm-none-eabi-objcopy  -O binary  FW_Feinstaubmessung.elf  "FW_Feinstaubmessung.bin"
+arm-none-eabi-size   FW_Feinstaubmessung.elf 
+   text	   data	    bss	    dec	    hex	filename
+  52132	     92	   2660	  54884	   d664	FW_Feinstaubmessung.elf
+Finished building: default.size.stdout
+ 
+Finished building: FW_Feinstaubmessung.bin
+ 
+Finished building: FW_Feinstaubmessung.list
+ 
+18:06:34 **** Incremental Build of configuration Debug for project FW_Feinstaubmessung ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DCFG_sx1276_radio -DUSE_HAL_DRIVER -DCFG_eu868 -DSTM32L476xx -DDEBUG -c -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'readsensor':
+../Core/Src/main.c:120:12: warning: function returns address of local variable [-Wreturn-local-addr]
+     return frame;
+            ^~~~~
+../Core/Src/main.c: In function 'onEvent':
+../Core/Src/main.c:196:16: warning: passing argument 1 of 'debug_str' makes pointer from integer without a cast [-Wint-conversion]
+      debug_str(LMIC.dataLen);
+                ^~~~
+In file included from ../Core/Src/main.c:27:0:
+../Core/Inc/debug.h:51:6: note: expected 'const char *' but argument is of type 'u1_t {aka unsigned char}'
+ void debug_str (const char* str);
+      ^~~~~~~~~
+arm-none-eabi-gcc -o "FW_Feinstaubmessung.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\andre\Google Drive\Academic\Fachhochshule Muenster\Master\3\Embedded Systems\Feinstaubmessung Project\Firmware\FW_Feinstaubmessung\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FW_Feinstaubmessung.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: FW_Feinstaubmessung.elf
+ 
+arm-none-eabi-objdump -h -S  FW_Feinstaubmessung.elf  > "FW_Feinstaubmessung.list"
+arm-none-eabi-objcopy  -O binary  FW_Feinstaubmessung.elf  "FW_Feinstaubmessung.bin"
+arm-none-eabi-size   FW_Feinstaubmessung.elf 
+   text	   data	    bss	    dec	    hex	filename
+  52708	     92	   2660	  55460	   d8a4	FW_Feinstaubmessung.elf
 Finished building: default.size.stdout
  
 Finished building: FW_Feinstaubmessung.bin
