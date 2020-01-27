@@ -102,6 +102,25 @@ void initfunc (osjob_t* j) {
     // init done - onEvent() callback will be invoked...
 }
 
+u2_t * readsensor(){
+
+	int pm25;
+	int pm10;
+	u2_t frame[] = {0x00, 0x00, 0x00, 0x00};
+	hpmStartParticleMeasurement();
+	HAL_Delay(2000);
+	hpmReadResults(&pm25,&pm10);
+	hpmStopParticleMeasurement();
+    //int value = (int) pm25;    /// read from evrything ...make your own sensor
+    frame[0] = pm25 << 8;
+    frame[1] = pm25;
+    frame[2] = pm10 << 8;
+    frame[3] = pm10;
+	//return value;
+    return frame;
+}
+
+
 
 static osjob_t reportjob;
 
@@ -114,6 +133,9 @@ static void reportfunc (osjob_t* j) {
 	HAL_Delay(5000);
 	hpmReadResults(&pm25,&pm10);
 	hpmStopParticleMeasurement();
+	//u2_t * frame;
+    //frame = readsensor();
+    //debug_val("val = ", val);
     // prepare and schedule data for transmission
     LMIC.frame[0] = pm25 >> 8;
     LMIC.frame[1] = pm25;

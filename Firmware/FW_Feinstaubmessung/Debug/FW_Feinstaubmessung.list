@@ -27,23 +27,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000030  00000000  00000000  00020054  2**0
                   CONTENTS, READONLY
- 12 .debug_info   0001c2dd  00000000  00000000  00020084  2**0
+ 12 .debug_info   0001c282  00000000  00000000  00020084  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_abbrev 0000312b  00000000  00000000  0003c361  2**0
+ 13 .debug_abbrev 00003111  00000000  00000000  0003c306  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_aranges 00001638  00000000  00000000  0003f490  2**3
+ 14 .debug_aranges 00001630  00000000  00000000  0003f418  2**3
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_ranges 00001510  00000000  00000000  00040ac8  2**3
+ 15 .debug_ranges 00001508  00000000  00000000  00040a48  2**3
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_macro  0002861f  00000000  00000000  00041fd8  2**0
+ 16 .debug_macro  0002861f  00000000  00000000  00041f50  2**0
                   CONTENTS, READONLY, DEBUGGING
- 17 .debug_line   00013051  00000000  00000000  0006a5f7  2**0
+ 17 .debug_line   00013036  00000000  00000000  0006a56f  2**0
                   CONTENTS, READONLY, DEBUGGING
- 18 .debug_str    000f679c  00000000  00000000  0007d648  2**0
+ 18 .debug_str    000f6791  00000000  00000000  0007d5a5  2**0
                   CONTENTS, READONLY, DEBUGGING
- 19 .comment      0000007b  00000000  00000000  00173de4  2**0
+ 19 .comment      0000007b  00000000  00000000  00173d36  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00005ddc  00000000  00000000  00173e60  2**2
+ 20 .debug_frame  00005db8  00000000  00000000  00173db4  2**2
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -9686,9 +9686,6 @@ static void reportfunc (osjob_t* j) {
  80046dc:	f001 fae4 	bl	8005ca8 <hpmReadResults>
 	hpmStopParticleMeasurement();
  80046e0:	f001 fb45 	bl	8005d6e <hpmStopParticleMeasurement>
-	//u2_t * frame;
-    //frame = readsensor();
-    //debug_val("val = ", val);
     // prepare and schedule data for transmission
     LMIC.frame[0] = pm25 >> 8;
  80046e4:	68fb      	ldr	r3, [r7, #12]
@@ -9719,11 +9716,11 @@ static void reportfunc (osjob_t* j) {
  8004716:	2001      	movs	r0, #1
  8004718:	f7ff ff48 	bl	80045ac <LMIC_setTxData2>
     // reschedule job in 60 seconds
-    os_setTimedCallback(j, os_getTime()+sec2osticks(30), reportfunc);
+    os_setTimedCallback(j, os_getTime()+sec2osticks(60), reportfunc);
  800471c:	f000 fb2c 	bl	8004d78 <os_getTime>
  8004720:	4603      	mov	r3, r0
- 8004722:	f503 236a 	add.w	r3, r3, #958464	; 0xea000
- 8004726:	f503 63c0 	add.w	r3, r3, #1536	; 0x600
+ 8004722:	f503 13ea 	add.w	r3, r3, #1916928	; 0x1d4000
+ 8004726:	f503 6340 	add.w	r3, r3, #3072	; 0xc00
  800472a:	4a06      	ldr	r2, [pc, #24]	; (8004744 <reportfunc+0x90>)
  800472c:	4619      	mov	r1, r3
  800472e:	6878      	ldr	r0, [r7, #4]

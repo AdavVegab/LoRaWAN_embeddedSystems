@@ -1,12 +1,8 @@
-18:06:34 **** Incremental Build of configuration Debug for project FW_Feinstaubmessung ****
+18:21:04 **** Incremental Build of configuration Debug for project FW_Feinstaubmessung ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DCFG_sx1276_radio -DUSE_HAL_DRIVER -DCFG_eu868 -DSTM32L476xx -DDEBUG -c -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'readsensor':
-../Core/Src/main.c:120:12: warning: function returns address of local variable [-Wreturn-local-addr]
-     return frame;
-            ^~~~~
 ../Core/Src/main.c: In function 'onEvent':
-../Core/Src/main.c:196:16: warning: passing argument 1 of 'debug_str' makes pointer from integer without a cast [-Wint-conversion]
+../Core/Src/main.c:174:16: warning: passing argument 1 of 'debug_str' makes pointer from integer without a cast [-Wint-conversion]
       debug_str(LMIC.dataLen);
                 ^~~~
 In file included from ../Core/Src/main.c:27:0:
@@ -28,5 +24,5 @@ Finished building: FW_Feinstaubmessung.bin
 Finished building: FW_Feinstaubmessung.list
  
 
-18:06:36 Build Finished. 0 errors, 2 warnings. (took 2s.798ms)
+18:21:08 Build Finished. 0 errors, 1 warnings. (took 3s.905ms)
 
