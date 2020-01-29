@@ -1,0 +1,117 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 73100-0258
+D MOLEX - 73100-0258 - RF COAX CONN, SMB, JACK, 75 OHM, PCB
+F https://componentsearchengine.com/Datasheets/1/73100-0258.pdf
+$ENDCMP
+#
+$CMP ABS25-32.768KHZ-T
+D ABRACON - ABS25-32.768KHZ-T - CRYSTAL, 32.768K, 12.5PF CL 8X2.5 SMD
+F https://componentsearchengine.com/Datasheets/1/ABS25-32.768KHZ-T.pdf
+$ENDCMP
+#
+$CMP B39162B4353P810
+D Signal Conditioning CSSP3 Cu AE AEC-Q200
+F https://www.mouser.de/datasheet/2/842/B4353-1375286.pdf
+$ENDCMP
+#
+$CMP BGA824N6E6327XTSA1
+D INFINEON - BGA824N6E6327XTSA1 - LNA, 17DB, 1.55GHZ-1.615GHZ, TSNP-6
+F https://www.infineon.com/dgdl/Infineon-BGA824N6-DS-v03_00-en.pdf?fileId=db3a30433f764301013f7b53cdd02721
+$ENDCMP
+#
+$CMP BGA_725L6_E6327
+D INFINEON - BGA 725L6 E6327 - RF AMP, 20DB, 1.615GHZ, 3.6V, TSLP-6
+F https://componentsearchengine.com/Datasheets/1/BGA 725L6 E6327.pdf
+$ENDCMP
+#
+$CMP CONSMA002-L-G
+D RF Connectors / Coaxial Connectors SMA Fml Right Angle PCB Mount, Extended
+F https://componentsearchengine.com/Datasheets/1/CONSMA002-L-G.pdf
+$ENDCMP
+#
+$CMP EEE-FK1H470V
+D Aluminum Electrolytic Capacitors - SMD Al Lytic Cap SMT FK 105C Anti-Vib
+F https://componentsearchengine.com/Datasheets/1/EEE-FK1H470V.pdf
+$ENDCMP
+#
+$CMP ESDARF02-1BU2CK
+D STMicroelectronics ESDARF02-1BU2CK Bi-Directional ESD Protection Diode, 20W peak, 2-Pin ST-0201
+F https://componentsearchengine.com/Datasheets/1/ESDARF02-1BU2CK.pdf
+$ENDCMP
+#
+$CMP L6924D
+D L6924D, Battery Charge Controller, Lithium-Ion, Lithium-Polymer, 16-Pin VFQFPN
+F https://componentsearchengine.com/Datasheets/1/L6924D.pdf
+$ENDCMP
+#
+$CMP LL3301AF065QJ
+D Pushbutton Switches 50mA 12VDC F065 5.0mm J-Lead
+F https://componentsearchengine.com/Datasheets/1/LL3301AF065QJ.pdf
+$ENDCMP
+#
+$CMP LL3301NF065QG
+D E-SWITCH - LL3301NF065QG - TACTILE SW, SPST, 0.05A, 12VDC, SOLDER
+F https://componentsearchengine.com/Datasheets/1/LL3301NF065QG.pdf
+$ENDCMP
+#
+$CMP NE555D
+D NE555DG4, Timer, 4.5 To 16V, 8-Pin SOIC-8
+F http://www.ti.com/lit/ds/symlink/ne555.pdf
+$ENDCMP
+#
+$CMP SMM4F5.0A-TR
+D ESD Suppressors / TVS Diodes 400W HI JCT TMP
+F http://www.st.com/content/ccc/resource/technical/document/datasheet/5d/b3/40/b8/ac/6c/49/a2/CD00178940.pdf/files/CD00178940.pdf/jcr:content/translations/en.CD00178940.pdf
+$ENDCMP
+#
+$CMP SPV1040T
+D Voltage Regulators - Switching Regulators Hi efficiency solar battery charger
+F https://componentsearchengine.com/Datasheets/1/SPV1040T.pdf
+$ENDCMP
+#
+$CMP STM32F103CBT6
+D STM32F103CBT6, 32 bit ARM Cortex M3 , 72MHz, 128 kB ROM , 20 kB RAM USB CAN I2C, 48 LQFP
+F https://componentsearchengine.com/Datasheets/1/STM32F103CBT6.pdf
+$ENDCMP
+#
+$CMP TESEO-LIV3F
+D GPS Modules Tiny GNSS module
+F https://componentsearchengine.com/Datasheets/1/TESEO-LIV3F.pdf
+$ENDCMP
+#
+$CMP TLS850B0TBV33ATMA1
+D INFINEON - TLS850B0TBV33ATMA1 - LDO, AEC-Q100, FIXED, 3.3V, 0.5A, TO-263
+F https://componentsearchengine.com/Datasheets/1/TLS850B0TBV33ATMA1.pdf
+$ENDCMP
+#
+$CMP TPS22943DCKR
+D LOW-INPUT-VOLTAGE CURRENT-LIMITED LOAD SWITCHES  WITH SHUT OFF AND AUTO-RESTART FEATURE
+F http://www.ti.com/lit/gpn/tps22943
+$ENDCMP
+#
+$CMP CON-SOCJ-2155
+D DC Power Connectors Power Jack/Connector 2.1mm x 5.5mm
+K
+F http://www.produktinfo.conrad.com/datenblaetter/1500000-1599999/001582350-da-01-en-DC_EINBAUBUCHSE__SCHALTER_GESCHLOSSEN.pdf
+$ENDCMP
+#
+$CMP 53048-0810
+D 8 way through board PCB 90deg header Molex PICOBLADE Series, Series Number 53048, 1.25mm Pitch 8 Way 1 Row Right Angle PCB Header, Solder Termination, 1A
+K
+F https://componentsearchengine.com/Datasheets/1/53048-0810.pdf
+$ENDCMP
+#
+$CMP T3V3S5-7
+D ESD Suppressor TVS 3.3V 2-Pin SOD-523 T/R
+K
+F https://componentsearchengine.com/Datasheets/1/T3V3S5-7.pdf
+$ENDCMP
+#
+$CMP ECS-80-12-30Q-DS-TR
+D Crystals 8MHz 12pF AEC ESR 100 -40C +125C
+K
+F https://componentsearchengine.com/Datasheets/1/ECS-80-12-30Q-DS-TR.pdf
+$ENDCMP
+#
+#End Doc Library

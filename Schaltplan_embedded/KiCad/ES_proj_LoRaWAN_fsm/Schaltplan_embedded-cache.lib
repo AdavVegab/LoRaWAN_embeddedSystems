@@ -1,87 +1,6 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Connector_Barrel_Jack
-#
-DEF Connector_Barrel_Jack J 0 40 Y Y 1 F N
-F0 "J" 0 210 50 H V C CNN
-F1 "Connector_Barrel_Jack" 0 -200 50 H V C CNN
-F2 "" 50 -40 50 H I C CNN
-F3 "" 50 -40 50 H I C CNN
-ALIAS Jack-DC
-$FPLIST
- BarrelJack*
-$ENDFPLIST
-DRAW
-A -130 100 25 901 -901 0 1 10 F -130 125 -130 75
-A -130 100 25 901 -901 0 1 10 N -130 125 -130 75
-S -200 150 200 -150 0 1 10 f
-S 145 125 -130 75 0 1 10 F
-P 2 0 1 10 200 100 150 100 N
-P 6 0 1 10 -150 -100 -100 -100 -50 -50 0 -100 100 -100 200 -100 N
-X ~ 1 300 100 100 L 50 50 1 1 P
-X ~ 2 300 -100 100 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Connector_Conn_01x02_Female
-#
-DEF Connector_Conn_01x02_Female J 0 40 Y N 1 F N
-F0 "J" 0 100 50 H V C CNN
-F1 "Connector_Conn_01x02_Female" 0 -200 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Connector*:*_1x??_*
-$ENDFPLIST
-DRAW
-A 0 -100 20 901 -901 1 1 6 N 0 -80 0 -120
-A 0 0 20 901 -901 1 1 6 N 0 20 0 -20
-P 2 1 1 6 -50 -100 -20 -100 N
-P 2 1 1 6 -50 0 -20 0 N
-X Pin_1 1 -200 0 150 R 50 50 1 1 P
-X Pin_2 2 -200 -100 150 R 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Connector_Conn_01x08_Male
-#
-DEF Connector_Conn_01x08_Male J 0 40 Y N 1 F N
-F0 "J" 0 400 50 H V C CNN
-F1 "Connector_Conn_01x08_Male" 0 -500 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Connector*:*_1x??_*
-$ENDFPLIST
-DRAW
-S 34 -395 0 -405 1 1 6 F
-S 34 -295 0 -305 1 1 6 F
-S 34 -195 0 -205 1 1 6 F
-S 34 -95 0 -105 1 1 6 F
-S 34 5 0 -5 1 1 6 F
-S 34 105 0 95 1 1 6 F
-S 34 205 0 195 1 1 6 F
-S 34 305 0 295 1 1 6 F
-P 2 1 1 6 50 -400 34 -400 N
-P 2 1 1 6 50 -300 34 -300 N
-P 2 1 1 6 50 -200 34 -200 N
-P 2 1 1 6 50 -100 34 -100 N
-P 2 1 1 6 50 0 34 0 N
-P 2 1 1 6 50 100 34 100 N
-P 2 1 1 6 50 200 34 200 N
-P 2 1 1 6 50 300 34 300 N
-X Pin_1 1 200 300 150 L 50 50 1 1 P
-X Pin_2 2 200 200 150 L 50 50 1 1 P
-X Pin_3 3 200 100 150 L 50 50 1 1 P
-X Pin_4 4 200 0 150 L 50 50 1 1 P
-X Pin_5 5 200 -100 150 L 50 50 1 1 P
-X Pin_6 6 200 -200 150 L 50 50 1 1 P
-X Pin_7 7 200 -300 150 L 50 50 1 1 P
-X Pin_8 8 200 -400 150 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
 # Connector_Conn_Coaxial
 #
 DEF Connector_Conn_Coaxial J 0 40 Y N 1 F N
@@ -107,15 +26,34 @@ X Ext 2 0 -200 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Generic_Conn_02x05_Odd_Even
+# Connector_Generic_Conn_01x02
 #
-DEF Connector_Generic_Conn_02x05_Odd_Even J 0 40 Y N 1 F N
-F0 "J" 50 300 50 H V C CNN
-F1 "Connector_Generic_Conn_02x05_Odd_Even" 50 -300 50 H V C CNN
+DEF Connector_Generic_Conn_01x02 J 0 40 Y N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "Connector_Generic_Conn_01x02" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
- Connector*:*_2x??_*
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 50 50 -150 1 1 10 f
+X Pin_1 1 -200 0 150 R 50 50 1 1 P
+X Pin_2 2 -200 -100 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Connector_Generic_Conn_01x05
+#
+DEF Connector_Generic_Conn_01x05 J 0 40 Y N 1 F N
+F0 "J" 0 300 50 H V C CNN
+F1 "Connector_Generic_Conn_01x05" 0 -300 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??_*
 $ENDFPLIST
 DRAW
 S -50 -195 0 -205 1 1 6 N
@@ -123,22 +61,12 @@ S -50 -95 0 -105 1 1 6 N
 S -50 5 0 -5 1 1 6 N
 S -50 105 0 95 1 1 6 N
 S -50 205 0 195 1 1 6 N
-S -50 250 150 -250 1 1 10 f
-S 150 -195 100 -205 1 1 6 N
-S 150 -95 100 -105 1 1 6 N
-S 150 5 100 -5 1 1 6 N
-S 150 105 100 95 1 1 6 N
-S 150 205 100 195 1 1 6 N
+S -50 250 50 -250 1 1 10 f
 X Pin_1 1 -200 200 150 R 50 50 1 1 P
-X Pin_10 10 300 -200 150 L 50 50 1 1 P
-X Pin_2 2 300 200 150 L 50 50 1 1 P
-X Pin_3 3 -200 100 150 R 50 50 1 1 P
-X Pin_4 4 300 100 150 L 50 50 1 1 P
-X Pin_5 5 -200 0 150 R 50 50 1 1 P
-X Pin_6 6 300 0 150 L 50 50 1 1 P
-X Pin_7 7 -200 -100 150 R 50 50 1 1 P
-X Pin_8 8 300 -100 150 L 50 50 1 1 P
-X Pin_9 9 -200 -200 150 R 50 50 1 1 P
+X Pin_2 2 -200 100 150 R 50 50 1 1 P
+X Pin_3 3 -200 0 150 R 50 50 1 1 P
+X Pin_4 4 -200 -100 150 R 50 50 1 1 P
+X Pin_5 5 -200 -200 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -177,27 +105,6 @@ P 2 0 1 0 -70 90 -30 90 N
 P 2 0 1 0 -50 110 -50 70 N
 X ~ 1 0 150 110 D 50 50 1 1 P
 X ~ 2 0 -150 110 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_Crystal
-#
-DEF Device_Crystal Y 0 40 N N 1 F N
-F0 "Y" 0 150 50 H V C CNN
-F1 "Device_Crystal" 0 -150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Crystal*
-$ENDFPLIST
-DRAW
-S -45 100 45 -100 0 1 12 N
-P 2 0 1 0 -100 0 -75 0 N
-P 2 0 1 20 -75 -50 -75 50 N
-P 2 0 1 20 75 -50 75 50 N
-P 2 0 1 0 100 0 75 0 N
-X 1 1 -150 0 50 R 50 50 1 1 P
-X 2 2 150 0 50 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -344,106 +251,49 @@ X PC1 9 -700 -200 100 R 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# RF_Filter_neu_B4327
+# SamacSys_Parts_53048-0810
 #
-DEF RF_Filter_neu_B4327 FL 0 20 Y Y 1 F N
-F0 "FL" 0 425 50 H V C CNN
-F1 "RF_Filter_neu_B4327" 0 350 50 H V C CNN
-F2 "" 0 500 50 H I C CNN
-F3 "" 0 100 50 H I C CNN
-$FPLIST
- Filter*Mini?Circuits*FV1206?7*
-$ENDFPLIST
+DEF SamacSys_Parts_53048-0810 J 0 30 Y Y 1 F N
+F0 "J" 650 300 50 H V L CNN
+F1 "SamacSys_Parts_53048-0810" 650 200 50 H V L CNN
+F2 "SHDR8W35P0X125_1X8_1175X550X370P" 650 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/1/53048-0810.pdf" 650 0 50 H I L CNN
+F4 "8 way through board PCB 90deg header Molex PICOBLADE Series, Series Number 53048, 1.25mm Pitch 8 Way 1 Row Right Angle PCB Header, Solder Termination, 1A" 650 -100 50 H I L CNN "Description"
+F5 "3.7" 650 -200 50 H I L CNN "Height"
+F6 "538-53048-0810" 650 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.com/Search/Refine.aspx?Keyword=538-53048-0810" 650 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Molex" 650 -500 50 H I L CNN "Manufacturer_Name"
+F9 "53048-0810" 650 -600 50 H I L CNN "Manufacturer_Part_Number"
 DRAW
-A -75 -100 90 1463 337 0 1 10 N -150 -50 0 -50
-A -75 0 90 1463 337 0 1 10 N -150 50 0 50
-A -75 100 90 1463 337 0 1 10 N -150 150 0 150
-A 75 0 90 -1463 -337 0 1 10 N 0 -50 150 -50
-A 75 100 90 -1463 -337 0 1 10 N 0 50 150 50
-A 75 200 90 -1463 -337 0 1 10 N 0 150 150 150
-S -300 300 300 -300 0 1 10 f
-P 2 0 1 10 -50 -100 50 0 N
-P 2 0 1 10 -50 100 50 200 N
-X IN 1 -400 0 100 R 50 50 1 1 P
-X GND 2 -100 -500 200 U 50 50 1 1 P
-X GND 3 0 -500 200 U 50 50 1 1 P
-X OUT 4 400 0 100 L 50 50 1 1 P
-X GND 5 100 -500 200 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# RF_Module_RFM95W-868S2
-#
-DEF RF_Module_RFM95W-868S2 U 0 40 Y Y 1 F N
-F0 "U" -410 460 50 H V L CNN
-F1 "RF_Module_RFM95W-868S2" 60 450 50 H V L CNN
-F2 "" -3300 1650 50 H I C CNN
-F3 "" -3300 1650 50 H I C CNN
-ALIAS RFM95W-915S2 RFM96W-315S2 RFM96W-433S2 RFM97W-868S2 RFM97W-915S2 RFM98W-315S2 RFM98W-433S2 RFM69HCW
-$FPLIST
- HOPERF*RFM9XW*
-$ENDFPLIST
-DRAW
-S -400 400 400 -500 0 1 10 f
-X GND 1 -100 -600 100 U 50 50 1 1 W
-X GND 10 100 -600 100 U 50 50 1 1 W
-X DIO3 11 500 -100 100 L 50 50 1 1 B
-X DIO4 12 500 0 100 L 50 50 1 1 B
-X 3.3V 13 0 500 100 D 50 50 1 1 W
-X DIO0 14 500 -400 100 L 50 50 1 1 B
-X DIO1 15 500 -300 100 L 50 50 1 1 B
-X DIO2 16 500 -200 100 L 50 50 1 1 B
-X MISO 2 -500 100 100 R 50 50 1 1 O
-X MOSI 3 -500 200 100 R 50 50 1 1 I
-X SCK 4 -500 300 100 R 50 50 1 1 I
-X NSS 5 -500 0 100 R 50 50 1 1 I
-X RESET 6 -500 -200 100 R 50 50 1 1 B
-X DIO5 7 500 100 100 L 50 50 1 1 B
-X GND 8 0 -600 100 U 50 50 1 1 W
-X ANT 9 500 300 100 L 50 50 1 1 B
-ENDDRAW
-ENDDEF
-#
-# SamacSys_Parts_BGA824N6E6327XTSA1
-#
-DEF SamacSys_Parts_BGA824N6E6327XTSA1 IC 0 30 Y Y 1 F N
-F0 "IC" 1050 300 50 H V L CNN
-F1 "SamacSys_Parts_BGA824N6E6327XTSA1" 1050 200 50 H V L CNN
-F2 "BGS12SN6E6327XTSA1" 1050 100 50 H I L CNN
-F3 "https://www.infineon.com/dgdl/Infineon-BGA824N6-DS-v03_00-en.pdf?fileId=db3a30433f764301013f7b53cdd02721" 1050 0 50 H I L CNN
-F4 "INFINEON - BGA824N6E6327XTSA1 - LNA, 17DB, 1.55GHZ-1.615GHZ, TSNP-6" 1050 -100 50 H I L CNN "Description"
-F5 "Infineon" 1050 -300 50 H I L CNN "Manufacturer_Name"
-F6 "BGA824N6E6327XTSA1" 1050 -400 50 H I L CNN "Manufacturer_Part_Number"
-F7 "726-A824N6E6327XTSA1" 1050 -500 50 H I L CNN "Mouser Part Number"
-F8 "https://www.mouser.com/Search/Refine.aspx?Keyword=726-A824N6E6327XTSA1" 1050 -600 50 H I L CNN "Mouser Price/Stock"
-DRAW
-P 5 0 1 6 200 100 1000 100 1000 -300 200 -300 200 100 N
-X GND_1 1 0 0 200 R 50 50 0 0 U
-X VCC 2 0 -100 200 R 50 50 0 0 U
-X AO 3 0 -200 200 R 50 50 0 0 U
-X GND_2 4 1200 0 200 L 50 50 0 0 U
-X AI 5 1200 -100 200 L 50 50 0 0 U
-X PON 6 1200 -200 200 L 50 50 0 0 U
-ENDDRAW
-ENDDEF
-#
-# SamacSys_Parts_ESDARF02-1BU2CK
-#
-DEF SamacSys_Parts_ESDARF02-1BU2CK D 0 30 Y Y 1 F N
-F0 "D" 650 300 50 H V L CNN
-F1 "SamacSys_Parts_ESDARF02-1BU2CK" 650 200 50 H V L CNN
-F2 "ESDARF021BU2CK" 650 100 50 H I L CNN
-F3 "https://componentsearchengine.com/Datasheets/1/ESDARF02-1BU2CK.pdf" 650 0 50 H I L CNN
-F4 "STMicroelectronics ESDARF02-1BU2CK Bi-Directional ESD Protection Diode, 20W peak, 2-Pin ST-0201" 650 -100 50 H I L CNN "Description"
-F5 "0.33" 650 -200 50 H I L CNN "Height"
-F6 "511-ESDARF02-1BU2CK" 650 -300 50 H I L CNN "Mouser Part Number"
-F7 "https://www.mouser.com/Search/Refine.aspx?Keyword=511-ESDARF02-1BU2CK" 650 -400 50 H I L CNN "Mouser Price/Stock"
-F8 "STMicroelectronics" 650 -500 50 H I L CNN "Manufacturer_Name"
-F9 "ESDARF02-1BU2CK" 650 -600 50 H I L CNN "Manufacturer_Part_Number"
-DRAW
-P 5 0 1 6 200 100 600 100 600 -100 200 -100 200 100 N
+P 5 0 1 6 200 100 600 100 600 -800 200 -800 200 100 N
 X 1 1 0 0 200 R 50 50 0 0 U
-X 2 2 800 0 200 L 50 50 0 0 U
+X 2 2 0 -100 200 R 50 50 0 0 U
+X 3 3 0 -200 200 R 50 50 0 0 U
+X 4 4 0 -300 200 R 50 50 0 0 U
+X 5 5 0 -400 200 R 50 50 0 0 U
+X 6 6 0 -500 200 R 50 50 0 0 U
+X 7 7 0 -600 200 R 50 50 0 0 U
+X 8 8 0 -700 200 R 50 50 0 0 U
+ENDDRAW
+ENDDEF
+#
+# SamacSys_Parts_ECS-80-12-30Q-DS-TR
+#
+DEF SamacSys_Parts_ECS-80-12-30Q-DS-TR Y 0 30 Y Y 1 F N
+F0 "Y" 850 300 50 H V L CNN
+F1 "SamacSys_Parts_ECS-80-12-30Q-DS-TR" 850 200 50 H V L CNN
+F2 "ECS801230QDSTR" 850 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/1/ECS-80-12-30Q-DS-TR.pdf" 850 0 50 H I L CNN
+F4 "Crystals 8MHz 12pF AEC ESR 100 -40C +125C" 850 -100 50 H I L CNN "Description"
+F5 "1.1" 850 -200 50 H I L CNN "Height"
+F6 "520-80-12-30Q-DST" 850 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.com/Search/Refine.aspx?Keyword=520-80-12-30Q-DST" 850 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "ECS" 850 -500 50 H I L CNN "Manufacturer_Name"
+F9 "ECS-80-12-30Q-DS-TR" 850 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 5 0 1 6 200 100 800 100 800 -200 200 -200 200 100 N
+X IN/OUT 1 0 0 200 R 50 50 0 0 U
+X OUT/IN 2 0 -100 200 R 50 50 0 0 U
 ENDDRAW
 ENDDEF
 #
@@ -488,12 +338,12 @@ DEF SamacSys_Parts_SMM4F5.0A-TR D 0 30 Y Y 1 F N
 F0 "D" 450 200 50 H V L CNN
 F1 "SamacSys_Parts_SMM4F5.0A-TR" 450 100 50 H V L CNN
 F2 "STMITE" 450 0 50 H I L CNN
-F3 "https://componentsearchengine.com/Datasheets/1/SMM4F5.0A-TR.pdf" 450 -100 50 H I L CNN
+F3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/5d/b3/40/b8/ac/6c/49/a2/CD00178940.pdf/files/CD00178940.pdf/jcr:content/translations/en.CD00178940.pdf" 450 -100 50 H I L CNN
 F4 "ESD Suppressors / TVS Diodes 400W HI JCT TMP" 450 -200 50 H I L CNN "Description"
-F5 "511-SMM4F5.0A-TR" 450 -400 50 H I L CNN "Mouser Part Number"
-F6 "https://www.mouser.com/Search/Refine.aspx?Keyword=511-SMM4F5.0A-TR" 450 -500 50 H I L CNN "Mouser Price/Stock"
-F7 "STMicroelectronics" 450 -600 50 H I L CNN "Manufacturer_Name"
-F8 "SMM4F5.0A-TR" 450 -700 50 H I L CNN "Manufacturer_Part_Number"
+F5 "STMicroelectronics" 450 -400 50 H I L CNN "Manufacturer_Name"
+F6 "SMM4F5.0A-TR" 450 -500 50 H I L CNN "Manufacturer_Part_Number"
+F7 "511-SMM4F5.0A-TR" 450 -600 50 H I L CNN "Mouser Part Number"
+F8 "https://www.mouser.com/Search/Refine.aspx?Keyword=511-SMM4F5.0A-TR" 450 -700 50 H I L CNN "Mouser Price/Stock"
 DRAW
 P 2 0 1 6 200 100 200 -100 N
 P 4 0 1 6 200 0 400 100 400 -100 200 0 N
@@ -525,6 +375,26 @@ X VCTRL 5 1600 -300 200 L 50 50 0 0 U
 X ICTRL_MINUS 6 1600 -200 200 L 50 50 0 0 U
 X ICTRL_PLUS 7 1600 -100 200 L 50 50 0 0 U
 X XSHUT 8 1600 0 200 L 50 50 0 0 U
+ENDDRAW
+ENDDEF
+#
+# SamacSys_Parts_T3V3S5-7
+#
+DEF SamacSys_Parts_T3V3S5-7 D 0 30 Y Y 1 F N
+F0 "D" 650 300 50 H V L CNN
+F1 "SamacSys_Parts_T3V3S5-7" 650 200 50 H V L CNN
+F2 "SODFL1608X65N" 650 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/1/T3V3S5-7.pdf" 650 0 50 H I L CNN
+F4 "ESD Suppressor TVS 3.3V 2-Pin SOD-523 T/R" 650 -100 50 H I L CNN "Description"
+F5 "0.65" 650 -200 50 H I L CNN "Height"
+F6 "621-T3V3S5-7" 650 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.com/Search/Refine.aspx?Keyword=621-T3V3S5-7" 650 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Diodes Inc." 650 -500 50 H I L CNN "Manufacturer_Name"
+F9 "T3V3S5-7" 650 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 5 0 1 6 200 100 600 100 600 -100 200 -100 200 100 N
+X K 1 0 0 200 R 50 50 0 0 U
+X A 2 800 0 200 L 50 50 0 0 U
 ENDDRAW
 ENDDEF
 #
@@ -610,20 +480,104 @@ X VIN 5 1100 -100 200 L 50 50 0 0 U
 ENDDRAW
 ENDDEF
 #
-# Switch_SW_Push
+# Schaltplan_embedded-rescue_CON-SOCJ-2155-SamacSys_Parts-Schaltplan_embedded-rescue
 #
-DEF Switch_SW_Push SW 0 40 N N 1 F N
-F0 "SW" 50 100 50 H V L CNN
-F1 "Switch_SW_Push" 0 -60 50 H V C CNN
-F2 "" 0 200 50 H I C CNN
-F3 "" 0 200 50 H I C CNN
+DEF Schaltplan_embedded-rescue_CON-SOCJ-2155-SamacSys_Parts-Schaltplan_embedded-rescue J 0 30 Y Y 1 F N
+F0 "J" 650 50 50 H V L CNN
+F1 "Schaltplan_embedded-rescue_CON-SOCJ-2155-SamacSys_Parts-Schaltplan_embedded-rescue" 650 -50 50 H V L CNN
+F2 "CONSOCJ2155" 650 -150 50 H I L CNN
+F3 "http://www.produktinfo.conrad.com/datenblaetter/1500000-1599999/001582350-da-01-en-DC_EINBAUBUCHSE__SCHALTER_GESCHLOSSEN.pdf" 650 -250 50 H I L CNN
+F4 "DC Power Connectors Power Jack/Connector 2.1mm x 5.5mm" 650 -350 50 H I L CNN "Description"
+F5 "11" 650 -450 50 H I L CNN "Height"
+F6 "992-CON-SOCJ-2155" 650 -550 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.com/Search/Refine.aspx?Keyword=992-CON-SOCJ-2155" 650 -650 50 H I L CNN "Mouser Price/Stock"
+F8 "Gravitech" 650 -750 50 H I L CNN "Manufacturer_Name"
+F9 "CON-SOCJ-2155" 650 -850 50 H I L CNN "Manufacturer_Part_Number"
 DRAW
-C -80 0 20 0 1 0 N
-C 80 0 20 0 1 0 N
-P 2 0 1 0 0 50 0 120 N
-P 2 0 1 0 100 50 -100 50 N
-X 1 1 -200 0 100 R 50 50 0 1 P
-X 2 2 200 0 100 L 50 50 0 1 P
+P 2 0 1 6 100 0 200 0 N
+P 3 0 1 6 100 -100 300 -100 300 -200 N
+P 4 0 1 6 100 -200 400 -200 500 -100 600 -200 N
+P 4 0 1 6 300 -200 280 -140 320 -140 300 -200 N
+P 5 0 1 6 200 40 200 -40 600 -40 600 40 200 40 N
+X ~ 1 0 0 100 R 50 50 0 0 U
+X ~ 2 0 -200 100 R 50 50 0 0 U
+X ~ 3 0 -100 100 R 50 50 0 0 U
+ENDDRAW
+ENDDEF
+#
+# Schaltplan_embedded-rescue_CONSMA002-L-G-SamacSys_Parts-Schaltplan_embedded-rescue
+#
+DEF Schaltplan_embedded-rescue_CONSMA002-L-G-SamacSys_Parts-Schaltplan_embedded-rescue J 0 30 Y Y 1 F N
+F0 "J" 650 300 50 H V L CNN
+F1 "Schaltplan_embedded-rescue_CONSMA002-L-G-SamacSys_Parts-Schaltplan_embedded-rescue" 650 200 50 H V L CNN
+F2 "CONSMA002LG" 650 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/1/CONSMA002-L-G.pdf" 650 0 50 H I L CNN
+F4 "RF Connectors / Coaxial Connectors SMA Fml Right Angle PCB Mount, Extended" 650 -100 50 H I L CNN "Description"
+F5 "10" 650 -200 50 H I L CNN "Height"
+F6 "712-CONSMA002-L-G" 650 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.com/Search/Refine.aspx?Keyword=712-CONSMA002-L-G" 650 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Linx Technologies" 650 -500 50 H I L CNN "Manufacturer_Name"
+F9 "CONSMA002-L-G" 650 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 5 0 1 6 200 100 600 100 600 -300 200 -300 200 100 N
+X 1 1 0 0 200 R 50 50 0 0 U
+X 2 2 800 0 200 L 50 50 0 0 U
+X 3 3 0 -100 200 R 50 50 0 0 U
+X 4 4 800 -100 200 L 50 50 0 0 U
+X 5 5 0 -200 200 R 50 50 0 0 U
+ENDDRAW
+ENDDEF
+#
+# Schaltplan_embedded-rescue_LL3301NF065QG-SamacSys_Parts-Schaltplan_embedded-rescue
+#
+DEF Schaltplan_embedded-rescue_LL3301NF065QG-SamacSys_Parts-Schaltplan_embedded-rescue S 0 30 Y Y 1 F N
+F0 "S" 650 300 50 H V L CNN
+F1 "Schaltplan_embedded-rescue_LL3301NF065QG-SamacSys_Parts-Schaltplan_embedded-rescue" 650 200 50 H V L CNN
+F2 "LL3301NF065QG" 650 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/1/LL3301NF065QG.pdf" 650 0 50 H I L CNN
+F4 "E-SWITCH - LL3301NF065QG - TACTILE SW, SPST, 0.05A, 12VDC, SOLDER" 650 -100 50 H I L CNN "Description"
+F5 "4" 650 -200 50 H I L CNN "Height"
+F6 "612-LL3301NF065QG" 650 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.com/Search/Refine.aspx?Keyword=612-LL3301NF065QG" 650 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "E-Switch" 650 -500 50 H I L CNN "Manufacturer_Name"
+F9 "LL3301NF065QG" 650 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 5 0 1 6 200 100 600 100 600 -200 200 -200 200 100 N
+X 1 1 0 0 200 R 50 50 0 0 U
+X 2 2 0 -100 200 R 50 50 0 0 U
+X 3 3 800 0 200 L 50 50 0 0 U
+X 4 4 800 -100 200 L 50 50 0 0 U
+ENDDRAW
+ENDDEF
+#
+# Schaltplan_embedded-rescue_RFM95W-868S2-RF_Module-Schaltplan_embedded-rescue
+#
+DEF Schaltplan_embedded-rescue_RFM95W-868S2-RF_Module-Schaltplan_embedded-rescue U 0 40 Y Y 1 F N
+F0 "U" -410 460 50 H V L CNN
+F1 "Schaltplan_embedded-rescue_RFM95W-868S2-RF_Module-Schaltplan_embedded-rescue" 60 450 50 H V L CNN
+F2 "" -3300 1650 50 H I C CNN
+F3 "" -3300 1650 50 H I C CNN
+$FPLIST
+ HOPERF*RFM9XW*
+$ENDFPLIST
+DRAW
+S -400 400 400 -500 0 1 10 f
+X GND 1 -100 -600 100 U 50 50 1 1 W
+X GND 10 100 -600 100 U 50 50 1 1 W
+X DIO3 11 500 -100 100 L 50 50 1 1 B
+X DIO4 12 500 0 100 L 50 50 1 1 B
+X 3.3V 13 0 500 100 D 50 50 1 1 W
+X DIO0 14 500 -400 100 L 50 50 1 1 B
+X DIO1 15 500 -300 100 L 50 50 1 1 B
+X DIO2 16 500 -200 100 L 50 50 1 1 B
+X MISO 2 -500 100 100 R 50 50 1 1 O
+X MOSI 3 -500 200 100 R 50 50 1 1 I
+X SCK 4 -500 300 100 R 50 50 1 1 I
+X NSS 5 -500 0 100 R 50 50 1 1 I
+X RESET 6 -500 -200 100 R 50 50 1 1 B
+X DIO5 7 500 100 100 L 50 50 1 1 B
+X GND 8 0 -600 100 U 50 50 1 1 W
+X ANT 9 500 300 100 L 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
@@ -668,6 +622,19 @@ F3 "" 0 0 50 H I C CNN
 DRAW
 P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
 X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# power_PWR_FLAG
+#
+DEF power_PWR_FLAG #FLG 0 0 N N 1 F P
+F0 "#FLG" 0 75 50 H I C CNN
+F1 "power_PWR_FLAG" 0 150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 50 -40 75 0 100 40 75 0 50 N
+X pwr 1 0 0 0 U 50 50 0 0 w
 ENDDRAW
 ENDDEF
 #
