@@ -1,4 +1,4 @@
-18:21:04 **** Incremental Build of configuration Debug for project FW_Feinstaubmessung ****
+18:25:20 **** Incremental Build of configuration Debug for project FW_Feinstaubmessung ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DCFG_sx1276_radio -DUSE_HAL_DRIVER -DCFG_eu868 -DSTM32L476xx -DDEBUG -c -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'onEvent':
@@ -16,7 +16,7 @@ arm-none-eabi-objdump -h -S  FW_Feinstaubmessung.elf  > "FW_Feinstaubmessung.lis
 arm-none-eabi-objcopy  -O binary  FW_Feinstaubmessung.elf  "FW_Feinstaubmessung.bin"
 arm-none-eabi-size   FW_Feinstaubmessung.elf 
    text	   data	    bss	    dec	    hex	filename
-  52708	     92	   2660	  55460	   d8a4	FW_Feinstaubmessung.elf
+  52712	     92	   2660	  55464	   d8a8	FW_Feinstaubmessung.elf
 Finished building: default.size.stdout
  
 Finished building: FW_Feinstaubmessung.bin
@@ -24,5 +24,5 @@ Finished building: FW_Feinstaubmessung.bin
 Finished building: FW_Feinstaubmessung.list
  
 
-18:21:08 Build Finished. 0 errors, 1 warnings. (took 3s.905ms)
+18:25:23 Build Finished. 0 errors, 1 warnings. (took 3s.27ms)
 
