@@ -26,6 +26,7 @@
 #include "lmic.h"
 #include "debug.h"
 #include "stm32hpmlib.h"
+#include "user_config.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -43,19 +44,6 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-
-
-/* USER CODE BEGIN PV */
-// unique device ID (LSBF)       < ------- IMPORTANT
-static const u1_t DEVEUI[8]  = { 0x6F, 0xD2, 0x0A, 0x30, 0x14, 0xE0, 0x23, 0x00 };
-
-// application router ID (LSBF)  < ------- IMPORTANT
-static const u1_t APPEUI[8]  = { 0xB0, 0x53, 0x02, 0xD0, 0x7E, 0xD5, 0xB3, 0x70 };
-
-// device-specific AES key (derived from device EUI)
-static const u1_t DEVKEY[16] = { 0x87, 0x65, 0x68, 0x5D, 0x38, 0x21, 0x5E, 0xEA, 0xA0, 0xEE, 0xC0, 0x4B, 0xE3, 0x2C, 0xD0, 0xC7 };
-
-//Air Quality
 
 /* USER CODE END PV */
 
@@ -88,13 +76,8 @@ void os_getDevKey (u1_t* buf) {
     memcpy(buf, DEVKEY, 16);
 }
 
-void initsensor(){
-	 // Here you init your sensors
-}
 
 void initfunc (osjob_t* j) {
-    // intialize sensor hardware
-    initsensor();
     // reset MAC state
     LMIC_reset();
     // start joining
@@ -105,23 +88,28 @@ void initfunc (osjob_t* j) {
 
 static osjob_t reportjob;
 
-// report sensor value every minute
+
 static void reportfunc (osjob_t* j) {
-    // read sensor
+
+    // read sensors
 	int pm25 = 0;
 	int pm10 = 0;
 	hpmStartParticleMeasurement();
-	HAL_Delay(5000);
+	HAL_Delay(measure);
 	hpmReadResults(&pm25,&pm10);
 	hpmStopParticleMeasurement();
+
     // prepare and schedule data for transmission
     LMIC.frame[0] = pm25 >> 8;
     LMIC.frame[1] = pm25;
     LMIC.frame[2] = pm10 >> 8;
     LMIC.frame[3] = pm10;
-    LMIC_setTxData2(1, LMIC.frame, 4, 0); // (port 1, 2 bytes, unconfirmed)
-    // reschedule job in 60 seconds
-    os_setTimedCallback(j, os_getTime()+sec2osticks(60), reportfunc);
+
+    // send data
+    LMIC_setTxData2(1, LMIC.frame, 4, 0); // (port 1, 4 bytes, unconfirmed)
+
+    // reschedule job
+    os_setTimedCallback(j, os_getTime()+sec2osticks(interval), reportfunc);
 }
 
 
@@ -171,7 +159,7 @@ void onEvent (ev_t ev) {
 			  debug_str("Received ack\r\n");
 		  if (LMIC.dataLen) {
 			  debug_str("Received ");
-			  debug_str(LMIC.dataLen);
+			  //debug_str(LMIC.dataLen);
 			  debug_str(" bytes of payload\r\n");
 		  }
 		  break;

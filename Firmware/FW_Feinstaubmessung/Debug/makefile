@@ -40,8 +40,8 @@ FW_Feinstaubmessung.bin \
 all: FW_Feinstaubmessung.elf secondary-outputs
 
 # Tool invocations
-FW_Feinstaubmessung.elf: $(OBJS) $(USER_OBJS) C:\Users\andre\Google\ Drive\Academic\Fachhochshule\ Muenster\Master\3\Embedded\ Systems\Feinstaubmessung\ Project\Firmware\FW_Feinstaubmessung\STM32L476RGTX_FLASH.ld
-	arm-none-eabi-gcc -o "FW_Feinstaubmessung.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\andre\Google Drive\Academic\Fachhochshule Muenster\Master\3\Embedded Systems\Feinstaubmessung Project\Firmware\FW_Feinstaubmessung\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FW_Feinstaubmessung.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+FW_Feinstaubmessung.elf: $(OBJS) $(USER_OBJS) C:\Users\andre\Google\ Drive\Academic\Fachhochshule\ Muenster\Master\3\Embedded\ Systems\GIT\Firmware\FW_Feinstaubmessung\STM32L476RGTX_FLASH.ld
+	arm-none-eabi-gcc -o "FW_Feinstaubmessung.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\andre\Google Drive\Academic\Fachhochshule Muenster\Master\3\Embedded Systems\GIT\Firmware\FW_Feinstaubmessung\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FW_Feinstaubmessung.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -1,0 +1,21 @@
+/*
+ * user_config.h
+ *
+ *  Header File of the configuration of the User Variables
+ *      Author: Andres David Vega Botero
+ */
+
+#include "lmic.h"
+
+#ifndef INC_USER_CONFIG_H_
+#define INC_USER_CONFIG_H_
+
+extern int x;
+
+extern const u1_t DEVEUI[8];
+extern const u1_t APPEUI[8];
+extern const u1_t DEVKEY[16];
+extern const int interval;
+extern const int measure;
+
+#endif /* INC_USER_CONFIG_H_ */

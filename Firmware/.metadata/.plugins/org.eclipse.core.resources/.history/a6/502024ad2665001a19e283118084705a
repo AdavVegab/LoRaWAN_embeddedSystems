@@ -1,0 +1,13 @@
+/*
+ * user_config.h
+ *
+ *  Header File of the configuration of the User Variables
+ *      Author: Andres David Vega Botero
+ */
+
+#ifndef INC_USER_CONFIG_H_
+#define INC_USER_CONFIG_H_
+
+
+
+#endif /* INC_USER_CONFIG_H_ */
